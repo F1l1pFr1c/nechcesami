@@ -1,0 +1,6 @@
+/* Textová časť karty – výška sa prispôsobí obsahu (Hug, cca 208 px) */
+.card-text{background:var(--white);padding:32px;border-radius:0 0 var(--radius) var(--radius)}
+.card-text h2{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.35;margin:0 0 12px}
+.card-text p{font-size:16px;line-height:28px;margin:0 0 28px}
+.card-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:500;letter-spacing:.3px}
+.card-meta a{text-transform:uppercase;border-bottom:1px solid currentColor;line-height:1.3}

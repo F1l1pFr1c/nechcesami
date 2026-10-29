@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sekcia Wiedza (bez kariet)</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;800&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="blog-section.css">
+</head><body>
+<main class="blog">
+  <section class="container blog-hero">
+    <h1>Wiedza</h1>
+    <p>Wszystko co powinieneś wiedzieć o najmie krótkoterminowym – zanim zdecydujesz się na start.</p>
+    <ul class="filters" id="filters">
+      <li><button class="active" data-cat="all">Wszystkie</button></li>
+      <li><button data-cat="zarabianie">Zarabianie na nieruchomości</button></li>
+      <li><button data-cat="prawo">Prawo i bezpieczeństwo</button></li>
+      <li><button data-cat="przygotowanie">Przygotowanie nieruchomości</button></li>
+      <li><button data-cat="rynek">Rynek i trendy</button></li>
+      <li><button data-cat="poradniki">Poradniki</button></li>
+    </ul>
+  </section>
+  <section class="container blog-list">
+    <div class="cards" id="cards"><!-- sem sa vkladá sekcia "cards" --></div>
+    <nav class="pagination" id="pagination" aria-label="Stronicowanie"></nav>
+  </section>
+</main>
+<script src="blog-section.js"></script>
+</body></html>

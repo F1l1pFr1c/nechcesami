@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Navbar</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;800&family=Source+Serif+4:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="navbar.css">
+</head><body>
+<header class="header">
+  <div class="container header-in">
+    <a href="#" class="logo" aria-label="pirx.rent"><span class="logo-mark"></span>pirx.rent</a>
+    <nav class="nav" id="nav">
+      <div class="nav-item"><button type="button" aria-haspopup="true">Dlaczego PIRX? <i class="chev"></i></button>
+        <div class="dropdown"><a href="#">O nas</a><a href="#">Jak działamy</a></div></div>
+      <div class="nav-item"><button type="button" aria-haspopup="true">Nasze usługi <i class="chev"></i></button>
+        <div class="dropdown"><a href="#">Zarządzanie najmem</a><a href="#">Przygotowanie nieruchomości</a></div></div>
+      <a href="#" class="active">Wiedza</a><a href="#">Cennik</a><a href="#">Kontakt</a>
+    </nav>
+    <a href="tel:+48792937176" class="phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/><path d="M14 4a6 6 0 0 1 6 6M14 7.5a2.5 2.5 0 0 1 2.5 2.5"/></svg><span>+48 792 937 176</span></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+<script src="navbar.js"></script>
+</body></html>
