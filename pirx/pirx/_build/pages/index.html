@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  {{head:pirx.rent — Pilotujemy Twój wynajem|Profesjonalne zarządzanie najmem krótkoterminowym dla właścicieli, którzy cenią wyniki bardziej niż obietnice.}}
+  <link href="css/home.css" rel="stylesheet">
+</head>
+<body>
+  {{nav:home}}
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero__top">
+          <div class="hero__txt">
+            <h1 class="h-xl" id="hero-title">Pilotujemy Twój wynajem.</h1>
+            <p class="lead-pirx">Tak jak dobry pilot zawsze doprowadza misję do końca — my dbamy o Twoją nieruchomość od pierwszego kontaktu z gościem do ostatniej rezerwacji. Profesjonalnie. Bez turbulencji.</p>
+          </div>
+          <!-- TODO: animacja "pirx_story_anim_opt" z Figmy (rakieta + planeta) — wyeksportuj jako SVG -->
+          <div class="ph hero__art" role="img" aria-label="Ilustracja: rakieta i planeta">Ilustracja: rakieta i planeta<small>pirx_story_anim_opt</small></div>
+        </div>
+
+        <form class="calc" action="#" onsubmit="return false" aria-label="Kalkulator przychodu">
+          <label class="calc__field calc__field--address">
+            {{icon:pin}}
+            <span>
+              <span class="field__label">Adres twojego mieszkania</span>
+              <input class="field__input" type="text" name="adres" placeholder="np. Marszałkowska 12, Warszawa" autocomplete="street-address">
+            </span>
+          </label>
+          <label class="calc__field">
+            {{icon:bed}}
+            <span>
+              <span class="field__label">Liczba łóżek</span>
+              <input class="field__input" type="number" name="lozka" min="1" placeholder="np. 4" inputmode="numeric">
+            </span>
+          </label>
+          <div class="calc__field select" data-select>
+            {{icon:sofa}}
+            <span class="flex-grow-1">
+              <span class="field__label" id="std-label"><span class="d-lg-none">Standard wykończenia</span><span class="d-none d-lg-inline">Standard</span></span>
+              <input type="hidden" name="standard">
+              <button class="select__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="std-label">
+                <span class="select__value">Wybierz z listy</span>{{icon:chevron}}
+              </button>
+            </span>
+            <!-- TODO: opcje standardu nie są opisane w Figmie — do uzupełnienia -->
+            <ul class="select__list" role="listbox" aria-labelledby="std-label">
+              <li role="option" data-value="podstawowy">Podstawowy</li>
+              <li role="option" data-value="dobry">Dobry</li>
+              <li role="option" data-value="wysoki">Wysoki</li>
+              <li role="option" data-value="premium">Premium</li>
+            </ul>
+          </div>
+          <button class="btn-pirx btn-pirx--yellow calc__btn" type="submit">{{icon:calc}}Oblicz przychód</button>
+        </form>
+
+        <ul class="counters">
+          <li><strong>20 mln zł</strong><span>Wartość nieruchomości pod zarządem</span></li>
+          <li><strong>5 000+</strong><span>Obsłużonych nocy</span></li>
+          <li><strong>85,5%</strong><span>Średnie obłożenie</span></li>
+          <li><strong>4,84/5</strong><span>Średnia ocena gości</span></li>
+          <li><strong>14%</strong><span>Maksymalna prowizja</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= DLA KOGO (zakładki) ================= -->
+    <section class="section bg-light-pirx target" aria-labelledby="target-title">
+      <div class="wrap">
+        <h2 class="h-lg text-center" id="target-title">Twoja nieruchomość. Twoja sytuacja.<br>Nasze rozwiązanie.</h2>
+
+        <div class="target-card">
+          <div class="target-tabs" role="tablist">
+            <button class="target-tab active" id="tab-wlasciciel" data-bs-toggle="tab" data-bs-target="#pane-wlasciciel" type="button" role="tab" aria-controls="pane-wlasciciel" aria-selected="true">{{icon:tab-owner}}Właściciel nieruchomości</button>
+            <button class="target-tab" id="tab-dlugo" data-bs-toggle="tab" data-bs-target="#pane-dlugo" type="button" role="tab" aria-controls="pane-dlugo" aria-selected="false">{{icon:tab-long}}Wynajmujący długoterminowo</button>
+            <button class="target-tab" id="tab-inwestor" data-bs-toggle="tab" data-bs-target="#pane-inwestor" type="button" role="tab" aria-controls="pane-inwestor" aria-selected="false">{{icon:tab-investor}}Inwestor</button>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="pane-wlasciciel" role="tabpanel" aria-labelledby="tab-wlasciciel" tabindex="0">
+              <div class="target-pane">
+                <!-- TODO: zdjęcie z Figmy (mężczyzna z laptopem, żółte tło) -->
+                <div class="ph ph--photo target-pane__img" role="img" aria-label="Zdjęcie: właściciel z laptopem">Zdjęcie<small>właściciel z laptopem</small></div>
+                <div class="target-pane__txt">
+                  <h3 class="target-pane__title">Każda nieruchomość ma potencjał.<br>Naszą rolą jest go uwolnić.</h3>
+                  <p class="lead-pirx">Nieważne czy masz mieszkanie w centrum miasta, apartament nad morzem czy dom, który stoi pusty przez większość roku — każda nieruchomość ma potencjał, który czeka na właściwego pilota. pirx.rent przejmuje stery w całości.</p>
+                  <ul class="feature-list">
+                    <li>{{icon:clock}}Zarządzanie nieruchomościami 24/7</li>
+                    <li>{{icon:camera}}Profesjonalna fotografia i optymalizacja ogłoszenia</li>
+                    <li>{{icon:broom}}Sprzątanie i przygotowanie nieruchomości przed każdym gościem</li>
+                    <li>{{icon:calendar}}Elastyczny kalendarz — blokujesz swoje terminy kiedy chcesz</li>
+                    <li>{{icon:key}}Nieruchomość zawsze gotowa na Twój przyjazd</li>
+                  </ul>
+                  <a class="btn-pirx btn-pirx--dark" href="{{link:cennik}}">Sprawdź ofertę</a>
+                </div>
+              </div>
+            </div>
+            <!-- TODO: Figma ma treść tylko dla pierwszej zakładki — pozostałe do uzupełnienia -->
+            <div class="tab-pane fade" id="pane-dlugo" role="tabpanel" aria-labelledby="tab-dlugo" tabindex="0">
+              <div class="target-pane">
+                <div class="ph ph--photo target-pane__img" role="img" aria-label="Zdjęcie">Zdjęcie<small>wynajmujący długoterminowo</small></div>
+                <div class="target-pane__txt">
+                  <h3 class="target-pane__title">Najem długoterminowy to nie jedyna droga.</h3>
+                  <p class="lead-pirx">Treść tej zakładki nie jest jeszcze gotowa w projekcie.</p>
+                  <a class="btn-pirx btn-pirx--dark" href="{{link:cennik}}">Sprawdź ofertę</a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pane-inwestor" role="tabpanel" aria-labelledby="tab-inwestor" tabindex="0">
+              <div class="target-pane">
+                <div class="ph ph--photo target-pane__img" role="img" aria-label="Zdjęcie">Zdjęcie<small>inwestor</small></div>
+                <div class="target-pane__txt">
+                  <h3 class="target-pane__title">Inwestycja, która pracuje na siebie.</h3>
+                  <p class="lead-pirx">Treść tej zakładki nie jest jeszcze gotowa w projekcie.</p>
+                  <a class="btn-pirx btn-pirx--dark" href="{{link:cennik}}">Sprawdź ofertę</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= USŁUGI ================= -->
+    <section class="section services" aria-labelledby="services-title">
+      <div class="wrap">
+        <h2 class="h-lg services__title" id="services-title">Pełna obsługa nieruchomości<br>-od startu do lądowania.</h2>
+
+        <div class="services-grid">
+          <article class="svc">
+            {{svc:ogloszenia}}
+            <h3 class="h-md"><a href="{{link:ogloszenia}}">Ogłoszenia{{icon:arrow-circle}}</a></h3>
+            <ul class="check-list check-list--tight">
+              <li>{{icon:check}}Sesja fotograficzna</li>
+              <li>{{icon:check}}Tworzenie i optymalizacja ogłoszenia</li>
+              <li>{{icon:check}}Wystawianie na Airbnb, Booking, Expedia, Agoda</li>
+              <li>{{icon:check}}Ciągła optymalizacja pozycji w wyszukiwarkach</li>
+            </ul>
+          </article>
+          <article class="svc">
+            {{svc:goscie}}
+            <h3 class="h-md"><a href="{{link:goscie}}">Goście{{icon:arrow-circle}}</a></h3>
+            <ul class="check-list check-list--tight">
+              <li>{{icon:check}}Weryfikacja przed każdą rezerwacją</li>
+              <li>{{icon:check}}Check-in i check-out</li>
+              <li>{{icon:check}}Komunikacja 24/7</li>
+              <li>{{icon:check}}Obsługa sytuacji kryzysowych i reklamacji</li>
+            </ul>
+          </article>
+          <article class="svc">
+            {{svc:housekeeping}}
+            <h3 class="h-md"><a href="{{link:housekeeping}}">Housekeeping{{icon:arrow-circle}}</a></h3>
+            <ul class="check-list check-list--tight">
+              <li>{{icon:check}}Profesjonalne sprzątanie po każdym pobycie</li>
+              <li>{{icon:check}}Pościel i kosmetyki hotelowej jakości</li>
+              <li>{{icon:check}}Przygotowanie nieruchomości przed każdym gościem</li>
+            </ul>
+          </article>
+          <article class="svc">
+            {{svc:serwis}}
+            <h3 class="h-md"><a href="{{link:serwis}}">Serwis techniczny{{icon:arrow-circle}}</a></h3>
+            <ul class="check-list check-list--tight">
+              <li>{{icon:check}}Regularne inspekcje stanu</li>
+              <li>{{icon:check}}Koordynacja napraw i serwisu technicznego</li>
+            </ul>
+          </article>
+          <!-- W Figmie "Przychody" występuje tylko w wersji mobilnej -->
+          <article class="svc d-lg-none">
+            {{tile:pie}}
+            <h3 class="h-md"><a href="{{link:przychody}}">Przychody{{icon:arrow-circle}}</a></h3>
+            <ul class="check-list check-list--tight">
+              <li>{{icon:check}}Dynamiczny pricing reagujący na popyt, sezon i wydarzenia lokalne</li>
+              <li>{{icon:check}}Miesięczny raport przychodów i kosztów</li>
+              <li>{{icon:check}}Strategie maksymalizacji przychodu</li>
+            </ul>
+          </article>
+          <div class="mission-box">
+            <!-- TODO: ilustracja "kokpit" z Figmy -->
+            <div class="ph mission-box__art" role="img" aria-label="Ilustracja: kokpit">Ilustracja<small>kokpit</small></div>
+            <p class="txt-14"><strong>Od momentu gdy przekazujesz nam klucze — misja jest nasza.</strong> Nasza odpowiedzialność kończy się wtedy, gdy Ty jesteś zadowolony z wyników.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CENNIK ================= -->
+    <section class="section bg-dark-pirx pricing" aria-labelledby="pricing-title">
+      <!-- TODO: ilustracja rakiety (lewa strona) z Figmy -->
+      <div class="ph ph--dark pricing__art" aria-hidden="true">Ilustracja<small>rakieta</small></div>
+      <div class="wrap">
+        <div class="pricing__head">
+          <h2 class="h-xl" id="pricing-title">Prosty model.<br>Żadnych niespodzianek.</h2>
+          <p class="lead-pirx">Żadnych opłat ukrytych. Żadnych niespodzianek na orbicie. Prowizja naliczana wyłącznie od zrealizowanych rezerwacji — nasz sukces zależy od Twojego sukcesu.</p>
+        </div>
+
+        <div class="plans">
+          <article class="plan plan--lite">
+            <h3 class="plan__name">Pirx Lite</h3>
+            <p class="plan__price"><span class="plan__from">od</span>9%</p>
+            <p class="plan__unit">przychodu z rezerwacji</p>
+            <p class="plan__desc">Dla właścicieli, którzy działają poza głównymi miastami lub mają własną ekipę na miejscu. Ty organizujesz obsługę lokalną — my pilotujemy zdalnie.</p>
+            <ul class="check-list check-list--bold">
+              <li>{{icon:check}}Wystawianie na wszystkich platformach</li>
+              <li>{{icon:check}}Dynamiczny pricing</li>
+              <li>{{icon:check}}Komunikacja z gośćmi 24/7</li>
+              <li>{{icon:check}}Weryfikacja gości</li>
+              <li>{{icon:check}}Synchronizacja kalendarzy</li>
+              <li>{{icon:check}}Dashboard właściciela</li>
+              <li>{{icon:check}}Miesięczny raport przychodów</li>
+            </ul>
+            <a class="btn-pirx btn-pirx--white btn-pirx--block plan__btn" href="{{link:kontakt}}">Skontaktuj się</a>
+          </article>
+
+          <article class="plan plan--standard">
+            <h3 class="plan__name">Pirx Standard</h3>
+            <p class="plan__price"><span class="plan__from">od</span>17%</p>
+            <p class="plan__unit">przychodu z rezerwacji</p>
+            <span class="plan__badge">{{icon:star}}Najpopularniejszy</span>
+            <p class="plan__desc">Dla właścicieli którzy chcą oddać nieruchomość w całości i nie zajmować się niczym. Pełna obsługa od A do Z.</p>
+            <ul class="check-list check-list--bold">
+              <li>{{icon:check}}Wszystko z PIRX Lite</li>
+              <li>{{icon:check}}Profesjonalna sesja fotograficzna</li>
+              <li>{{icon:check}}Sprzątanie i housekeeping</li>
+              <li>{{icon:check}}Pościel i kosmetyki hotelowej jakości</li>
+              <li>{{icon:check}}Organizacja check-in i check-out</li>
+              <li>{{icon:check}}Regularne inspekcje nieruchomości</li>
+              <li>{{icon:check}}Koordynacja napraw i serwisu</li>
+            </ul>
+            <a class="btn-pirx btn-pirx--dark btn-pirx--block plan__btn" href="{{link:kontakt}}">Skontaktuj się</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTEGRACJE ================= -->
+    <section class="section bg-light-pirx integration" aria-labelledby="integration-title">
+      <div class="wrap integration__grid">
+        <div class="integration__txt">
+          <h2 class="h-lg" id="integration-title">Twoja nieruchomość wszędzie tam, gdzie szukają goście.</h2>
+          <p class="lead-pirx">Wystawiamy Twoją nieruchomość jednocześnie na wszystkich głównych kanałach rezerwacyjnych i synchronizujemy kalendarze w czasie rzeczywistym — zero ryzyka podwójnych rezerwacji.</p>
+          <ul class="check-list check-list--bold">
+            <li>{{icon:check}}Wszystkie rezerwacje spływają do jednego systemu.</li>
+            <li>{{icon:check}}Jeden kalendarz.</li>
+            <li>{{icon:check}}Jedna załoga.</li>
+            <li>{{icon:check}}Zero chaosu.</li>
+          </ul>
+          <div class="note-dark">
+            {{icon:info}}
+            <p class="txt-14b">Pracujemy nad własną platformą rezerwacyjną pirx.rent — rezerwacje bezpośrednie bez prowizji dla pośredników. Więcej dla Ciebie, mniej dla algorytmów. Niektóre misje wymagają czasu — ta jest w toku.</p>
+          </div>
+        </div>
+        <!-- TODO: logotypy platform z Figmy (11 szt.) — podmień placeholdery na <img> -->
+        <ul class="logos" aria-label="Platformy rezerwacyjne">
+          <li>Logo</li><li>Logo</li><li>Logo</li><li>Logo</li>
+          <li>Logo</li><li>Logo</li><li>Logo</li><li>Logo</li>
+          <li>Logo</li><li>Logo</li><li>Logo</li>
+        </ul>
+      </div>
+
+      <!-- ================= OPINIE ================= -->
+      <div class="wrap reviews" aria-labelledby="reviews-title">
+        <div class="reviews-head">
+          <div>
+            <h2 class="h-lg" id="reviews-title"><span class="text-orange">4,84/5</span> średniej oceny na podstawie<br>ponad <span class="text-orange">5 000</span> obsłużonych nocy.</h2>
+            <p class="lead-pirx">Najlepsza nawigacja to opinie tych którzy już polecieli.</p>
+          </div>
+          <div class="reviews-arrows">
+            <button type="button" data-reviews-prev aria-label="Poprzednia opinia">{{icon:arrow-left}}</button>
+            <button type="button" data-reviews-next aria-label="Następna opinia">{{icon:arrow-right}}</button>
+          </div>
+        </div>
+        <div class="reviews-track" data-reviews>
+          <article class="review-card">
+            {{icon:quote:quote}}
+            <p class="review-card__text">Miejsce było czyste, przytulne i bardzo dogodnie położone w pobliżu transportu publicznego i stadionu. Było dokładnie tak, jak na zdjęciach. Łukasz bardzo szybko odpowiadał i był w każdym aspekcie wspaniałym gospodarzem. Gorąco polecam!</p>
+            <div class="review-card__foot">
+              <span class="avatar" aria-hidden="true">J</span>
+              <div class="review-card__who"><strong>Joanne</strong><span class="label-caps muted">Marsaskala, Malta</span></div>
+              <span class="stars" aria-label="Ocena 5 na 5">{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}</span>
+            </div>
+          </article>
+          <article class="review-card">
+            {{icon:quote:quote}}
+            <p class="review-card__text">Nie po raz pierwszy tu przebywam i zawsze jestem bardzo zadowolony. To naprawdę przytulne i wygodne miejsce na pobyt. Mieszkanie jest zawsze idealnie czyste i ma wszystko, czego potrzebujesz, od naczyń po żelazko, dzięki czemu poczujesz się jak w domu. Mieszkanie znajduje się w cichej, zielonej okolicy, gdzie przyjemnie jest odpocząć po długim dniu. Chciałbym szczególnie wspomnieć o gospodarzu, Łukaszowi. Jest zawsze uprzejmy, szybko pomaga rozwiązać wszelkie problemy i osobiście dba o jakość obsługi oraz stan techniczny mieszkania.</p>
+            <div class="review-card__foot">
+              <span class="avatar" aria-hidden="true">Д</span>
+              <div class="review-card__who"><strong>Даниил</strong><span class="label-caps muted">Warszawa, Polska</span></div>
+              <span class="stars" aria-label="Ocena 5 na 5">{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}</span>
+            </div>
+          </article>
+          <article class="review-card">
+            {{icon:quote:quote}}
+            <p class="review-card__text">Wspaniały właściciel. Kiedy pomyliłam adresy, szybko odpowiedział i pomógł mi. Odpowiedział też na wszystkie moje pytania. Ładne, czyste, wygodne, ma wszystko, co jest wymienione w ogłoszeniu o mieszkaniu. Mój pobyt był udany; mogę go polecić 👍</p>
+            <div class="review-card__foot">
+              <span class="avatar" aria-hidden="true">V</span>
+              <div class="review-card__who"><strong>Valentyna</strong></div>
+              <span class="stars" aria-label="Ocena 5 na 5">{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}{{icon:star}}</span>
+            </div>
+          </article>
+        </div>
+        <div class="reviews-dots" data-reviews-dots aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ================= KROKI ================= -->
+    <section class="section bg-dark-pirx steps" aria-labelledby="steps-title">
+      <div class="wrap">
+        <h2 class="h-lg text-center" id="steps-title">Od pierwszego kontaktu do pierwszej<br class="d-none d-lg-inline"> rezerwacji — w 14 dni.</h2>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__txt">
+              <h3 class="h-md">01. Odprawa przed startem</h3>
+              <p class="txt-14">15-minutowa rozmowa z naszym zespołem. Opowiadasz nam o swojej nieruchomości — my dobieramy model współpracy. Konkretnie i bez owijania w bawełnę. Zero zobowiązań.</p>
+            </div>
+            <div class="ph ph--dark ph--round timeline__art" aria-hidden="true">Ilustracja<small>wieża kontroli</small></div>
+          </li>
+          <li class="timeline__item timeline__item--rev">
+            <div class="timeline__txt">
+              <h3 class="h-md">02. Przygotowujemy nieruchomość<br class="d-none d-lg-inline"> do startu</h3>
+              <p class="txt-14">Organizujemy profesjonalną sesję fotograficzną, tworzymy i optymalizujemy ogłoszenia na wszystkich platformach, konfigurujemy system rezerwacji i dynamic pricing. Ty nie musisz robić nic.</p>
+            </div>
+            <div class="ph ph--dark ph--round timeline__art" aria-hidden="true">Ilustracja<small>chmury</small></div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__txt">
+              <h3 class="h-md">03. Zarabiasz — my pilotujemy</h3>
+              <p class="txt-14">W ciągu 14 dni od podpisania umowy Twoja nieruchomość jest gotowa na pierwszych gości. Od tej chwili przejmujemy pełną odpowiedzialność. Przychody trafiają na Twoje konto co miesiąc.</p>
+            </div>
+            <div class="ph ph--dark ph--round timeline__art" aria-hidden="true">Ilustracja<small>planeta</small></div>
+          </li>
+        </ol>
+
+        <p class="h-md text-center steps__claim">Tak jak dobry pilot zawsze doprowadza misję do końca — my dbamy o Twoją nieruchomość<br class="d-none d-lg-inline"> od pierwszego kontaktu z gościem do ostatniej rezerwacji.</p>
+      </div>
+    </section>
+
+    {{faq}}
+  </main>
+
+  {{footer}}
+
+  {{scripts}}
+</body>
+</html>

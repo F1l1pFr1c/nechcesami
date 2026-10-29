@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pirx.rent — Pilotujemy Twój wynajem</title>
+  <meta name="description" content="Profesjonalne zarządzanie najmem krótkoterminowym dla właścicieli, którzy cenią wyniki bardziej niż obietnice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500;600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/home.css" rel="stylesheet">
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="i-arrow-circle" viewBox="442 2449 16 16" fill="none"><path fill-rule="evenodd" d="M450 2449C445.6 2449 442 2452.6 442 2457C442 2461.4 445.6 2465 450 2465C454.4 2465 458 2461.4 458 2457C458 2452.6 454.4 2449 450 2449ZM450.8 2454L453.4 2456.6C453.6 2456.8 453.6 2457.2 453.4 2457.4L450.8 2460C450.6 2460.2 450.2 2460.2 450 2460C449.8 2459.8 449.8 2459.4 450 2459.2L451.6 2457.6H447C446.7 2457.6 446.5 2457.3 446.5 2457C446.5 2456.7 446.7 2456.4 447 2456.4H451.6L450 2454.8C449.8 2454.6 449.8 2454.2 450 2454C450.2 2453.8 450.6 2453.8 450.8 2454Z" fill="currentColor"/></symbol><symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m14 7-5 5 5 5"/></g></symbol><symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m10 7 5 5-5 5"/></g></symbol><symbol id="i-bed" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 19v-4.5a2.5 2.5 0 0 1 2.5-2.5h15a2.5 2.5 0 0 1 2.5 2.5V19M2 16h20M3 12V7.5C3 6 5 4.5 12 4.5S21 6 21 7.5V12M6.5 12v-1.5c0-.6.8-1.2 2.5-1.2s2.5.6 2.5 1.2V12M12.5 12v-1.5c0-.6.8-1.2 2.5-1.2s2.5.6 2.5 1.2V12"/></g></symbol><symbol id="i-broom" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3l-8.5 9M13.5 13.5 10.5 10.5c-1.2-.4-3-.2-4.7 1.3C3.4 14 3 17.5 3 21c3.5 0 7-.4 9.2-2.8 1.5-1.7 1.7-3.5 1.3-4.7zM6 15.5c.8.3 2 .2 3-.5"/></g></symbol><symbol id="i-calc" viewBox="1414 550 18 20" fill="none"><path d="M1415 558.2H1431M1425.7 554.6H1427.4M1418.6 561.8H1419M1422.8 561.8H1423.2M1427 561.8H1427.4M1418.6 565.4H1419M1422.8 565.4H1423.2M1427 565.4H1427.4M1431 560.9V559.1C1431 555.3 1431 553.4 1429.8 552.2C1428.7 551 1426.8 551 1423 551C1419.2 551 1417.3 551 1416.2 552.2C1415 553.4 1415 555.3 1415 559.1V560.9C1415 564.7 1415 566.6 1416.2 567.8C1417.3 569 1419.2 569 1423 569C1426.8 569 1428.7 569 1429.8 567.8C1431 566.6 1431 564.7 1431 560.9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol><symbol id="i-calendar" viewBox="960.2 1636.2 19.6 21.6" fill="none"><path d="M974 1637V1641M966 1637V1641M961 1645H979M970.1 1649H970M970.1 1653H970M965.6 1649H965.5M965.6 1653H965.5M974.6 1649H974.5M971 1639H969C965.2 1639 963.3 1639 962.2 1640.2C961 1641.3 961 1643.2 961 1647V1649C961 1652.8 961 1654.7 962.2 1655.8C963.3 1657 965.2 1657 969 1657H971C974.8 1657 976.7 1657 977.8 1655.8C979 1654.7 979 1652.8 979 1649V1647C979 1643.2 979 1641.3 977.8 1640.2C976.7 1639 974.8 1639 971 1639Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="i-camera" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 6.5 8.3 4.6A1.5 1.5 0 0 1 9.5 4h5a1.5 1.5 0 0 1 1.2.6L17 6.5h1.5A2.5 2.5 0 0 1 21 9v8.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5V9a2.5 2.5 0 0 1 2.5-2.5z"/><circle cx="12" cy="13" r="3.5"/><path d="M17.5 9.5h.01"/></g></symbol><symbol id="i-chat" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H10l-4 4v-4H4z"/><path d="M8 9h8M8 12h5"/></g></symbol><symbol id="i-check" viewBox="341 2497 18 18" fill="none"><path fill-rule="evenodd" d="M352.4 2502.8C352.7 2502.5 353.2 2502.5 353.5 2502.8C353.8 2503.1 353.8 2503.6 353.5 2503.9L349.1 2508.7C349 2508.8 348.8 2508.9 348.6 2508.9C348.4 2508.9 348.2 2508.8 348 2508.7L346 2506.7C345.7 2506.4 345.7 2505.9 346 2505.6C346.3 2505.3 346.8 2505.3 347.1 2505.6L348.5 2507.1L352.4 2502.8ZM358.5 2505.8C358.5 2510.6 354.6 2514.5 349.8 2514.5C344.9 2514.5 341 2510.6 341 2505.8C341 2500.9 344.9 2497 349.8 2497C354.6 2497 358.5 2500.9 358.5 2505.8ZM357 2505.8C357 2501.8 353.8 2498.5 349.8 2498.5C345.8 2498.5 342.5 2501.8 342.5 2505.8C342.5 2509.8 345.8 2513 349.8 2513C353.8 2513 357 2509.8 357 2505.8Z" fill="currentColor"/></symbol><symbol id="i-chevron" viewBox="671 47 8 6" fill="none"><path d="M677.6 47.7C678 47.4 678.5 47.4 678.8 47.7C679.1 48.1 679.1 48.6 678.8 48.9L675.6 52.3C675.3 52.6 674.8 52.6 674.4 52.3L671.2 48.9C670.9 48.6 670.9 48.1 671.2 47.7C671.6 47.4 672.1 47.4 672.4 47.7L675 50.5L677.6 47.7Z" fill="currentColor"/></symbol><symbol id="i-clock" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3"/></g></symbol><symbol id="i-close" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></g></symbol><symbol id="i-facebook" viewBox="340 8651 18 18.6" fill="none"><path fill-rule="evenodd" d="M358 8660.6C358 8655.6 354 8651.5 349 8651.5C344 8651.5 340 8655.6 340 8660.6C340 8665.1 343.3 8668.8 347.6 8669.5V8663.2H345.3V8660.6H347.6V8658.6C347.6 8656.3 348.9 8655 351 8655C352 8655 353 8655.2 353 8655.2V8657.4H351.9C350.8 8657.4 350.4 8658.1 350.4 8658.9V8660.6H352.9L352.5 8663.2H350.4V8669.5C354.7 8668.8 358 8665.1 358 8660.6" fill="currentColor"/></symbol><symbol id="i-faq-chevron" viewBox="1569 7617 12 7" fill="none"><path d="M1578.3 7617.8C1578.7 7617.4 1579.3 7617.4 1579.7 7617.8C1580.1 7618.2 1580.1 7618.8 1579.7 7619.2L1575.7 7623.2C1575.3 7623.6 1574.7 7623.6 1574.3 7623.2L1570.3 7619.2C1569.9 7618.8 1569.9 7618.2 1570.3 7617.8C1570.7 7617.4 1571.3 7617.4 1571.7 7617.8L1575 7621.1L1578.3 7617.8Z" fill="currentColor"/></symbol><symbol id="i-help" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/></g></symbol><symbol id="i-info" viewBox="359 4930 20 20" fill="none"><path d="M369 4943.8V4940M369.1 4936.5H369M360 4940C360 4935.8 360 4933.6 361.3 4932.3C362.6 4931 364.8 4931 369 4931C373.2 4931 375.4 4931 376.7 4932.3C378 4933.6 378 4935.8 378 4940C378 4944.2 378 4946.4 376.7 4947.7C375.4 4949 373.2 4949 369 4949C364.8 4949 362.6 4949 361.3 4947.7C360 4946.4 360 4944.2 360 4940Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="i-instagram" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01" stroke-width="2.2"/></g></symbol><symbol id="i-key" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="5"/><path d="m11.5 11.5 9-9M17.5 5.5l2.5 2.5M15 8l2 2"/></g></symbol><symbol id="i-linkedin" viewBox="382 8651.5 18 18" fill="none"><path d="M398.7 8651.5H383.4C383 8651.5 382.7 8651.6 382.4 8651.9C382.1 8652.2 382 8652.5 382 8652.9V8668.2C382 8668.5 382.1 8668.9 382.4 8669.1C382.7 8669.4 383 8669.5 383.4 8669.5H398.7C399 8669.5 399.4 8669.4 399.6 8669.1C399.9 8668.9 400 8668.5 400 8668.2V8652.9C400 8652.5 399.9 8652.2 399.6 8651.9C399.4 8651.6 399 8651.5 398.7 8651.5ZM387.4 8666.8H384.7V8658.7H387.4V8666.8ZM386.1 8657.1C385.7 8657.1 385.4 8657 385.2 8656.8C384.9 8656.7 384.7 8656.4 384.6 8656.1C384.5 8655.8 384.5 8655.5 384.6 8655.2C384.6 8654.9 384.8 8654.6 385 8654.4C385.2 8654.2 385.5 8654.1 385.8 8654C386.1 8654 386.4 8654 386.7 8654.1C387 8654.2 387.2 8654.4 387.4 8654.7C387.6 8654.9 387.7 8655.2 387.7 8655.6C387.7 8656 387.5 8656.4 387.2 8656.7C386.9 8657 386.5 8657.1 386.1 8657.1ZM397.3 8666.8H394.6V8662.5C394.6 8661.3 394.1 8660.8 393.4 8660.8C393.2 8660.8 393 8660.9 392.8 8661C392.6 8661.1 392.4 8661.2 392.3 8661.3C392.2 8661.5 392 8661.7 392 8661.9C391.9 8662.1 391.9 8662.3 391.9 8662.5V8666.8H389.2V8658.7H391.8V8659.9C392.1 8659.5 392.4 8659.1 392.9 8658.9C393.3 8658.7 393.8 8658.6 394.2 8658.6C395.6 8658.6 397.3 8659.4 397.3 8661.9L397.3 8666.8Z" fill="currentColor"/></symbol><symbol id="i-menu" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></g></symbol><symbol id="i-news" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h12v14H6a2 2 0 0 1-2-2zM16 9h4v8a2 2 0 0 1-4 0"/><path d="M7 9h6M7 12h6M7 15h4"/></g></symbol><symbol id="i-phone" viewBox="1422 41.5 17.5 17.5" fill="none"><path d="M1431.9 42C1435.8 42 1439 45.2 1439 49.1M1432.3 45.1C1434.3 45.1 1435.9 46.7 1435.9 48.7M1428.5 44.4L1428.1 43.6C1427.9 43.1 1427.8 42.8 1427.6 42.6C1427.4 42.4 1427.1 42.2 1426.8 42.1C1426.5 42 1426.2 42 1425.7 42C1424.8 42 1424.4 42 1424 42.2C1423.6 42.4 1423.2 42.8 1423.1 43.2C1423 43.6 1423 44 1423.1 44.7C1423.8 52.8 1428.3 57.2 1436.3 57.9C1437.1 58 1437.4 58 1437.8 57.9C1438.2 57.8 1438.7 57.4 1438.8 57C1439 56.6 1439 56.2 1439 55.4C1439 54.8 1439 54.5 1438.9 54.2C1438.8 53.9 1438.6 53.6 1438.4 53.4C1438.2 53.2 1437.9 53.1 1437.4 52.9L1436.6 52.5C1436 52.3 1435.7 52.2 1435.4 52.1C1435.2 52.1 1434.9 52.1 1434.6 52.2C1434.4 52.3 1434.1 52.5 1433.6 52.9C1433.2 53.3 1432.9 53.5 1432.6 53.6C1432.4 53.7 1432 53.8 1431.8 53.7C1431.5 53.7 1431.2 53.6 1430.8 53.3C1429.3 52.5 1428.5 51.7 1427.7 50.3C1427.4 49.8 1427.3 49.6 1427.3 49.2C1427.2 49 1427.3 48.6 1427.4 48.4C1427.5 48.1 1427.7 47.8 1428.1 47.4C1428.5 46.9 1428.7 46.6 1428.8 46.4C1428.9 46.1 1428.9 45.8 1428.9 45.6C1428.9 45.3 1428.7 45 1428.5 44.4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol><symbol id="i-pie" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 2.6A9 9 0 0 1 21.4 9H15z"/></g></symbol><symbol id="i-pin" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 10c0 5.2-7.5 11-7.5 11S4.5 15.2 4.5 10a7.5 7.5 0 0 1 15 0z"/><circle cx="12" cy="10" r="2"/></g></symbol><symbol id="i-quote" viewBox="372 5508 37 33" fill="none"><path d="M373.5 5540.5L372 5537.2C375 5535.8 377.2 5534.3 378.8 5532.5C380.2 5530.7 380.9 5528.7 380.9 5526.4C380.9 5525.3 380.7 5524.3 380.3 5523.6C379.9 5522.9 379.3 5522.2 378.7 5521.6C378 5521.1 377.4 5520.5 376.8 5519.9C376.2 5519.3 375.7 5518.7 375.3 5517.9C374.8 5517.1 374.6 5516.1 374.6 5514.8C374.6 5513.1 375.2 5511.6 376.5 5510.3C377.7 5509.1 379.4 5508.5 381.4 5508.5C382.7 5508.5 383.9 5508.9 385.2 5509.6C386.4 5510.3 387.3 5511.5 388.1 5512.9C388.8 5514.5 389.2 5516.5 389.2 5518.9C389.2 5521.8 388.5 5524.7 387.3 5527.5C386 5530.4 384.2 5533 381.9 5535.2C379.5 5537.5 376.7 5539.2 373.5 5540.5ZM393.3 5540.5L391.8 5537.2C394.8 5535.8 397.1 5534.3 398.6 5532.5C400 5530.7 400.8 5528.7 400.8 5526.4C400.8 5525.3 400.6 5524.3 400.2 5523.6C399.7 5522.9 399.2 5522.2 398.5 5521.6C397.8 5521.1 397.2 5520.5 396.6 5519.9C396 5519.3 395.5 5518.7 395.1 5517.9C394.7 5517.1 394.4 5516.1 394.4 5514.8C394.4 5513.1 395.1 5511.6 396.3 5510.3C397.6 5509.1 399.2 5508.5 401.3 5508.5C402.5 5508.5 403.8 5508.9 405 5509.6C406.2 5510.3 407.2 5511.5 407.9 5512.9C408.6 5514.5 409 5516.5 409 5518.9C409 5521.8 408.4 5524.7 407.1 5527.5C405.9 5530.4 404.1 5533 401.8 5535.2C399.4 5537.5 396.6 5539.2 393.3 5540.5Z" fill="currentColor"/></symbol><symbol id="i-route" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></g></symbol><symbol id="i-sofa" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17.5V19M20 17.5V19M5 9V7c0-2 1.5-3 3.5-3h7C17.5 4 19 5 19 7v2M2 11.5a2 2 0 0 1 4 0V14h12v-2.5a2 2 0 0 1 4 0v1.3c0 3.2-.6 4.7-4.5 4.7h-11C2.6 17.5 2 16 2 12.8z"/></g></symbol><symbol id="i-star" viewBox="1017 3713 13 13" fill="none"><path d="M1021.3 3717.1L1023 3713.8C1023.2 3713.4 1023.8 3713.4 1024 3713.8L1025.7 3717.1L1029.5 3717.7C1030 3717.7 1030.2 3718.3 1029.8 3718.6L1027.1 3721.2L1027.7 3724.8C1027.8 3725.3 1027.3 3725.7 1026.9 3725.4L1023.5 3723.7L1020.1 3725.4C1019.7 3725.7 1019.2 3725.3 1019.3 3724.8L1019.9 3721.2L1017.2 3718.6C1016.8 3718.3 1017 3717.7 1017.5 3717.7L1021.3 3717.1Z" fill="currentColor"/></symbol><symbol id="i-tab-investor" viewBox="1211 1094.5 19.5 20" fill="none"><path d="M1221.5 1096H1222.5C1223.4 1096 1223.9 1096 1224.3 1096.1C1225.3 1096.4 1226.1 1097.2 1226.4 1098.2C1226.5 1098.6 1226.5 1099.1 1226.5 1100H1213.5C1212.4 1100 1211.5 1099.1 1211.5 1098M1211.5 1098C1211.5 1096.9 1212.4 1096 1213.5 1096H1216.5M1211.5 1098V1108C1211.5 1110.8 1211.5 1112.2 1212.4 1113.1C1213.3 1114 1214.7 1114 1217.5 1114H1223.5C1226.3 1114 1227.7 1114 1228.6 1113.1C1229.5 1112.2 1229.5 1110.8 1229.5 1108V1106C1229.5 1103.2 1229.5 1101.8 1228.6 1100.9C1227.7 1100 1226.3 1100 1223.5 1100H1215.5M1229.5 1105H1227.5C1227 1105 1226.8 1105 1226.6 1105.1C1226.1 1105.2 1225.7 1105.6 1225.6 1106.1C1225.5 1106.3 1225.5 1106.5 1225.5 1107C1225.5 1107.5 1225.5 1107.7 1225.6 1107.9C1225.7 1108.4 1226.1 1108.8 1226.6 1109C1226.8 1109 1227 1109 1227.5 1109H1229.5M1219 1095C1220.9 1095 1222.5 1096.6 1222.5 1098.5C1222.5 1099 1222.4 1099.6 1222.2 1100H1215.8C1215.6 1099.6 1215.5 1099 1215.5 1098.5C1215.5 1096.6 1217.1 1095 1219 1095Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="i-tab-long" viewBox="890 1095 21 19" fill="none"><path d="M894.5 1101.5H892.5C891.6 1101.5 891.1 1101.5 890.8 1101.2C890.5 1100.9 890.5 1100.4 890.5 1099.5V1097.5C890.5 1096.4 891.4 1095.5 892.5 1095.5M894.5 1101.5V1097.5C894.5 1096.4 893.6 1095.5 892.5 1095.5M894.5 1101.5V1111.5C894.5 1112.6 895.4 1113.5 896.5 1113.5M892.5 1095.5H903.5C905.4 1095.5 906.3 1095.5 906.9 1096.1C907.5 1096.7 907.5 1097.6 907.5 1099.5V1108.5M896.5 1113.5H908.5C909.6 1113.5 910.5 1112.6 910.5 1111.5V1110.5C910.5 1109.6 910.5 1109.1 910.2 1108.8C909.9 1108.5 909.4 1108.5 908.5 1108.5H900.5C899.6 1108.5 899.1 1108.5 898.8 1108.8C898.5 1109.1 898.5 1109.6 898.5 1110.5V1111.5C898.5 1112.6 897.6 1113.5 896.5 1113.5ZM898.5 1100.5H903.5M898.5 1103.5H901.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="i-tab-owner" viewBox="612 1095 19 19" fill="none"><path d="M622.4 1095.5L612.5 1100M621.5 1096.4V1100M621.5 1100V1113.5M621.5 1100L626.9 1102.7M621.5 1113.5H617C615.3 1113.5 614.5 1113.5 613.9 1113C613.4 1112.5 613.4 1111.6 613.4 1109.9V1100M621.5 1113.5H625.6M626.9 1102.7L629.6 1104.1M626.9 1102.7V1100M629.6 1104.1L630.5 1104.5M629.6 1104.1V1109.9C629.6 1111.6 629.6 1112.5 629.1 1113C628.6 1113.5 627.7 1113.5 626 1113.5H625.6M625.6 1113.5V1109.9M617 1103.6H617.9M617 1107.2H617.9M625.1 1106.3H626" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol></svg>
+  <header class="site-nav">
+    <div class="wrap">
+      <div class="nav-left">
+        <a href="index.html" aria-label="pirx.rent — strona główna"><svg class="logo" viewBox="340 23 164 54" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="pirx.rent"><path d="M404.9 59.1V42.9H409.3V44.6C410.2 43.5 411.2 42.6 413.1 42.6C416.1 42.6 418.7 45.1 418.7 49.1V49.2C418.7 53.2 416.1 55.7 413.1 55.7C411.2 55.7 410.1 54.9 409.3 53.9V59.1H404.9ZM411.8 52C413.2 52 414.3 50.9 414.3 49.2V49.1C414.3 47.5 413.2 46.3 411.8 46.3C410.4 46.3 409.2 47.5 409.2 49.1V49.2C409.2 50.9 410.4 52 411.8 52Z" fill="#1A1A1A"/>
+<path d="M420.6 41.8V38.5H425.1V41.8H420.6ZM420.7 55.4V42.9H425V55.4H420.7Z" fill="#1A1A1A"/>
+<path d="M427.5 55.4V42.9H431.9V45.4C432.6 43.7 433.8 42.6 435.8 42.7V47.3H435.5C433.2 47.3 431.9 48.7 431.9 51.6V55.4H427.5Z" fill="#1A1A1A"/>
+<path d="M436.4 55.4L440.6 49.1L436.5 42.9H441.2L443.1 46L444.9 42.9H449.6L445.4 49.1L449.7 55.4H444.9L443 52.2L441 55.4H436.4Z" fill="#1A1A1A"/>
+<path d="M450.8 55.4V50.9H455.4V55.4H450.8Z" fill="#1A1A1A"/>
+<path d="M457.6 55.4V42.9H462V45.4C462.7 43.7 463.9 42.6 465.9 42.7V47.3H465.6C463.3 47.3 462 48.7 462 51.6V55.4H457.6Z" fill="#1A1A1A"/>
+<path d="M473.5 55.7C469.5 55.7 466.8 53.1 466.8 49.2V49.2C466.8 45.5 469.4 42.6 473.1 42.6C477.4 42.6 479.4 45.8 479.4 49.5C479.4 49.8 479.4 50.1 479.4 50.4H471C471.3 51.8 472.3 52.5 473.7 52.5C474.7 52.5 475.6 52.1 476.5 51.2L478.9 53.2C477.7 54.7 476 55.7 473.5 55.7ZM470.9 48.2H475.3C475.1 46.8 474.3 45.9 473.1 45.9C471.9 45.9 471.1 46.8 470.9 48.2Z" fill="#1A1A1A"/>
+<path d="M481.3 55.4V42.9H485.7V44.7C486.5 43.6 487.6 42.6 489.4 42.6C492.1 42.6 493.7 44.4 493.7 47.2V55.4H489.3V48.7C489.3 47.3 488.6 46.6 487.5 46.6C486.5 46.6 485.7 47.3 485.7 48.7V55.4H481.3Z" fill="#1A1A1A"/>
+<path d="M500.9 55.7C498.3 55.7 496.7 54.5 496.7 51.6V46.5H495.2V42.9H496.7V39.8H501.1V42.9H504V46.5H501.1V50.7C501.1 51.6 501.5 51.9 502.3 51.9C502.9 51.9 503.4 51.8 504 51.5V55C503.2 55.4 502.1 55.7 500.9 55.7Z" fill="#1A1A1A"/>
+<path d="M340.3 53.7L349.9 35.5L348.3 30.5C343.2 35.4 340 42.3 340 50C340 51.2 340.1 52.5 340.3 53.7Z" fill="#F8C512"/>
+<path d="M349.9 35.5L340.3 53.7L350.4 52.2L355 51.6L349.9 35.5Z" fill="#FAD513"/>
+<path d="M349.9 35.5L355 51.5L367.5 23C367.4 23 367.2 23 367 23C359.8 23 353.2 25.8 348.3 30.5L349.9 35.5Z" fill="#FBB110"/>
+<path d="M367.6 23L355 51.6L364.3 43.9L367.6 23Z" fill="#F98D0B"/>
+<path d="M367.6 23L364.3 43.9L375.6 33.7L367.6 23Z" fill="#F8C512"/>
+<path d="M367.6 23L375.6 33.7L382.1 27.6C378 24.8 373 23.1 367.6 23Z" fill="#F98D0B"/>
+<path d="M375.6 33.7L364.3 43.9L379 43L382.1 27.6L375.6 33.7Z" fill="#FBB110"/>
+<path d="M382.1 27.6L379 43L393 42.8C391.3 36.5 387.4 31.2 382.1 27.6Z" fill="#FAD513"/>
+<path d="M393 42.8L379 43L380.4 59.5L389 48.2L393 42.8Z" fill="#F98D0B"/>
+<path d="M393 42.8L389 48.2L389.9 64.3C392.5 60.2 394 55.3 394 50C394 47.5 393.7 45.1 393 42.8Z" fill="#FBB110"/>
+<path d="M389.9 64.3L389 48.2L380.4 59.5L381.6 72.7C384.9 70.6 387.8 67.7 389.9 64.3Z" fill="#F8C512"/>
+<path d="M380.4 59.5L379 43L372.6 53.4L373 65.2L380.4 59.5Z" fill="#FAD513"/>
+<path d="M380.4 59.5L373 65.2L371.8 76.6C375.4 75.9 378.7 74.6 381.6 72.7L380.4 59.5Z" fill="#FBB110"/>
+<path d="M371.8 76.6L373 65.2L359 75.8C361.5 76.6 364.2 77 367 77C368.6 77 370.2 76.9 371.8 76.6Z" fill="#F98D0B"/>
+<path d="M359 75.8L373 65.2L372.6 53.4L359 75.8Z" fill="#FBB110"/>
+<path d="M359 75.8L372.6 53.4L379 43L366.7 51.5L363.9 60.4L359 75.8Z" fill="#F4BF2D"/>
+<path d="M355 51.6L366.7 51.5L379 43L364.3 43.9L355 51.6Z" fill="#FAD513"/>
+<path d="M366.7 51.5L355 51.6L360.3 56.8L363.9 60.4L366.7 51.5Z" fill="#FBB110"/>
+<path d="M360.3 56.8L355 51.6L350.4 52.2L348.3 69.5L355.7 61.6L360.3 56.8Z" fill="#F98D0B"/>
+<path d="M348.3 69.5L350.4 52.2L340.3 53.7C341.1 59.8 344 65.3 348.3 69.5Z" fill="#FBB110"/>
+<path d="M355.7 61.6L359 75.8L363.9 60.4L360.3 56.8L355.7 61.6Z" fill="#FAD513"/>
+<path d="M359 75.8L355.7 61.6L348.3 69.5C351.3 72.3 354.9 74.5 359 75.8Z" fill="#F8C512"/></svg></a>
+        <nav aria-label="Główne menu">
+          <ul class="nav-menu">
+        <li class="nav-item-pirx" data-dropdown>
+          <button class="nav-link-pirx" type="button" aria-expanded="false" aria-controls="sub-why"><span class="marker">Dlaczego PIRX?</span><svg class="ico" viewBox="0 0 8 6" aria-hidden="true" focusable="false"><use href="#i-chevron" width="8" height="6"/></svg></button>
+          <div class="submenu" id="sub-why"><a href="proces.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-route" width="24" height="24"/></svg><span>Jak to działa?</span></a><a href="o-nas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chat" width="24" height="24"/></svg><span>O nas</span></a></div>
+        </li>
+        <li class="nav-item-pirx" data-dropdown>
+          <button class="nav-link-pirx" type="button" aria-expanded="false" aria-controls="sub-uslugi"><span class="marker">Nasze usługi</span><svg class="ico" viewBox="0 0 8 6" aria-hidden="true" focusable="false"><use href="#i-chevron" width="8" height="6"/></svg></button>
+          <div class="submenu" id="sub-uslugi"><a href="oferta-ogloszenia.html"><svg class="ico" viewBox="354 2378 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M359.3 2384.6L359.1 2383.9L359.1 2383.9L359.3 2384.6ZM359.3 2394.6L359.1 2395.3L359.1 2395.3L359.3 2394.6ZM366.4 2404.7C366.8 2404.9 367.3 2404.7 367.5 2404.4C367.7 2404 367.5 2403.5 367.2 2403.3L366.8 2404L366.4 2404.7ZM364.5 2402.7L364.8 2402.1L364.8 2402.1L364.5 2402.7ZM361.6 2395.7C361.7 2395.3 361.4 2394.9 361 2394.9C360.5 2394.8 360.2 2395.1 360.1 2395.5L360.9 2395.6L361.6 2395.7ZM380 2389.6H379.3C379.3 2392.2 378.7 2394.4 377.9 2396.1C377.1 2397.7 376.1 2398.5 375.2 2398.5V2399.2V2400C377 2400 378.4 2398.5 379.3 2396.7C380.2 2394.9 380.8 2392.3 380.8 2389.6H380ZM375.2 2399.2V2398.5C374.3 2398.5 373.3 2397.7 372.5 2396.1C371.7 2394.4 371.2 2392.2 371.2 2389.6H370.4H369.7C369.7 2392.3 370.2 2394.9 371.1 2396.7C372 2398.5 373.4 2400 375.2 2400V2399.2ZM370.4 2389.6H371.2C371.2 2387 371.7 2384.8 372.5 2383.2C373.3 2381.5 374.3 2380.8 375.2 2380.8V2380V2379.3C373.4 2379.3 372 2380.7 371.1 2382.5C370.2 2384.3 369.7 2386.9 369.7 2389.6H370.4ZM375.2 2380V2380.8C376.1 2380.8 377.1 2381.5 377.9 2383.2C378.7 2384.8 379.3 2387 379.3 2389.6H380H380.8C380.8 2386.9 380.2 2384.3 379.3 2382.5C378.4 2380.7 377 2379.3 375.2 2379.3V2380ZM375.2 2380V2379.3C373.2 2379.3 370.3 2380 367.3 2380.9C364.3 2381.9 361.3 2383 359.1 2383.9L359.3 2384.6L359.6 2385.3C361.8 2384.4 364.8 2383.3 367.8 2382.4C370.7 2381.4 373.5 2380.8 375.2 2380.8V2380ZM359.3 2384.6L359.1 2383.9C356.7 2384.9 355.3 2387.1 355.3 2389.6H356H356.8C356.8 2387.7 357.9 2386 359.6 2385.3L359.3 2384.6ZM356 2389.6H355.3C355.3 2392.1 356.7 2394.3 359.1 2395.3L359.3 2394.6L359.6 2393.9C357.9 2393.2 356.8 2391.5 356.8 2389.6H356ZM359.3 2394.6L359.1 2395.3C361.3 2396.2 364.3 2397.3 367.3 2398.3C370.3 2399.2 373.2 2400 375.2 2400V2399.2V2398.5C373.5 2398.5 370.7 2397.8 367.8 2396.8C364.8 2395.9 361.8 2394.8 359.6 2393.9L359.3 2394.6ZM366.8 2404L367.2 2403.3L364.8 2402.1L364.5 2402.7L364.1 2403.4L366.4 2404.7L366.8 2404ZM364.5 2402.7L364.8 2402.1C362.6 2400.8 361.3 2398.3 361.6 2395.7L360.9 2395.6L360.1 2395.5C359.7 2398.7 361.3 2401.8 364.1 2403.4L364.5 2402.7Z" fill="currentColor"/></svg><span>Ogłoszenia</span></a><a href="oferta-goscie.html"><svg class="ico" viewBox="786.7 2378 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M788.7 2402H812.7M800.7 2385.5C795.8 2385.5 791.7 2389.1 791.1 2393.8C791.1 2394.4 790.5 2394.9 789.9 2395.3C789.4 2395.6 789.1 2396.1 789 2396.7L788.7 2397.9H812.7L812.4 2396.7C812.3 2396.1 811.9 2395.6 811.4 2395.3C810.9 2394.9 810.3 2394.4 810.2 2393.8C809.6 2389.1 805.6 2385.5 800.7 2385.5ZM800.7 2385.5V2382M800.7 2382H797.7M800.7 2382H803.7M809.1 2384.4L808.5 2385.5M812.1 2387.3L810.9 2387.9M792.3 2384.4L792.9 2385.5M790.5 2387.9L789.3 2387.3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/></svg><span>Goście</span></a><a href="oferta-housekeeping.html"><svg class="ico" viewBox="1219.3 2378 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M1232.1 2388.4H1243.1C1243.7 2388.4 1244 2388.4 1244.2 2388.6C1244.4 2388.8 1244.4 2389.1 1244.3 2389.7L1243.5 2399.6C1243.4 2401.7 1243.3 2402.7 1242.6 2403.4C1241.9 2404 1240.9 2404 1238.8 2404H1233.3C1231.2 2404 1230.1 2404 1229.4 2403.4C1228.4 2402.4 1228.5 2400.5 1228.4 2399.2M1229.7 2387.2C1226.2 2387.2 1224.5 2387.2 1223.4 2388.2C1222.3 2389.1 1222.3 2390.7 1222.3 2393.8V2394.8C1222.3 2396.9 1222.3 2397.9 1223.1 2398.6C1223.8 2399.2 1224.9 2399.2 1227.2 2399.2C1229.5 2399.2 1230.7 2399.2 1231.4 2398.6C1232.1 2397.9 1232.1 2396.9 1232.1 2394.8V2388.3C1232.1 2387.8 1232.1 2387.5 1231.9 2387.4C1231.8 2387.2 1231.5 2387.2 1230.9 2387.2H1229.7ZM1229.7 2387.2C1230.1 2383.1 1232.7 2380 1235.8 2380C1239.1 2380 1241.9 2383.8 1241.9 2388.4M1222.3 2394.4H1232.1M1232.1 2393.2H1243.1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/></svg><span>Housekeeping</span></a><a href="oferta-serwis-techniczny.html"><svg class="ico" viewBox="354 2712 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M366.7 2724.7L360 2718M367.7 2729.3L375.2 2736.8C375.9 2737.5 377.1 2737.5 377.8 2736.8L378.8 2735.8C379.5 2735.1 379.5 2733.9 378.8 2733.2L371.3 2725.7M358.7 2720L362 2716.7L358 2714.7L356.7 2716L358.7 2720ZM378.6 2722C380 2720.6 380.3 2718.7 379.7 2717L377.8 2718.9H375.1V2716.2L377 2714.3C375.4 2713.7 373.4 2714 372 2715.4C370.7 2716.7 370.3 2718.7 371 2720.4L362.4 2729C360.7 2728.3 358.7 2728.7 357.4 2730C356 2731.4 355.7 2733.4 356.3 2735L358.2 2733.1H360.9V2735.8L359 2737.7C360.7 2738.3 362.6 2738 364 2736.6C365.3 2735.3 365.7 2733.3 365 2731.7L373.7 2723C375.3 2723.7 377.3 2723.3 378.6 2722Z" stroke-width="1.5" stroke-linejoin="round" stroke="currentColor"/></svg><span>Serwis techniczny</span></a><a href="oferta-przychody.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-pie" width="24" height="24"/></svg><span>Przychody</span></a></div>
+        </li>
+        <li class="nav-item-pirx" data-dropdown>
+          <button class="nav-link-pirx" type="button" aria-expanded="false" aria-controls="sub-wiedza"><span class="marker">Wiedza</span><svg class="ico" viewBox="0 0 8 6" aria-hidden="true" focusable="false"><use href="#i-chevron" width="8" height="6"/></svg></button>
+          <div class="submenu" id="sub-wiedza"><a href="blog.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-news" width="24" height="24"/></svg><span>Blog</span></a><a href="faq.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-help" width="24" height="24"/></svg><span>FAQ</span></a></div>
+        </li>
+        <li class="nav-item-pirx"><a class="nav-link-pirx" href="cennik.html"><span class="marker">Cennik</span></a></li>
+        <li class="nav-item-pirx"><a class="nav-link-pirx" href="kontakt.html"><span class="marker">Kontakt</span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <a class="btn-pirx btn-pirx--outline nav-phone" href="tel:+48792937176"><svg class="ico" viewBox="0 0 17.5 17.5" aria-hidden="true" focusable="false"><use href="#i-phone" width="17.5" height="17.5"/></svg>+48 792 937 176</a>
+      <div class="nav-mobile-actions">
+        <a class="icon-btn" href="tel:+48792937176" aria-label="Zadzwoń: +48 792 937 176"><svg class="ico" viewBox="0 0 17.5 17.5" aria-hidden="true" focusable="false"><use href="#i-phone" width="17.5" height="17.5"/></svg></a>
+        <button class="icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMobile" aria-controls="menuMobile" aria-label="Otwórz menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-menu" width="24" height="24"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuMobile" aria-label="Menu">
+    <div class="menu-mobile__top">
+      <a href="index.html" aria-label="pirx.rent — strona główna"><svg class="logo" viewBox="340 23 164 54" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="pirx.rent"><path d="M404.9 59.1V42.9H409.3V44.6C410.2 43.5 411.2 42.6 413.1 42.6C416.1 42.6 418.7 45.1 418.7 49.1V49.2C418.7 53.2 416.1 55.7 413.1 55.7C411.2 55.7 410.1 54.9 409.3 53.9V59.1H404.9ZM411.8 52C413.2 52 414.3 50.9 414.3 49.2V49.1C414.3 47.5 413.2 46.3 411.8 46.3C410.4 46.3 409.2 47.5 409.2 49.1V49.2C409.2 50.9 410.4 52 411.8 52Z" fill="#1A1A1A"/>
+<path d="M420.6 41.8V38.5H425.1V41.8H420.6ZM420.7 55.4V42.9H425V55.4H420.7Z" fill="#1A1A1A"/>
+<path d="M427.5 55.4V42.9H431.9V45.4C432.6 43.7 433.8 42.6 435.8 42.7V47.3H435.5C433.2 47.3 431.9 48.7 431.9 51.6V55.4H427.5Z" fill="#1A1A1A"/>
+<path d="M436.4 55.4L440.6 49.1L436.5 42.9H441.2L443.1 46L444.9 42.9H449.6L445.4 49.1L449.7 55.4H444.9L443 52.2L441 55.4H436.4Z" fill="#1A1A1A"/>
+<path d="M450.8 55.4V50.9H455.4V55.4H450.8Z" fill="#1A1A1A"/>
+<path d="M457.6 55.4V42.9H462V45.4C462.7 43.7 463.9 42.6 465.9 42.7V47.3H465.6C463.3 47.3 462 48.7 462 51.6V55.4H457.6Z" fill="#1A1A1A"/>
+<path d="M473.5 55.7C469.5 55.7 466.8 53.1 466.8 49.2V49.2C466.8 45.5 469.4 42.6 473.1 42.6C477.4 42.6 479.4 45.8 479.4 49.5C479.4 49.8 479.4 50.1 479.4 50.4H471C471.3 51.8 472.3 52.5 473.7 52.5C474.7 52.5 475.6 52.1 476.5 51.2L478.9 53.2C477.7 54.7 476 55.7 473.5 55.7ZM470.9 48.2H475.3C475.1 46.8 474.3 45.9 473.1 45.9C471.9 45.9 471.1 46.8 470.9 48.2Z" fill="#1A1A1A"/>
+<path d="M481.3 55.4V42.9H485.7V44.7C486.5 43.6 487.6 42.6 489.4 42.6C492.1 42.6 493.7 44.4 493.7 47.2V55.4H489.3V48.7C489.3 47.3 488.6 46.6 487.5 46.6C486.5 46.6 485.7 47.3 485.7 48.7V55.4H481.3Z" fill="#1A1A1A"/>
+<path d="M500.9 55.7C498.3 55.7 496.7 54.5 496.7 51.6V46.5H495.2V42.9H496.7V39.8H501.1V42.9H504V46.5H501.1V50.7C501.1 51.6 501.5 51.9 502.3 51.9C502.9 51.9 503.4 51.8 504 51.5V55C503.2 55.4 502.1 55.7 500.9 55.7Z" fill="#1A1A1A"/>
+<path d="M340.3 53.7L349.9 35.5L348.3 30.5C343.2 35.4 340 42.3 340 50C340 51.2 340.1 52.5 340.3 53.7Z" fill="#F8C512"/>
+<path d="M349.9 35.5L340.3 53.7L350.4 52.2L355 51.6L349.9 35.5Z" fill="#FAD513"/>
+<path d="M349.9 35.5L355 51.5L367.5 23C367.4 23 367.2 23 367 23C359.8 23 353.2 25.8 348.3 30.5L349.9 35.5Z" fill="#FBB110"/>
+<path d="M367.6 23L355 51.6L364.3 43.9L367.6 23Z" fill="#F98D0B"/>
+<path d="M367.6 23L364.3 43.9L375.6 33.7L367.6 23Z" fill="#F8C512"/>
+<path d="M367.6 23L375.6 33.7L382.1 27.6C378 24.8 373 23.1 367.6 23Z" fill="#F98D0B"/>
+<path d="M375.6 33.7L364.3 43.9L379 43L382.1 27.6L375.6 33.7Z" fill="#FBB110"/>
+<path d="M382.1 27.6L379 43L393 42.8C391.3 36.5 387.4 31.2 382.1 27.6Z" fill="#FAD513"/>
+<path d="M393 42.8L379 43L380.4 59.5L389 48.2L393 42.8Z" fill="#F98D0B"/>
+<path d="M393 42.8L389 48.2L389.9 64.3C392.5 60.2 394 55.3 394 50C394 47.5 393.7 45.1 393 42.8Z" fill="#FBB110"/>
+<path d="M389.9 64.3L389 48.2L380.4 59.5L381.6 72.7C384.9 70.6 387.8 67.7 389.9 64.3Z" fill="#F8C512"/>
+<path d="M380.4 59.5L379 43L372.6 53.4L373 65.2L380.4 59.5Z" fill="#FAD513"/>
+<path d="M380.4 59.5L373 65.2L371.8 76.6C375.4 75.9 378.7 74.6 381.6 72.7L380.4 59.5Z" fill="#FBB110"/>
+<path d="M371.8 76.6L373 65.2L359 75.8C361.5 76.6 364.2 77 367 77C368.6 77 370.2 76.9 371.8 76.6Z" fill="#F98D0B"/>
+<path d="M359 75.8L373 65.2L372.6 53.4L359 75.8Z" fill="#FBB110"/>
+<path d="M359 75.8L372.6 53.4L379 43L366.7 51.5L363.9 60.4L359 75.8Z" fill="#F4BF2D"/>
+<path d="M355 51.6L366.7 51.5L379 43L364.3 43.9L355 51.6Z" fill="#FAD513"/>
+<path d="M366.7 51.5L355 51.6L360.3 56.8L363.9 60.4L366.7 51.5Z" fill="#FBB110"/>
+<path d="M360.3 56.8L355 51.6L350.4 52.2L348.3 69.5L355.7 61.6L360.3 56.8Z" fill="#F98D0B"/>
+<path d="M348.3 69.5L350.4 52.2L340.3 53.7C341.1 59.8 344 65.3 348.3 69.5Z" fill="#FBB110"/>
+<path d="M355.7 61.6L359 75.8L363.9 60.4L360.3 56.8L355.7 61.6Z" fill="#FAD513"/>
+<path d="M359 75.8L355.7 61.6L348.3 69.5C351.3 72.3 354.9 74.5 359 75.8Z" fill="#F8C512"/></svg></a>
+      <div class="d-flex gap-2">
+        <a class="icon-btn" href="tel:+48792937176" aria-label="Zadzwoń: +48 792 937 176"><svg class="ico" viewBox="0 0 17.5 17.5" aria-hidden="true" focusable="false"><use href="#i-phone" width="17.5" height="17.5"/></svg></a>
+        <button class="icon-btn" type="button" data-bs-dismiss="offcanvas" aria-label="Zamknij menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-close" width="24" height="24"/></svg></button>
+      </div>
+    </div>
+    <div class="offcanvas-body">
+      <nav aria-label="Menu mobilne">
+        <ul class="mm-links">
+          <li>
+            <div class="mm-row">
+              <button class="mm-label" type="button" data-bs-toggle="collapse" data-bs-target="#mm-why" aria-expanded="false" aria-controls="mm-why">Dlaczego PIRX?</button>
+              <button class="mm-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mm-why" aria-expanded="false" aria-controls="mm-why" aria-label="Rozwiń: Dlaczego PIRX?"><svg class="ico" viewBox="0 0 12 7" aria-hidden="true" focusable="false"><use href="#i-faq-chevron" width="12" height="7"/></svg></button>
+            </div>
+            <div class="collapse" id="mm-why"><div class="mm-sub"><a href="proces.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-route" width="24" height="24"/></svg><span>Jak to działa?</span></a><a href="o-nas.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chat" width="24" height="24"/></svg><span>O nas</span></a></div></div>
+          </li>
+          <li>
+            <div class="mm-row">
+              <button class="mm-label" type="button" data-bs-toggle="collapse" data-bs-target="#mm-uslugi" aria-expanded="false" aria-controls="mm-uslugi">Nasze usługi</button>
+              <button class="mm-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mm-uslugi" aria-expanded="false" aria-controls="mm-uslugi" aria-label="Rozwiń: Nasze usługi"><svg class="ico" viewBox="0 0 12 7" aria-hidden="true" focusable="false"><use href="#i-faq-chevron" width="12" height="7"/></svg></button>
+            </div>
+            <div class="collapse" id="mm-uslugi"><div class="mm-sub"><a href="oferta-ogloszenia.html"><svg class="ico" viewBox="354 2378 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M359.3 2384.6L359.1 2383.9L359.1 2383.9L359.3 2384.6ZM359.3 2394.6L359.1 2395.3L359.1 2395.3L359.3 2394.6ZM366.4 2404.7C366.8 2404.9 367.3 2404.7 367.5 2404.4C367.7 2404 367.5 2403.5 367.2 2403.3L366.8 2404L366.4 2404.7ZM364.5 2402.7L364.8 2402.1L364.8 2402.1L364.5 2402.7ZM361.6 2395.7C361.7 2395.3 361.4 2394.9 361 2394.9C360.5 2394.8 360.2 2395.1 360.1 2395.5L360.9 2395.6L361.6 2395.7ZM380 2389.6H379.3C379.3 2392.2 378.7 2394.4 377.9 2396.1C377.1 2397.7 376.1 2398.5 375.2 2398.5V2399.2V2400C377 2400 378.4 2398.5 379.3 2396.7C380.2 2394.9 380.8 2392.3 380.8 2389.6H380ZM375.2 2399.2V2398.5C374.3 2398.5 373.3 2397.7 372.5 2396.1C371.7 2394.4 371.2 2392.2 371.2 2389.6H370.4H369.7C369.7 2392.3 370.2 2394.9 371.1 2396.7C372 2398.5 373.4 2400 375.2 2400V2399.2ZM370.4 2389.6H371.2C371.2 2387 371.7 2384.8 372.5 2383.2C373.3 2381.5 374.3 2380.8 375.2 2380.8V2380V2379.3C373.4 2379.3 372 2380.7 371.1 2382.5C370.2 2384.3 369.7 2386.9 369.7 2389.6H370.4ZM375.2 2380V2380.8C376.1 2380.8 377.1 2381.5 377.9 2383.2C378.7 2384.8 379.3 2387 379.3 2389.6H380H380.8C380.8 2386.9 380.2 2384.3 379.3 2382.5C378.4 2380.7 377 2379.3 375.2 2379.3V2380ZM375.2 2380V2379.3C373.2 2379.3 370.3 2380 367.3 2380.9C364.3 2381.9 361.3 2383 359.1 2383.9L359.3 2384.6L359.6 2385.3C361.8 2384.4 364.8 2383.3 367.8 2382.4C370.7 2381.4 373.5 2380.8 375.2 2380.8V2380ZM359.3 2384.6L359.1 2383.9C356.7 2384.9 355.3 2387.1 355.3 2389.6H356H356.8C356.8 2387.7 357.9 2386 359.6 2385.3L359.3 2384.6ZM356 2389.6H355.3C355.3 2392.1 356.7 2394.3 359.1 2395.3L359.3 2394.6L359.6 2393.9C357.9 2393.2 356.8 2391.5 356.8 2389.6H356ZM359.3 2394.6L359.1 2395.3C361.3 2396.2 364.3 2397.3 367.3 2398.3C370.3 2399.2 373.2 2400 375.2 2400V2399.2V2398.5C373.5 2398.5 370.7 2397.8 367.8 2396.8C364.8 2395.9 361.8 2394.8 359.6 2393.9L359.3 2394.6ZM366.8 2404L367.2 2403.3L364.8 2402.1L364.5 2402.7L364.1 2403.4L366.4 2404.7L366.8 2404ZM364.5 2402.7L364.8 2402.1C362.6 2400.8 361.3 2398.3 361.6 2395.7L360.9 2395.6L360.1 2395.5C359.7 2398.7 361.3 2401.8 364.1 2403.4L364.5 2402.7Z" fill="currentColor"/></svg><span>Ogłoszenia</span></a><a href="oferta-goscie.html"><svg class="ico" viewBox="786.7 2378 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M788.7 2402H812.7M800.7 2385.5C795.8 2385.5 791.7 2389.1 791.1 2393.8C791.1 2394.4 790.5 2394.9 789.9 2395.3C789.4 2395.6 789.1 2396.1 789 2396.7L788.7 2397.9H812.7L812.4 2396.7C812.3 2396.1 811.9 2395.6 811.4 2395.3C810.9 2394.9 810.3 2394.4 810.2 2393.8C809.6 2389.1 805.6 2385.5 800.7 2385.5ZM800.7 2385.5V2382M800.7 2382H797.7M800.7 2382H803.7M809.1 2384.4L808.5 2385.5M812.1 2387.3L810.9 2387.9M792.3 2384.4L792.9 2385.5M790.5 2387.9L789.3 2387.3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/></svg><span>Goście</span></a><a href="oferta-housekeeping.html"><svg class="ico" viewBox="1219.3 2378 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M1232.1 2388.4H1243.1C1243.7 2388.4 1244 2388.4 1244.2 2388.6C1244.4 2388.8 1244.4 2389.1 1244.3 2389.7L1243.5 2399.6C1243.4 2401.7 1243.3 2402.7 1242.6 2403.4C1241.9 2404 1240.9 2404 1238.8 2404H1233.3C1231.2 2404 1230.1 2404 1229.4 2403.4C1228.4 2402.4 1228.5 2400.5 1228.4 2399.2M1229.7 2387.2C1226.2 2387.2 1224.5 2387.2 1223.4 2388.2C1222.3 2389.1 1222.3 2390.7 1222.3 2393.8V2394.8C1222.3 2396.9 1222.3 2397.9 1223.1 2398.6C1223.8 2399.2 1224.9 2399.2 1227.2 2399.2C1229.5 2399.2 1230.7 2399.2 1231.4 2398.6C1232.1 2397.9 1232.1 2396.9 1232.1 2394.8V2388.3C1232.1 2387.8 1232.1 2387.5 1231.9 2387.4C1231.8 2387.2 1231.5 2387.2 1230.9 2387.2H1229.7ZM1229.7 2387.2C1230.1 2383.1 1232.7 2380 1235.8 2380C1239.1 2380 1241.9 2383.8 1241.9 2388.4M1222.3 2394.4H1232.1M1232.1 2393.2H1243.1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/></svg><span>Housekeeping</span></a><a href="oferta-serwis-techniczny.html"><svg class="ico" viewBox="354 2712 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M366.7 2724.7L360 2718M367.7 2729.3L375.2 2736.8C375.9 2737.5 377.1 2737.5 377.8 2736.8L378.8 2735.8C379.5 2735.1 379.5 2733.9 378.8 2733.2L371.3 2725.7M358.7 2720L362 2716.7L358 2714.7L356.7 2716L358.7 2720ZM378.6 2722C380 2720.6 380.3 2718.7 379.7 2717L377.8 2718.9H375.1V2716.2L377 2714.3C375.4 2713.7 373.4 2714 372 2715.4C370.7 2716.7 370.3 2718.7 371 2720.4L362.4 2729C360.7 2728.3 358.7 2728.7 357.4 2730C356 2731.4 355.7 2733.4 356.3 2735L358.2 2733.1H360.9V2735.8L359 2737.7C360.7 2738.3 362.6 2738 364 2736.6C365.3 2735.3 365.7 2733.3 365 2731.7L373.7 2723C375.3 2723.7 377.3 2723.3 378.6 2722Z" stroke-width="1.5" stroke-linejoin="round" stroke="currentColor"/></svg><span>Serwis techniczny</span></a><a href="oferta-przychody.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-pie" width="24" height="24"/></svg><span>Przychody</span></a></div></div>
+          </li>
+          <li>
+            <div class="mm-row">
+              <button class="mm-label" type="button" data-bs-toggle="collapse" data-bs-target="#mm-wiedza" aria-expanded="false" aria-controls="mm-wiedza">Wiedza</button>
+              <button class="mm-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mm-wiedza" aria-expanded="false" aria-controls="mm-wiedza" aria-label="Rozwiń: Wiedza"><svg class="ico" viewBox="0 0 12 7" aria-hidden="true" focusable="false"><use href="#i-faq-chevron" width="12" height="7"/></svg></button>
+            </div>
+            <div class="collapse" id="mm-wiedza"><div class="mm-sub"><a href="blog.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-news" width="24" height="24"/></svg><span>Blog</span></a><a href="faq.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-help" width="24" height="24"/></svg><span>FAQ</span></a></div></div>
+          </li>
+          <li><div class="mm-row"><a href="cennik.html">Cennik</a></div></li>
+          <li><div class="mm-row"><a href="kontakt.html">Kontakt</a></div></li>
+        </ul>
+      </nav>
+      <div class="mm-cta"><a class="btn-pirx btn-pirx--yellow" href="tel:+48792937176">+48 792 937 176</a></div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero__top">
+          <div class="hero__txt">
+            <h1 class="h-xl" id="hero-title">Pilotujemy Twój wynajem.</h1>
+            <p class="lead-pirx">Tak jak dobry pilot zawsze doprowadza misję do końca — my dbamy o Twoją nieruchomość od pierwszego kontaktu z gościem do ostatniej rezerwacji. Profesjonalnie. Bez turbulencji.</p>
+          </div>
+          <!-- TODO: animacja "pirx_story_anim_opt" z Figmy (rakieta + planeta) — wyeksportuj jako SVG -->
+          <div class="ph hero__art" role="img" aria-label="Ilustracja: rakieta i planeta">Ilustracja: rakieta i planeta<small>pirx_story_anim_opt</small></div>
+        </div>
+
+        <form class="calc" action="#" onsubmit="return false" aria-label="Kalkulator przychodu">
+          <label class="calc__field calc__field--address">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-pin" width="24" height="24"/></svg>
+            <span>
+              <span class="field__label">Adres twojego mieszkania</span>
+              <input class="field__input" type="text" name="adres" placeholder="np. Marszałkowska 12, Warszawa" autocomplete="street-address">
+            </span>
+          </label>
+          <label class="calc__field">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-bed" width="24" height="24"/></svg>
+            <span>
+              <span class="field__label">Liczba łóżek</span>
+              <input class="field__input" type="number" name="lozka" min="1" placeholder="np. 4" inputmode="numeric">
+            </span>
+          </label>
+          <div class="calc__field select" data-select>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-sofa" width="24" height="24"/></svg>
+            <span class="flex-grow-1">
+              <span class="field__label" id="std-label"><span class="d-lg-none">Standard wykończenia</span><span class="d-none d-lg-inline">Standard</span></span>
+              <input type="hidden" name="standard">
+              <button class="select__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="std-label">
+                <span class="select__value">Wybierz z listy</span><svg class="ico" viewBox="0 0 8 6" aria-hidden="true" focusable="false"><use href="#i-chevron" width="8" height="6"/></svg>
+              </button>
+            </span>
+            <!-- TODO: opcje standardu nie są opisane w Figmie — do uzupełnienia -->
+            <ul class="select__list" role="listbox" aria-labelledby="std-label">
+              <li role="option" data-value="podstawowy">Podstawowy</li>
+              <li role="option" data-value="dobry">Dobry</li>
+              <li role="option" data-value="wysoki">Wysoki</li>
+              <li role="option" data-value="premium">Premium</li>
+            </ul>
+          </div>
+          <button class="btn-pirx btn-pirx--yellow calc__btn" type="submit"><svg class="ico" viewBox="0 0 18 20" aria-hidden="true" focusable="false"><use href="#i-calc" width="18" height="20"/></svg>Oblicz przychód</button>
+        </form>
+
+        <ul class="counters">
+          <li><strong>20 mln zł</strong><span>Wartość nieruchomości pod zarządem</span></li>
+          <li><strong>5 000+</strong><span>Obsłużonych nocy</span></li>
+          <li><strong>85,5%</strong><span>Średnie obłożenie</span></li>
+          <li><strong>4,84/5</strong><span>Średnia ocena gości</span></li>
+          <li><strong>14%</strong><span>Maksymalna prowizja</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= DLA KOGO (zakładki) ================= -->
+    <section class="section bg-light-pirx target" aria-labelledby="target-title">
+      <div class="wrap">
+        <h2 class="h-lg text-center" id="target-title">Twoja nieruchomość. Twoja sytuacja.<br>Nasze rozwiązanie.</h2>
+
+        <div class="target-card">
+          <div class="target-tabs" role="tablist">
+            <button class="target-tab active" id="tab-wlasciciel" data-bs-toggle="tab" data-bs-target="#pane-wlasciciel" type="button" role="tab" aria-controls="pane-wlasciciel" aria-selected="true"><svg class="ico" viewBox="0 0 19 19" aria-hidden="true" focusable="false"><use href="#i-tab-owner" width="19" height="19"/></svg>Właściciel nieruchomości</button>
+            <button class="target-tab" id="tab-dlugo" data-bs-toggle="tab" data-bs-target="#pane-dlugo" type="button" role="tab" aria-controls="pane-dlugo" aria-selected="false"><svg class="ico" viewBox="0 0 21 19" aria-hidden="true" focusable="false"><use href="#i-tab-long" width="21" height="19"/></svg>Wynajmujący długoterminowo</button>
+            <button class="target-tab" id="tab-inwestor" data-bs-toggle="tab" data-bs-target="#pane-inwestor" type="button" role="tab" aria-controls="pane-inwestor" aria-selected="false"><svg class="ico" viewBox="0 0 19.5 20" aria-hidden="true" focusable="false"><use href="#i-tab-investor" width="19.5" height="20"/></svg>Inwestor</button>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="pane-wlasciciel" role="tabpanel" aria-labelledby="tab-wlasciciel" tabindex="0">
+              <div class="target-pane">
+                <!-- TODO: zdjęcie z Figmy (mężczyzna z laptopem, żółte tło) -->
+                <div class="ph ph--photo target-pane__img" role="img" aria-label="Zdjęcie: właściciel z laptopem">Zdjęcie<small>właściciel z laptopem</small></div>
+                <div class="target-pane__txt">
+                  <h3 class="target-pane__title">Każda nieruchomość ma potencjał.<br>Naszą rolą jest go uwolnić.</h3>
+                  <p class="lead-pirx">Nieważne czy masz mieszkanie w centrum miasta, apartament nad morzem czy dom, który stoi pusty przez większość roku — każda nieruchomość ma potencjał, który czeka na właściwego pilota. pirx.rent przejmuje stery w całości.</p>
+                  <ul class="feature-list">
+                    <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-clock" width="24" height="24"/></svg>Zarządzanie nieruchomościami 24/7</li>
+                    <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-camera" width="24" height="24"/></svg>Profesjonalna fotografia i optymalizacja ogłoszenia</li>
+                    <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-broom" width="24" height="24"/></svg>Sprzątanie i przygotowanie nieruchomości przed każdym gościem</li>
+                    <li><svg class="ico" viewBox="0 0 19.6 21.6" aria-hidden="true" focusable="false"><use href="#i-calendar" width="19.6" height="21.6"/></svg>Elastyczny kalendarz — blokujesz swoje terminy kiedy chcesz</li>
+                    <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-key" width="24" height="24"/></svg>Nieruchomość zawsze gotowa na Twój przyjazd</li>
+                  </ul>
+                  <a class="btn-pirx btn-pirx--dark" href="cennik.html">Sprawdź ofertę</a>
+                </div>
+              </div>
+            </div>
+            <!-- TODO: Figma ma treść tylko dla pierwszej zakładki — pozostałe do uzupełnienia -->
+            <div class="tab-pane fade" id="pane-dlugo" role="tabpanel" aria-labelledby="tab-dlugo" tabindex="0">
+              <div class="target-pane">
+                <div class="ph ph--photo target-pane__img" role="img" aria-label="Zdjęcie">Zdjęcie<small>wynajmujący długoterminowo</small></div>
+                <div class="target-pane__txt">
+                  <h3 class="target-pane__title">Najem długoterminowy to nie jedyna droga.</h3>
+                  <p class="lead-pirx">Treść tej zakładki nie jest jeszcze gotowa w projekcie.</p>
+                  <a class="btn-pirx btn-pirx--dark" href="cennik.html">Sprawdź ofertę</a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pane-inwestor" role="tabpanel" aria-labelledby="tab-inwestor" tabindex="0">
+              <div class="target-pane">
+                <div class="ph ph--photo target-pane__img" role="img" aria-label="Zdjęcie">Zdjęcie<small>inwestor</small></div>
+                <div class="target-pane__txt">
+                  <h3 class="target-pane__title">Inwestycja, która pracuje na siebie.</h3>
+                  <p class="lead-pirx">Treść tej zakładki nie jest jeszcze gotowa w projekcie.</p>
+                  <a class="btn-pirx btn-pirx--dark" href="cennik.html">Sprawdź ofertę</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= USŁUGI ================= -->
+    <section class="section services" aria-labelledby="services-title">
+      <div class="wrap">
+        <h2 class="h-lg services__title" id="services-title">Pełna obsługa nieruchomości<br>-od startu do lądowania.</h2>
+
+        <div class="services-grid">
+          <article class="svc">
+            <svg class="svc-ico" viewBox="341 2365 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="341" y="2365" width="54" height="54" rx="12" fill="#FFD000"/><path d="M359.3 2384.6L359.1 2383.9L359.1 2383.9L359.3 2384.6ZM359.3 2394.6L359.1 2395.3L359.1 2395.3L359.3 2394.6ZM366.4 2404.7C366.8 2404.9 367.3 2404.7 367.5 2404.4C367.7 2404 367.5 2403.5 367.2 2403.3L366.8 2404L366.4 2404.7ZM364.5 2402.7L364.8 2402.1L364.8 2402.1L364.5 2402.7ZM361.6 2395.7C361.7 2395.3 361.4 2394.9 361 2394.9C360.5 2394.8 360.2 2395.1 360.1 2395.5L360.9 2395.6L361.6 2395.7ZM380 2389.6H379.3C379.3 2392.2 378.7 2394.4 377.9 2396.1C377.1 2397.7 376.1 2398.5 375.2 2398.5V2399.2V2400C377 2400 378.4 2398.5 379.3 2396.7C380.2 2394.9 380.8 2392.3 380.8 2389.6H380ZM375.2 2399.2V2398.5C374.3 2398.5 373.3 2397.7 372.5 2396.1C371.7 2394.4 371.2 2392.2 371.2 2389.6H370.4H369.7C369.7 2392.3 370.2 2394.9 371.1 2396.7C372 2398.5 373.4 2400 375.2 2400V2399.2ZM370.4 2389.6H371.2C371.2 2387 371.7 2384.8 372.5 2383.2C373.3 2381.5 374.3 2380.8 375.2 2380.8V2380V2379.3C373.4 2379.3 372 2380.7 371.1 2382.5C370.2 2384.3 369.7 2386.9 369.7 2389.6H370.4ZM375.2 2380V2380.8C376.1 2380.8 377.1 2381.5 377.9 2383.2C378.7 2384.8 379.3 2387 379.3 2389.6H380H380.8C380.8 2386.9 380.2 2384.3 379.3 2382.5C378.4 2380.7 377 2379.3 375.2 2379.3V2380ZM375.2 2380V2379.3C373.2 2379.3 370.3 2380 367.3 2380.9C364.3 2381.9 361.3 2383 359.1 2383.9L359.3 2384.6L359.6 2385.3C361.8 2384.4 364.8 2383.3 367.8 2382.4C370.7 2381.4 373.5 2380.8 375.2 2380.8V2380ZM359.3 2384.6L359.1 2383.9C356.7 2384.9 355.3 2387.1 355.3 2389.6H356H356.8C356.8 2387.7 357.9 2386 359.6 2385.3L359.3 2384.6ZM356 2389.6H355.3C355.3 2392.1 356.7 2394.3 359.1 2395.3L359.3 2394.6L359.6 2393.9C357.9 2393.2 356.8 2391.5 356.8 2389.6H356ZM359.3 2394.6L359.1 2395.3C361.3 2396.2 364.3 2397.3 367.3 2398.3C370.3 2399.2 373.2 2400 375.2 2400V2399.2V2398.5C373.5 2398.5 370.7 2397.8 367.8 2396.8C364.8 2395.9 361.8 2394.8 359.6 2393.9L359.3 2394.6ZM366.8 2404L367.2 2403.3L364.8 2402.1L364.5 2402.7L364.1 2403.4L366.4 2404.7L366.8 2404ZM364.5 2402.7L364.8 2402.1C362.6 2400.8 361.3 2398.3 361.6 2395.7L360.9 2395.6L360.1 2395.5C359.7 2398.7 361.3 2401.8 364.1 2403.4L364.5 2402.7Z" fill="#1F1C17"/></svg>
+            <h3 class="h-md"><a href="oferta-ogloszenia.html">Ogłoszenia<svg class="ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow-circle" width="16" height="16"/></svg></a></h3>
+            <ul class="check-list check-list--tight">
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Sesja fotograficzna</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Tworzenie i optymalizacja ogłoszenia</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Wystawianie na Airbnb, Booking, Expedia, Agoda</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Ciągła optymalizacja pozycji w wyszukiwarkach</li>
+            </ul>
+          </article>
+          <article class="svc">
+            <svg class="svc-ico" viewBox="773.7 2365 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="773.7" y="2365" width="54" height="54" rx="12" fill="#FFD000"/><path d="M788.7 2402H812.7M800.7 2385.5C795.8 2385.5 791.7 2389.1 791.1 2393.8C791.1 2394.4 790.5 2394.9 789.9 2395.3C789.4 2395.6 789.1 2396.1 789 2396.7L788.7 2397.9H812.7L812.4 2396.7C812.3 2396.1 811.9 2395.6 811.4 2395.3C810.9 2394.9 810.3 2394.4 810.2 2393.8C809.6 2389.1 805.6 2385.5 800.7 2385.5ZM800.7 2385.5V2382M800.7 2382H797.7M800.7 2382H803.7M809.1 2384.4L808.5 2385.5M812.1 2387.3L810.9 2387.9M792.3 2384.4L792.9 2385.5M790.5 2387.9L789.3 2387.3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1C17"/></svg>
+            <h3 class="h-md"><a href="oferta-goscie.html">Goście<svg class="ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow-circle" width="16" height="16"/></svg></a></h3>
+            <ul class="check-list check-list--tight">
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Weryfikacja przed każdą rezerwacją</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Check-in i check-out</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Komunikacja 24/7</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Obsługa sytuacji kryzysowych i reklamacji</li>
+            </ul>
+          </article>
+          <article class="svc">
+            <svg class="svc-ico" viewBox="1206.3 2365 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="1206.3" y="2365" width="54" height="54" rx="12" fill="#FFD000"/><path d="M1232.1 2388.4H1243.1C1243.7 2388.4 1244 2388.4 1244.2 2388.6C1244.4 2388.8 1244.4 2389.1 1244.3 2389.7L1243.5 2399.6C1243.4 2401.7 1243.3 2402.7 1242.6 2403.4C1241.9 2404 1240.9 2404 1238.8 2404H1233.3C1231.2 2404 1230.1 2404 1229.4 2403.4C1228.4 2402.4 1228.5 2400.5 1228.4 2399.2M1229.7 2387.2C1226.2 2387.2 1224.5 2387.2 1223.4 2388.2C1222.3 2389.1 1222.3 2390.7 1222.3 2393.8V2394.8C1222.3 2396.9 1222.3 2397.9 1223.1 2398.6C1223.8 2399.2 1224.9 2399.2 1227.2 2399.2C1229.5 2399.2 1230.7 2399.2 1231.4 2398.6C1232.1 2397.9 1232.1 2396.9 1232.1 2394.8V2388.3C1232.1 2387.8 1232.1 2387.5 1231.9 2387.4C1231.8 2387.2 1231.5 2387.2 1230.9 2387.2H1229.7ZM1229.7 2387.2C1230.1 2383.1 1232.7 2380 1235.8 2380C1239.1 2380 1241.9 2383.8 1241.9 2388.4M1222.3 2394.4H1232.1M1232.1 2393.2H1243.1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#1F1C17"/></svg>
+            <h3 class="h-md"><a href="oferta-housekeeping.html">Housekeeping<svg class="ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow-circle" width="16" height="16"/></svg></a></h3>
+            <ul class="check-list check-list--tight">
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Profesjonalne sprzątanie po każdym pobycie</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Pościel i kosmetyki hotelowej jakości</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Przygotowanie nieruchomości przed każdym gościem</li>
+            </ul>
+          </article>
+          <article class="svc">
+            <svg class="svc-ico" viewBox="341 2699 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="341" y="2699" width="54" height="54" rx="12" fill="#FFD000"/><path d="M366.7 2724.7L360 2718M367.7 2729.3L375.2 2736.8C375.9 2737.5 377.1 2737.5 377.8 2736.8L378.8 2735.8C379.5 2735.1 379.5 2733.9 378.8 2733.2L371.3 2725.7M358.7 2720L362 2716.7L358 2714.7L356.7 2716L358.7 2720ZM378.6 2722C380 2720.6 380.3 2718.7 379.7 2717L377.8 2718.9H375.1V2716.2L377 2714.3C375.4 2713.7 373.4 2714 372 2715.4C370.7 2716.7 370.3 2718.7 371 2720.4L362.4 2729C360.7 2728.3 358.7 2728.7 357.4 2730C356 2731.4 355.7 2733.4 356.3 2735L358.2 2733.1H360.9V2735.8L359 2737.7C360.7 2738.3 362.6 2738 364 2736.6C365.3 2735.3 365.7 2733.3 365 2731.7L373.7 2723C375.3 2723.7 377.3 2723.3 378.6 2722Z" stroke-width="1.5" stroke-linejoin="round" stroke="#1F1C17"/></svg>
+            <h3 class="h-md"><a href="oferta-serwis-techniczny.html">Serwis techniczny<svg class="ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow-circle" width="16" height="16"/></svg></a></h3>
+            <ul class="check-list check-list--tight">
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Regularne inspekcje stanu</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Koordynacja napraw i serwisu technicznego</li>
+            </ul>
+          </article>
+          <!-- W Figmie "Przychody" występuje tylko w wersji mobilnej -->
+          <article class="svc d-lg-none">
+            <span class="tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-pie" width="24" height="24"/></svg></span>
+            <h3 class="h-md"><a href="oferta-przychody.html">Przychody<svg class="ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow-circle" width="16" height="16"/></svg></a></h3>
+            <ul class="check-list check-list--tight">
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Dynamiczny pricing reagujący na popyt, sezon i wydarzenia lokalne</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Miesięczny raport przychodów i kosztów</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Strategie maksymalizacji przychodu</li>
+            </ul>
+          </article>
+          <div class="mission-box">
+            <!-- TODO: ilustracja "kokpit" z Figmy -->
+            <div class="ph mission-box__art" role="img" aria-label="Ilustracja: kokpit">Ilustracja<small>kokpit</small></div>
+            <p class="txt-14"><strong>Od momentu gdy przekazujesz nam klucze — misja jest nasza.</strong> Nasza odpowiedzialność kończy się wtedy, gdy Ty jesteś zadowolony z wyników.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CENNIK ================= -->
+    <section class="section bg-dark-pirx pricing" aria-labelledby="pricing-title">
+      <!-- TODO: ilustracja rakiety (lewa strona) z Figmy -->
+      <div class="ph ph--dark pricing__art" aria-hidden="true">Ilustracja<small>rakieta</small></div>
+      <div class="wrap">
+        <div class="pricing__head">
+          <h2 class="h-xl" id="pricing-title">Prosty model.<br>Żadnych niespodzianek.</h2>
+          <p class="lead-pirx">Żadnych opłat ukrytych. Żadnych niespodzianek na orbicie. Prowizja naliczana wyłącznie od zrealizowanych rezerwacji — nasz sukces zależy od Twojego sukcesu.</p>
+        </div>
+
+        <div class="plans">
+          <article class="plan plan--lite">
+            <h3 class="plan__name">Pirx Lite</h3>
+            <p class="plan__price"><span class="plan__from">od</span>9%</p>
+            <p class="plan__unit">przychodu z rezerwacji</p>
+            <p class="plan__desc">Dla właścicieli, którzy działają poza głównymi miastami lub mają własną ekipę na miejscu. Ty organizujesz obsługę lokalną — my pilotujemy zdalnie.</p>
+            <ul class="check-list check-list--bold">
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Wystawianie na wszystkich platformach</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Dynamiczny pricing</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Komunikacja z gośćmi 24/7</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Weryfikacja gości</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Synchronizacja kalendarzy</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Dashboard właściciela</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Miesięczny raport przychodów</li>
+            </ul>
+            <a class="btn-pirx btn-pirx--white btn-pirx--block plan__btn" href="kontakt.html">Skontaktuj się</a>
+          </article>
+
+          <article class="plan plan--standard">
+            <h3 class="plan__name">Pirx Standard</h3>
+            <p class="plan__price"><span class="plan__from">od</span>17%</p>
+            <p class="plan__unit">przychodu z rezerwacji</p>
+            <span class="plan__badge"><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg>Najpopularniejszy</span>
+            <p class="plan__desc">Dla właścicieli którzy chcą oddać nieruchomość w całości i nie zajmować się niczym. Pełna obsługa od A do Z.</p>
+            <ul class="check-list check-list--bold">
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Wszystko z PIRX Lite</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Profesjonalna sesja fotograficzna</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Sprzątanie i housekeeping</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Pościel i kosmetyki hotelowej jakości</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Organizacja check-in i check-out</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Regularne inspekcje nieruchomości</li>
+              <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Koordynacja napraw i serwisu</li>
+            </ul>
+            <a class="btn-pirx btn-pirx--dark btn-pirx--block plan__btn" href="kontakt.html">Skontaktuj się</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTEGRACJE ================= -->
+    <section class="section bg-light-pirx integration" aria-labelledby="integration-title">
+      <div class="wrap integration__grid">
+        <div class="integration__txt">
+          <h2 class="h-lg" id="integration-title">Twoja nieruchomość wszędzie tam, gdzie szukają goście.</h2>
+          <p class="lead-pirx">Wystawiamy Twoją nieruchomość jednocześnie na wszystkich głównych kanałach rezerwacyjnych i synchronizujemy kalendarze w czasie rzeczywistym — zero ryzyka podwójnych rezerwacji.</p>
+          <ul class="check-list check-list--bold">
+            <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Wszystkie rezerwacje spływają do jednego systemu.</li>
+            <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Jeden kalendarz.</li>
+            <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Jedna załoga.</li>
+            <li><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-check" width="18" height="18"/></svg>Zero chaosu.</li>
+          </ul>
+          <div class="note-dark">
+            <svg class="ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#i-info" width="20" height="20"/></svg>
+            <p class="txt-14b">Pracujemy nad własną platformą rezerwacyjną pirx.rent — rezerwacje bezpośrednie bez prowizji dla pośredników. Więcej dla Ciebie, mniej dla algorytmów. Niektóre misje wymagają czasu — ta jest w toku.</p>
+          </div>
+        </div>
+        <!-- TODO: logotypy platform z Figmy (11 szt.) — podmień placeholdery na <img> -->
+        <ul class="logos" aria-label="Platformy rezerwacyjne">
+          <li>Logo</li><li>Logo</li><li>Logo</li><li>Logo</li>
+          <li>Logo</li><li>Logo</li><li>Logo</li><li>Logo</li>
+          <li>Logo</li><li>Logo</li><li>Logo</li>
+        </ul>
+      </div>
+
+      <!-- ================= OPINIE ================= -->
+      <div class="wrap reviews" aria-labelledby="reviews-title">
+        <div class="reviews-head">
+          <div>
+            <h2 class="h-lg" id="reviews-title"><span class="text-orange">4,84/5</span> średniej oceny na podstawie<br>ponad <span class="text-orange">5 000</span> obsłużonych nocy.</h2>
+            <p class="lead-pirx">Najlepsza nawigacja to opinie tych którzy już polecieli.</p>
+          </div>
+          <div class="reviews-arrows">
+            <button type="button" data-reviews-prev aria-label="Poprzednia opinia"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-left" width="24" height="24"/></svg></button>
+            <button type="button" data-reviews-next aria-label="Następna opinia"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-arrow-right" width="24" height="24"/></svg></button>
+          </div>
+        </div>
+        <div class="reviews-track" data-reviews>
+          <article class="review-card">
+            <svg class="ico quote" viewBox="0 0 37 33" aria-hidden="true" focusable="false"><use href="#i-quote" width="37" height="33"/></svg>
+            <p class="review-card__text">Miejsce było czyste, przytulne i bardzo dogodnie położone w pobliżu transportu publicznego i stadionu. Było dokładnie tak, jak na zdjęciach. Łukasz bardzo szybko odpowiadał i był w każdym aspekcie wspaniałym gospodarzem. Gorąco polecam!</p>
+            <div class="review-card__foot">
+              <span class="avatar" aria-hidden="true">J</span>
+              <div class="review-card__who"><strong>Joanne</strong><span class="label-caps muted">Marsaskala, Malta</span></div>
+              <span class="stars" aria-label="Ocena 5 na 5"><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg></span>
+            </div>
+          </article>
+          <article class="review-card">
+            <svg class="ico quote" viewBox="0 0 37 33" aria-hidden="true" focusable="false"><use href="#i-quote" width="37" height="33"/></svg>
+            <p class="review-card__text">Nie po raz pierwszy tu przebywam i zawsze jestem bardzo zadowolony. To naprawdę przytulne i wygodne miejsce na pobyt. Mieszkanie jest zawsze idealnie czyste i ma wszystko, czego potrzebujesz, od naczyń po żelazko, dzięki czemu poczujesz się jak w domu. Mieszkanie znajduje się w cichej, zielonej okolicy, gdzie przyjemnie jest odpocząć po długim dniu. Chciałbym szczególnie wspomnieć o gospodarzu, Łukaszowi. Jest zawsze uprzejmy, szybko pomaga rozwiązać wszelkie problemy i osobiście dba o jakość obsługi oraz stan techniczny mieszkania.</p>
+            <div class="review-card__foot">
+              <span class="avatar" aria-hidden="true">Д</span>
+              <div class="review-card__who"><strong>Даниил</strong><span class="label-caps muted">Warszawa, Polska</span></div>
+              <span class="stars" aria-label="Ocena 5 na 5"><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg></span>
+            </div>
+          </article>
+          <article class="review-card">
+            <svg class="ico quote" viewBox="0 0 37 33" aria-hidden="true" focusable="false"><use href="#i-quote" width="37" height="33"/></svg>
+            <p class="review-card__text">Wspaniały właściciel. Kiedy pomyliłam adresy, szybko odpowiedział i pomógł mi. Odpowiedział też na wszystkie moje pytania. Ładne, czyste, wygodne, ma wszystko, co jest wymienione w ogłoszeniu o mieszkaniu. Mój pobyt był udany; mogę go polecić 👍</p>
+            <div class="review-card__foot">
+              <span class="avatar" aria-hidden="true">V</span>
+              <div class="review-card__who"><strong>Valentyna</strong></div>
+              <span class="stars" aria-label="Ocena 5 na 5"><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg><svg class="ico" viewBox="0 0 13 13" aria-hidden="true" focusable="false"><use href="#i-star" width="13" height="13"/></svg></span>
+            </div>
+          </article>
+        </div>
+        <div class="reviews-dots" data-reviews-dots aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ================= KROKI ================= -->
+    <section class="section bg-dark-pirx steps" aria-labelledby="steps-title">
+      <div class="wrap">
+        <h2 class="h-lg text-center" id="steps-title">Od pierwszego kontaktu do pierwszej<br class="d-none d-lg-inline"> rezerwacji — w 14 dni.</h2>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__txt">
+              <h3 class="h-md">01. Odprawa przed startem</h3>
+              <p class="txt-14">15-minutowa rozmowa z naszym zespołem. Opowiadasz nam o swojej nieruchomości — my dobieramy model współpracy. Konkretnie i bez owijania w bawełnę. Zero zobowiązań.</p>
+            </div>
+            <div class="ph ph--dark ph--round timeline__art" aria-hidden="true">Ilustracja<small>wieża kontroli</small></div>
+          </li>
+          <li class="timeline__item timeline__item--rev">
+            <div class="timeline__txt">
+              <h3 class="h-md">02. Przygotowujemy nieruchomość<br class="d-none d-lg-inline"> do startu</h3>
+              <p class="txt-14">Organizujemy profesjonalną sesję fotograficzną, tworzymy i optymalizujemy ogłoszenia na wszystkich platformach, konfigurujemy system rezerwacji i dynamic pricing. Ty nie musisz robić nic.</p>
+            </div>
+            <div class="ph ph--dark ph--round timeline__art" aria-hidden="true">Ilustracja<small>chmury</small></div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__txt">
+              <h3 class="h-md">03. Zarabiasz — my pilotujemy</h3>
+              <p class="txt-14">W ciągu 14 dni od podpisania umowy Twoja nieruchomość jest gotowa na pierwszych gości. Od tej chwili przejmujemy pełną odpowiedzialność. Przychody trafiają na Twoje konto co miesiąc.</p>
+            </div>
+            <div class="ph ph--dark ph--round timeline__art" aria-hidden="true">Ilustracja<small>planeta</small></div>
+          </li>
+        </ol>
+
+        <p class="h-md text-center steps__claim">Tak jak dobry pilot zawsze doprowadza misję do końca — my dbamy o Twoją nieruchomość<br class="d-none d-lg-inline"> od pierwszego kontaktu z gościem do ostatniej rezerwacji.</p>
+      </div>
+    </section>
+
+    <section class="section bg-light-pirx" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div class="faq-intro">
+        <h2 class="h-lg" id="faq-title">Najczęściej zadawane pytania</h2>
+        <p class="txt-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="help-box faq-help-desktop">
+            <svg class="ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#i-info" width="20" height="20"/></svg>
+            <p class="txt-14b">Nadal poszukujesz odpowiedzi? Chętnie pomożemy.</p>
+            <a class="btn-pirx btn-pirx--white btn-pirx--block" href="kontakt.html" style="height:48px">Skontaktuj się z nami</a>
+          </div>
+      </div>
+      <div>
+        <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="false" aria-controls="faq-1">
+                <span>01.</span><span>Oddaję Ci klucze do mojego mieszkania. Skąd mam wiedzieć, że wrócę do czegoś, co wciąż stoi?</span><svg class="ico" viewBox="0 0 12 7" aria-hidden="true" focusable="false"><use href="#i-faq-chevron" width="12" height="7"/></svg>
+              </button>
+              <div class="collapse" id="faq-1"><div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">
+                <span>02.</span><span>Mam najemcę od trzech lat. Płaci w miarę regularnie. Po co mi zmiana?</span><svg class="ico" viewBox="0 0 12 7" aria-hidden="true" focusable="false"><use href="#i-faq-chevron" width="12" height="7"/></svg>
+              </button>
+              <div class="collapse" id="faq-2"><div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">
+                <span>03.</span><span>Airbnb samo w sobie nie jest skomplikowane. Dlaczego miałbym płacić Wam prowizję?</span><svg class="ico" viewBox="0 0 12 7" aria-hidden="true" focusable="false"><use href="#i-faq-chevron" width="12" height="7"/></svg>
+              </button>
+              <div class="collapse" id="faq-3"><div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="false" aria-controls="faq-4">
+                <span>04.</span><span>Ile realnie zarobię — bez owijania w bawełnę?</span><svg class="ico" viewBox="0 0 12 7" aria-hidden="true" focusable="false"><use href="#i-faq-chevron" width="12" height="7"/></svg>
+              </button>
+              <div class="collapse" id="faq-4"><div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="false" aria-controls="faq-5">
+                <span>05.</span><span>Co się dzieje, jeśli gość zniszczy mieszkanie?</span><svg class="ico" viewBox="0 0 12 7" aria-hidden="true" focusable="false"><use href="#i-faq-chevron" width="12" height="7"/></svg>
+              </button>
+              <div class="collapse" id="faq-5"><div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6" aria-expanded="false" aria-controls="faq-6">
+                <span>06.</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span><svg class="ico" viewBox="0 0 12 7" aria-hidden="true" focusable="false"><use href="#i-faq-chevron" width="12" height="7"/></svg>
+              </button>
+              <div class="collapse" id="faq-6"><div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq-7" aria-expanded="false" aria-controls="faq-7">
+                <span>07.</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span><svg class="ico" viewBox="0 0 12 7" aria-hidden="true" focusable="false"><use href="#i-faq-chevron" width="12" height="7"/></svg>
+              </button>
+              <div class="collapse" id="faq-7"><div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq-8" aria-expanded="false" aria-controls="faq-8">
+                <span>08.</span><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit</span><svg class="ico" viewBox="0 0 12 7" aria-hidden="true" focusable="false"><use href="#i-faq-chevron" width="12" height="7"/></svg>
+              </button>
+              <div class="collapse" id="faq-8"><div class="faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div></div>
+            </div>
+        </div>
+        <div class="help-box faq-help-mobile mt-pirx-40">
+            <svg class="ico" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><use href="#i-info" width="20" height="20"/></svg>
+            <p class="txt-14b">Nadal poszukujesz odpowiedzi? Chętnie pomożemy.</p>
+            <a class="btn-pirx btn-pirx--white btn-pirx--block" href="kontakt.html" style="height:48px">Skontaktuj się z nami</a>
+          </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-row">
+        <div class="footer-about">
+          <a href="index.html" aria-label="pirx.rent — strona główna"><svg class="logo" viewBox="340 23 164 54" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="pirx.rent"><path d="M404.9 59.1V42.9H409.3V44.6C410.2 43.5 411.2 42.6 413.1 42.6C416.1 42.6 418.7 45.1 418.7 49.1V49.2C418.7 53.2 416.1 55.7 413.1 55.7C411.2 55.7 410.1 54.9 409.3 53.9V59.1H404.9ZM411.8 52C413.2 52 414.3 50.9 414.3 49.2V49.1C414.3 47.5 413.2 46.3 411.8 46.3C410.4 46.3 409.2 47.5 409.2 49.1V49.2C409.2 50.9 410.4 52 411.8 52Z" fill="#1A1A1A"/>
+<path d="M420.6 41.8V38.5H425.1V41.8H420.6ZM420.7 55.4V42.9H425V55.4H420.7Z" fill="#1A1A1A"/>
+<path d="M427.5 55.4V42.9H431.9V45.4C432.6 43.7 433.8 42.6 435.8 42.7V47.3H435.5C433.2 47.3 431.9 48.7 431.9 51.6V55.4H427.5Z" fill="#1A1A1A"/>
+<path d="M436.4 55.4L440.6 49.1L436.5 42.9H441.2L443.1 46L444.9 42.9H449.6L445.4 49.1L449.7 55.4H444.9L443 52.2L441 55.4H436.4Z" fill="#1A1A1A"/>
+<path d="M450.8 55.4V50.9H455.4V55.4H450.8Z" fill="#1A1A1A"/>
+<path d="M457.6 55.4V42.9H462V45.4C462.7 43.7 463.9 42.6 465.9 42.7V47.3H465.6C463.3 47.3 462 48.7 462 51.6V55.4H457.6Z" fill="#1A1A1A"/>
+<path d="M473.5 55.7C469.5 55.7 466.8 53.1 466.8 49.2V49.2C466.8 45.5 469.4 42.6 473.1 42.6C477.4 42.6 479.4 45.8 479.4 49.5C479.4 49.8 479.4 50.1 479.4 50.4H471C471.3 51.8 472.3 52.5 473.7 52.5C474.7 52.5 475.6 52.1 476.5 51.2L478.9 53.2C477.7 54.7 476 55.7 473.5 55.7ZM470.9 48.2H475.3C475.1 46.8 474.3 45.9 473.1 45.9C471.9 45.9 471.1 46.8 470.9 48.2Z" fill="#1A1A1A"/>
+<path d="M481.3 55.4V42.9H485.7V44.7C486.5 43.6 487.6 42.6 489.4 42.6C492.1 42.6 493.7 44.4 493.7 47.2V55.4H489.3V48.7C489.3 47.3 488.6 46.6 487.5 46.6C486.5 46.6 485.7 47.3 485.7 48.7V55.4H481.3Z" fill="#1A1A1A"/>
+<path d="M500.9 55.7C498.3 55.7 496.7 54.5 496.7 51.6V46.5H495.2V42.9H496.7V39.8H501.1V42.9H504V46.5H501.1V50.7C501.1 51.6 501.5 51.9 502.3 51.9C502.9 51.9 503.4 51.8 504 51.5V55C503.2 55.4 502.1 55.7 500.9 55.7Z" fill="#1A1A1A"/>
+<path d="M340.3 53.7L349.9 35.5L348.3 30.5C343.2 35.4 340 42.3 340 50C340 51.2 340.1 52.5 340.3 53.7Z" fill="#F8C512"/>
+<path d="M349.9 35.5L340.3 53.7L350.4 52.2L355 51.6L349.9 35.5Z" fill="#FAD513"/>
+<path d="M349.9 35.5L355 51.5L367.5 23C367.4 23 367.2 23 367 23C359.8 23 353.2 25.8 348.3 30.5L349.9 35.5Z" fill="#FBB110"/>
+<path d="M367.6 23L355 51.6L364.3 43.9L367.6 23Z" fill="#F98D0B"/>
+<path d="M367.6 23L364.3 43.9L375.6 33.7L367.6 23Z" fill="#F8C512"/>
+<path d="M367.6 23L375.6 33.7L382.1 27.6C378 24.8 373 23.1 367.6 23Z" fill="#F98D0B"/>
+<path d="M375.6 33.7L364.3 43.9L379 43L382.1 27.6L375.6 33.7Z" fill="#FBB110"/>
+<path d="M382.1 27.6L379 43L393 42.8C391.3 36.5 387.4 31.2 382.1 27.6Z" fill="#FAD513"/>
+<path d="M393 42.8L379 43L380.4 59.5L389 48.2L393 42.8Z" fill="#F98D0B"/>
+<path d="M393 42.8L389 48.2L389.9 64.3C392.5 60.2 394 55.3 394 50C394 47.5 393.7 45.1 393 42.8Z" fill="#FBB110"/>
+<path d="M389.9 64.3L389 48.2L380.4 59.5L381.6 72.7C384.9 70.6 387.8 67.7 389.9 64.3Z" fill="#F8C512"/>
+<path d="M380.4 59.5L379 43L372.6 53.4L373 65.2L380.4 59.5Z" fill="#FAD513"/>
+<path d="M380.4 59.5L373 65.2L371.8 76.6C375.4 75.9 378.7 74.6 381.6 72.7L380.4 59.5Z" fill="#FBB110"/>
+<path d="M371.8 76.6L373 65.2L359 75.8C361.5 76.6 364.2 77 367 77C368.6 77 370.2 76.9 371.8 76.6Z" fill="#F98D0B"/>
+<path d="M359 75.8L373 65.2L372.6 53.4L359 75.8Z" fill="#FBB110"/>
+<path d="M359 75.8L372.6 53.4L379 43L366.7 51.5L363.9 60.4L359 75.8Z" fill="#F4BF2D"/>
+<path d="M355 51.6L366.7 51.5L379 43L364.3 43.9L355 51.6Z" fill="#FAD513"/>
+<path d="M366.7 51.5L355 51.6L360.3 56.8L363.9 60.4L366.7 51.5Z" fill="#FBB110"/>
+<path d="M360.3 56.8L355 51.6L350.4 52.2L348.3 69.5L355.7 61.6L360.3 56.8Z" fill="#F98D0B"/>
+<path d="M348.3 69.5L350.4 52.2L340.3 53.7C341.1 59.8 344 65.3 348.3 69.5Z" fill="#FBB110"/>
+<path d="M355.7 61.6L359 75.8L363.9 60.4L360.3 56.8L355.7 61.6Z" fill="#FAD513"/>
+<path d="M359 75.8L355.7 61.6L348.3 69.5C351.3 72.3 354.9 74.5 359 75.8Z" fill="#F8C512"/></svg></a>
+          <p class="txt-14">Pilotujemy Twój wynajem. Profesjonalne zarządzanie najmem krótkoterminowym dla właścicieli którzy cenią wyniki bardziej niż obietnice.</p>
+        </div>
+        <div class="footer-col">
+          <p class="h-sm">Pirx Group Sp. z o. o.</p>
+          <address>Al. Grunwaldzka 413,<br>80-309 Gdańsk</address>
+          <p class="txt-14">Telefon: <a href="tel:+48792937176" class="text-decoration-none">+48 792 937 176</a><br>E-mail: <a href="mailto:hello@pirx.rent">hello@pirx.rent</a></p>
+        </div>
+        <div class="footer-col">
+          <p class="h-sm">Oddział w Warszawie</p>
+          <address>ul. Bukowińska 22/3,<br>02-703 Warszawa.</address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom__left">
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg class="ico" viewBox="0 0 18 18.6" aria-hidden="true" focusable="false"><use href="#i-facebook" width="18" height="18.6"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg class="ico" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><use href="#i-linkedin" width="18" height="18"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-instagram" width="24" height="24"/></svg></a>
+          </div>
+          <div class="footer-legal">
+            <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+            <a href="regulamin.html">Regulamin</a>
+          </div>
+        </div>
+        <div class="footer-credit">
+          <span>© Pirx Group. Design&amp;Code</span>
+          <svg class="dc" viewBox="1539 8655 41 9" fill="currentColor" aria-hidden="true"><path d="M1547.9 8664V8655H1539V8656.8H1546.1V8662.2H1539V8664H1547.9Z"/><path d="M1540.8 8658.6H1539V8660.4H1540.8V8658.6Z"/><path d="M1558.6 8664V8655H1549.7V8664H1558.6ZM1551.5 8656.8H1556.8V8662.2H1551.5V8656.8Z"/><path d="M1569.3 8664V8662.2H1562.2V8656.8H1569.3V8655H1560.4V8664H1569.3Z"/><path d="M1578.2 8664H1580V8660.4H1578.2V8664Z"/><path d="M1580 8655H1578.2V8658.6H1580V8655Z"/><path d="M1572.9 8660.4H1578.2V8658.6H1572.9V8655H1571.1V8664H1572.9V8660.4Z"/></svg>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
