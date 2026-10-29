@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pirx – CTA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Newsreader:opsz,wght@6..72,700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1f1c17;--yellow:#ffd000;--dark:#201d18;--serif:"Newsreader",Georgia,serif;--sans:"Figtree",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--sans);background:var(--dark)}
+.cta{position:relative;overflow:hidden;min-height:487px;padding:123px 24px 120px;text-align:center;color:#fff;background:var(--dark)}
+.sky{position:absolute;inset:0;width:100%;height:100%}
+.planet{position:absolute;left:36px;top:60px;width:240px;height:140px}
+.moon{position:absolute;left:431px;top:218px;width:36px;height:36px}
+.inner{position:relative;z-index:1}
+h2{font:700 44px/53px var(--serif);letter-spacing:-.01em}
+p{margin:23px auto 0;max-width:640px;font-size:15px;line-height:26px}
+.row{margin-top:61px;display:flex;justify-content:center;flex-wrap:wrap;gap:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;height:54px;padding:0 20px;border-radius:8px;font:600 15px var(--sans);color:var(--ink);text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.btn--yellow{background:var(--yellow)}
+.btn--white{background:#fff;font-weight:500}
+@media(max-width:900px){.moon{display:none}.planet{left:-40px;top:20px;width:180px}h2{font-size:34px;line-height:42px}p br{display:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/><path d="M15 3a6 6 0 0 1 6 6M15 7a2 2 0 0 1 2 2"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M4 8h16M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></symbol>
+  <pattern id="hatch" width="3" height="3" patternUnits="userSpaceOnUse"><path d="M0 3L3 0" stroke="#201d18" stroke-width=".9"/></pattern>
+</svg>
+
+<section class="cta">
+  <!-- hviezdy (generované) -->
+  <svg class="sky" id="sky" aria-hidden="true"></svg>
+
+  <!-- veľká planéta s prstencom -->
+  <svg class="planet" viewBox="0 0 240 140" aria-hidden="true">
+    <ellipse cx="117" cy="66" rx="118" ry="38" transform="rotate(22 117 66)" fill="none" stroke="#8a857b" stroke-width="1"/>
+    <circle cx="117" cy="66" r="62" fill="#ffd000"/>
+    <path d="M117 4A62 62 0 0 0 117 128z" fill="url(#hatch)"/>
+    <path d="M117 4v124" stroke="#201d18" stroke-width="1.2"/>
+    <g fill="#ffd000" stroke="#201d18" stroke-width="1.1">
+      <ellipse cx="146" cy="52" rx="13" ry="9" transform="rotate(-20 146 52)"/>
+      <ellipse cx="160" cy="62" rx="8" ry="6"/>
+    </g>
+    <g fill="#201d18"><circle cx="128" cy="14" r="1.6"/><circle cx="90" cy="50" r="2"/><circle cx="88" cy="82" r="1.6"/><circle cx="176" cy="84" r="1.8"/><circle cx="170" cy="42" r="1.4"/><circle cx="68" cy="100" r="1.6"/></g>
+  </svg>
+
+  <!-- malý mesiac -->
+  <svg class="moon" viewBox="0 0 36 36" aria-hidden="true">
+    <circle cx="18" cy="18" r="17" fill="#ffd000"/>
+    <path d="M18 1A17 17 0 0 0 18 35z" fill="url(#hatch)"/>
+    <ellipse cx="26" cy="15" rx="4" ry="3" fill="#ffd000" stroke="#201d18" stroke-width="1"/>
+    <circle cx="12" cy="21" r="1.2" fill="#201d18"/>
+  </svg>
+
+  <div class="inner">
+    <h2>Zacznij od 15 minut.</h2>
+    <p>Rozmowa jest bezpłatna i nie kończy się niczym, do czego trzeba się zobowiązać.<br>Wychodzisz z niej z wyliczeniem na piśmie.</p>
+    <div class="row">
+      <a class="btn btn--yellow" href="#kontakt"><svg><use href="#i-phone"/></svg>Umów rozmowę</a>
+      <a class="btn btn--white" href="#kalkulator"><svg><use href="#i-calc"/></svg>Oblicz przychód</a>
+    </div>
+  </div>
+</section>
+
+<script>
+// pseudonáhodné hviezdy – vždy rovnaké rozloženie
+(function(){
+  var s=document.getElementById('sky'),ns='http://www.w3.org/2000/svg',seed=7;
+  function r(){seed=(seed*16807)%2147483647;return seed/2147483647}
+  for(var i=0;i<70;i++){
+    var c=document.createElementNS(ns,'circle');
+    c.setAttribute('cx',(r()*100).toFixed(1)+'%');
+    c.setAttribute('cy',(r()*100).toFixed(1)+'%');
+    c.setAttribute('r',(1+r()*2.2).toFixed(1));
+    c.setAttribute('fill','#fff');
+    c.setAttribute('opacity',(.12+r()*.28).toFixed(2));
+    s.appendChild(c);
+  }
+})();
+</script>
+</body>
+</html>

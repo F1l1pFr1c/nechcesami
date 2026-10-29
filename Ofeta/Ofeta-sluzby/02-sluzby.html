@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pirx – Usługi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1f1c17;--yellow:#ffd000;--cream:#f6f4ec;--serif:"Newsreader",Georgia,serif;--sans:"Figtree",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream)}
+.services{max-width:1240px;margin:0 auto;padding:121px 0;display:grid;grid-template-columns:repeat(3,1fr);column-gap:60px;row-gap:81px}
+.tile{width:54px;height:54px;border-radius:12px;background:var(--yellow);display:grid;place-items:center}
+.tile svg{width:28px;height:28px;fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+h3{margin-top:24px;display:flex;align-items:center;gap:8px;font:600 20px/28px var(--serif)}
+h3 a{display:inline-flex;align-items:center;gap:8px;color:inherit;text-decoration:none}
+h3 a:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:4px}
+.go{width:17px;height:17px}
+ul{list-style:none;margin-top:19px}
+li{display:flex;align-items:center;gap:12px;min-height:32px;font-size:14px;line-height:20px}
+.ck{flex:none;width:18px;height:18px;fill:none;stroke:var(--ink);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.card{grid-column:2 / 4;background:#fff;border-radius:16px;min-height:204px;overflow:hidden;display:flex;align-items:center;gap:72px;padding-left:73px}
+.card svg{flex:none;align-self:flex-end;width:273px;height:204px}
+.card p{max-width:360px;font-size:14px;line-height:24px}
+@media(max-width:1000px){.services{padding:64px 24px;grid-template-columns:repeat(2,1fr);row-gap:56px}.card{grid-column:1 / -1}}
+@media(max-width:640px){.services{grid-template-columns:1fr}.card{flex-direction:column;padding:32px 24px 0;gap:24px;text-align:left}.card p{order:-1}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ck" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8"/><path d="M5.5 9.3l2.4 2.4 4.6-4.9"/></symbol>
+  <symbol id="go" viewBox="0 0 17 17"><circle cx="8.5" cy="8.5" r="8.5" fill="#1f1c17"/><path d="M4.8 8.5h7M9.3 5.8l2.7 2.7-2.7 2.7" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<section class="services">
+
+  <article>
+    <div class="tile"><svg viewBox="0 0 24 24"><path d="M3.5 10.5v3a1 1 0 0 0 1 1H7l8.5 4.5v-14L7 9.5H4.5a1 1 0 0 0-1 1z"/><path d="M7 14.5l1 4.5h2.5l-1-4M18.5 9.5a3.5 3.5 0 0 1 0 5"/></svg></div>
+    <h3><a href="#ogloszenia">Ogłoszenia <svg class="go"><use href="#go"/></svg></a></h3>
+    <ul>
+      <li><svg class="ck"><use href="#ck"/></svg>Sesja fotograficzna</li>
+      <li><svg class="ck"><use href="#ck"/></svg>Tworzenie i optymalizacja ogłoszenia</li>
+      <li><svg class="ck"><use href="#ck"/></svg>Wystawianie na Airbnb, Booking, Expedia, Agoda</li>
+      <li><svg class="ck"><use href="#ck"/></svg>Ciągła optymalizacja pozycji w wyszukiwarkach</li>
+    </ul>
+  </article>
+
+  <article>
+    <div class="tile"><svg viewBox="0 0 24 24"><path d="M3 19h18M5 19a7 7 0 0 1 14 0M12 9V6M10 6h4M12 3.5v.01M4.5 9l1.3 1M19.5 9l-1.3 1"/></svg></div>
+    <h3><a href="#goscie">Goście <svg class="go"><use href="#go"/></svg></a></h3>
+    <ul>
+      <li><svg class="ck"><use href="#ck"/></svg>Weryfikacja przed każdą rezerwacją</li>
+      <li><svg class="ck"><use href="#ck"/></svg>Check-in i check-out</li>
+      <li><svg class="ck"><use href="#ck"/></svg>Komunikacja 24/7</li>
+      <li><svg class="ck"><use href="#ck"/></svg>Obsługa sytuacji kryzysowych i reklamacji</li>
+    </ul>
+  </article>
+
+  <article>
+    <div class="tile"><svg viewBox="0 0 24 24"><path d="M9 8V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V8M5 8h14v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1zM5 13h14M10 11h4"/><path d="M3 8h18"/></svg></div>
+    <h3><a href="#housekeeping">Housekeeping <svg class="go"><use href="#go"/></svg></a></h3>
+    <ul>
+      <li><svg class="ck"><use href="#ck"/></svg>Profesjonalne sprzątanie po każdym pobycie</li>
+      <li><svg class="ck"><use href="#ck"/></svg>Pościel i kosmetyki hotelowej jakości</li>
+      <li><svg class="ck"><use href="#ck"/></svg>Przygotowanie nieruchomości przed każdym gościem</li>
+    </ul>
+  </article>
+
+  <article>
+    <div class="tile"><svg viewBox="0 0 24 24"><path d="M14.5 6.2a3.6 3.6 0 0 1 4.8-.9l-2 2 .7 1.5 1.5.7 2-2a3.6 3.6 0 0 1-4.9 4.8L8 19.6a1.8 1.8 0 0 1-2.6-2.6zM4 4l3.5 1L8 8.5 5.5 9 4 4zM8 8l3 3"/></svg></div>
+    <h3><a href="#serwis">Serwis techniczny <svg class="go"><use href="#go"/></svg></a></h3>
+    <ul>
+      <li><svg class="ck"><use href="#ck"/></svg>Regularne inspekcje stanu</li>
+      <li><svg class="ck"><use href="#ck"/></svg>Koordynacja napraw i serwisu technicznego</li>
+    </ul>
+  </article>
+
+  <div class="card">
+    <!-- ilustrácia: kokpit s oknami a ukazovateľmi -->
+    <svg viewBox="0 0 273 204" fill="none" stroke="#1f1c17" stroke-width="1.3" aria-hidden="true">
+      <defs>
+        <pattern id="v" width="3" height="4" patternUnits="userSpaceOnUse"><path d="M1 0v4" stroke-width=".9"/></pattern>
+        <pattern id="hat" width="2.6" height="4" patternUnits="userSpaceOnUse"><path d="M.5 0v4" stroke-width=".9"/></pattern>
+      </defs>
+      <!-- okná -->
+      <rect x="12" y="33" width="261" height="58" stroke-width="1.6"/>
+      <path d="M101 33v58M106 33v58M163 33v58M171 33v58" stroke-width="1.6"/>
+      <path d="M0 30h273M12 30v62" stroke-width="1.6"/>
+      <g fill="#1f1c17" stroke="none">
+        <circle cx="30" cy="48" r="1.4"/><circle cx="46" cy="70" r="1.2"/><circle cx="64" cy="55" r="1"/><circle cx="82" cy="78" r="1.3"/><circle cx="24" cy="80" r="1"/>
+        <circle cx="118" cy="46" r="1.2"/><circle cx="135" cy="64" r="1.4"/><circle cx="150" cy="52" r="1"/><circle cx="124" cy="80" r="1"/>
+        <circle cx="186" cy="44" r="1.3"/><circle cx="246" cy="52" r="1.2"/><circle cx="256" cy="78" r="1"/>
+      </g>
+      <!-- planéta s prstencom -->
+      <circle cx="212" cy="68" r="17" fill="#fff"/>
+      <path d="M200 58a17 17 0 0 1 24 -2M196 66l6 6M198 62l12 12M205 59l14 14" stroke-width=".8"/>
+      <ellipse cx="212" cy="68" rx="28" ry="9" transform="rotate(-18 212 68)" stroke-width="1"/>
+      <!-- rímsa -->
+      <rect x="0" y="92" width="273" height="22" fill="#fff"/>
+      <rect x="0" y="92" width="273" height="22" fill="url(#v)" stroke-width="1.4"/>
+      <path d="M0 92h273M0 114h273" stroke-width="1.6"/>
+      <!-- bočné pásy -->
+      <rect x="2" y="114" width="12" height="90" fill="url(#hat)" stroke="none"/>
+      <rect x="259" y="114" width="12" height="90" fill="url(#hat)" stroke="none"/>
+      <path d="M14 114v90M259 114v90" stroke-width="1.4"/>
+      <!-- ukazovatele -->
+      <g fill="#fff" stroke-width="1.6">
+        <circle cx="41" cy="152" r="17"/><circle cx="88" cy="150" r="16"/><circle cx="136" cy="147" r="20" stroke-width="2"/><circle cx="185" cy="150" r="16"/><circle cx="231" cy="152" r="17"/>
+      </g>
+      <g stroke-width=".9">
+        <circle cx="41" cy="152" r="13"/><circle cx="88" cy="150" r="12"/><circle cx="136" cy="147" r="15"/><circle cx="185" cy="150" r="12"/><circle cx="231" cy="152" r="13"/>
+      </g>
+      <path d="M41 152l-8-9M88 150l3-11M136 147v-16M185 150l9-3M231 152l9 5" stroke-width="1.6"/>
+      <!-- prepínače -->
+      <g fill="#fff" stroke-width="1.5">
+        <rect x="35" y="173" width="14" height="11" rx="2"/><rect x="62" y="173" width="14" height="11" rx="2"/><rect x="88" y="173" width="14" height="11" rx="2"/><rect x="116" y="173" width="14" height="11" rx="2"/><rect x="143" y="173" width="14" height="11" rx="2"/><rect x="171" y="173" width="14" height="11" rx="2"/><rect x="198" y="173" width="14" height="11" rx="2"/>
+      </g>
+      <path d="M14 196h245" stroke-width=".8"/>
+    </svg>
+    <p><strong>Od momentu gdy przekazujesz nam klucze – misja jest nasza.</strong> Nasza odpowiedzialność kończy się wtedy, gdy Ty jesteś zadowolony z wyników.</p>
+  </div>
+
+</section>
+</body>
+</html>
