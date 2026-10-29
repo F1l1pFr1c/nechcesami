@@ -1,0 +1,18 @@
+.blog-hero{text-align:center;padding-top:124px}
+.blog-hero h1{font-family:var(--serif);font-weight:500;font-size:44px;line-height:1.2;margin:0 0 20px}
+.blog-hero p{margin:0 auto;max-width:520px;font-size:16px;line-height:1.65}
+.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:64px 0 0;padding:0;list-style:none}
+.filters button{height:49px;padding:0 20px;font-size:14px;font-weight:500;background:transparent;border:1px solid var(--ink);border-radius:10px;transition:background .15s}
+.filters button:hover{background:rgba(28,26,23,.06)}
+.filters button.active{background:var(--ink);color:var(--white);font-weight:600}
+.blog-list{margin-top:120px}
+.cards:empty{min-height:600px;border:1px dashed rgba(28,26,23,.35);border-radius:var(--radius)} /* prázdny obdĺžnik */
+.pagination{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:120px;padding-bottom:110px}
+.pagination button{width:52px;height:52px;border:1px solid var(--ink);border-radius:10px;background:transparent;font-size:14px;font-weight:500;display:grid;place-items:center}
+.pagination button:hover:not(:disabled):not(.active){background:rgba(28,26,23,.06)}
+.pagination button.active{background:var(--ink);color:var(--white)}
+.pagination button:disabled{opacity:.35;cursor:default}
+.pagination .dots{font-size:14px}
+.arrow{width:8px;height:8px;border-left:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:rotate(45deg);display:block}
+[data-dir=next] .arrow{transform:rotate(-135deg)}
+@media(max-width:760px){.blog-hero{padding-top:64px}.blog-hero h1{font-size:34px}.blog-list{margin-top:56px}.pagination{margin-top:56px;gap:8px;padding-bottom:64px}.pagination button{width:42px;height:42px}}
