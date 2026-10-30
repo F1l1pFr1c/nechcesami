@@ -80,6 +80,8 @@ h1, h2, h3, p { margin: 0; }
 .btn--primary:hover { background: #f2c500; }
 .btn--outline { border-color: var(--color-border); background: var(--color-white); }
 .btn--outline:hover { background: #f6f4ee; }
+.btn--light { background: var(--color-white); border-color: var(--color-white); color: var(--color-text); }
+.btn--light:hover { background: #ece9df; }
 
 .icon { width: 18px; height: 18px; flex: none; }
 
