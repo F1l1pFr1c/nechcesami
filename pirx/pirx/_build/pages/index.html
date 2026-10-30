@@ -8,6 +8,62 @@
   {{nav:home}}
 
   <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero__top">
+          <div class="hero__txt">
+            <h1 class="h-xl" id="hero-title">Pilotujemy Twój wynajem.</h1>
+            <p class="lead-pirx">Tak jak dobry pilot zawsze doprowadza misję do końca — my dbamy o Twoją nieruchomość od pierwszego kontaktu z gościem do ostatniej rezerwacji. Profesjonalnie. Bez turbulencji.</p>
+          </div>
+          <img class="hero__art" src="img/home-hero.svg" width="568" height="320" alt="Animowana ilustracja: rakieta leci w górę obok planety, przez chmury i gwiazdy">
+        </div>
+
+        <form class="calc" action="#" onsubmit="return false" aria-label="Kalkulator przychodu">
+          <label class="calc__field calc__field--address">
+            {{icon:pin}}
+            <span>
+              <span class="field__label">Adres twojego mieszkania</span>
+              <input class="field__input" type="text" name="adres" placeholder="np. Marszałkowska 12, Warszawa" autocomplete="street-address">
+            </span>
+          </label>
+          <label class="calc__field">
+            {{icon:bed}}
+            <span>
+              <span class="field__label">Liczba łóżek</span>
+              <input class="field__input" type="number" name="lozka" min="1" placeholder="np. 4" inputmode="numeric">
+            </span>
+          </label>
+          <div class="calc__field select" data-select>
+            {{icon:sofa}}
+            <span class="flex-grow-1">
+              <span class="field__label" id="std-label"><span class="d-lg-none">Standard wykończenia</span><span class="d-none d-lg-inline">Standard</span></span>
+              <input type="hidden" name="standard">
+              <button class="select__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="std-label">
+                <span class="select__value">Wybierz z listy</span>{{icon:chevron}}
+              </button>
+            </span>
+            <!-- TODO: opcje standardu nie są opisane w Figmie — do uzupełnienia -->
+            <ul class="select__list" role="listbox" aria-labelledby="std-label">
+              <li role="option" data-value="podstawowy">Podstawowy</li>
+              <li role="option" data-value="dobry">Dobry</li>
+              <li role="option" data-value="wysoki">Wysoki</li>
+              <li role="option" data-value="premium">Premium</li>
+            </ul>
+          </div>
+          <button class="btn-pirx btn-pirx--yellow calc__btn" type="submit">{{icon:calc}}Oblicz przychód</button>
+        </form>
+
+        <ul class="counters">
+          <li><strong>20 mln zł</strong><span>Wartość nieruchomości pod zarządem</span></li>
+          <li><strong>5 000+</strong><span>Obsłużonych nocy</span></li>
+          <li><strong>85,5%</strong><span>Średnie obłożenie</span></li>
+          <li><strong>4,84/5</strong><span>Średnia ocena gości</span></li>
+          <li><strong>14%</strong><span>Maksymalna prowizja</span></li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
   {{footer}}

@@ -2,3 +2,54 @@
    Strona główna (index.html)
    ========================================================= */
 
+/* ---------- HERO ---------- */
+.hero { padding-top: 120px; padding-bottom: 42px; }
+.hero__top { display: flex; justify-content: space-between; align-items: center; gap: 40px; min-height: 300px; }
+.hero__txt { max-width: 570px; }
+.hero__txt p { margin-top: 27px; max-width: 500px; }
+.hero__art { width: 568px; height: auto; flex: none; margin-top: -60px; }
+
+.calc {
+  margin-top: 0;
+  display: grid; grid-template-columns: 562px 240px 240px 1fr; align-items: stretch;
+  height: 79px;
+  background: var(--c-white);
+  border: 1px solid var(--c-ink); border-radius: 14px;
+  position: relative;
+}
+.calc__field {
+  display: flex; align-items: center; gap: 22px;
+  padding: 0 22px; cursor: text; margin: 0;
+  border-right: 2px solid var(--c-ink);
+  position: relative;
+}
+.calc__field > .ico { width: 22px; height: 22px; }
+.calc__field .field__label { margin-bottom: 10px; }
+.calc__field.select { cursor: pointer; }
+.calc__field .select__list { left: -1px; right: -1px; top: calc(100% + 8px); }
+.calc__btn { align-self: center; justify-self: end; margin-right: 12px; width: 172px; }
+.calc__field:focus-within { background: rgba(255, 208, 0, .08); }
+
+.counters {
+  list-style: none; margin: 42px auto 0; padding: 0;
+  display: flex; justify-content: space-between; max-width: 1120px;
+}
+.counters li { text-align: center; }
+.counters strong { display: block; font-family: var(--ff-serif); font-size: 22px; font-weight: 500; letter-spacing: -0.04em; line-height: 25px; }
+.counters span { display: block; margin-top: 8px; font-size: 13px; letter-spacing: -0.01em; }
+
+@media (max-width: 1279.98px) {
+  .calc { grid-template-columns: 2fr 1fr 1fr auto; }
+  .hero__art { width: 420px; }
+}
+@media (max-width: 991.98px) {
+  .hero { padding-top: 32px; padding-bottom: 32px; }
+  .hero__top { flex-direction: column; align-items: stretch; gap: 24px; }
+  .hero__txt p { margin-top: 20px; }
+  .hero__art { width: 100%; height: auto; margin-top: 0; }
+  .calc { height: auto; border: 0; border-radius: 0; grid-template-columns: 1fr; gap: 12px; margin-top: 24px; background: transparent; }
+  .calc__field { border: 1px solid var(--c-ink); border-radius: var(--radius); background: var(--c-white); padding: 16px 20px; gap: 18px; }
+  .calc__btn { width: 100%; justify-self: stretch; margin: 0; }
+  .counters { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 16px; margin-top: 32px; }
+}
+
