@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pirx.rent – Ogłoszenia – case study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="section section--dark" id="case-study">
+    <div class="container">
+      <header class="case__head">
+        <h2 class="case__title">Jedno mieszkanie, czternaście dni, trzy miesiące później</h2>
+        <p class="section-lead">42 m², dwa pokoje, Zaspa, drugie piętro bez windy. Właściciel wynajmował długoterminowo za 2 800 zł netto i miał dość wymiany lokatorów co kilka miesięcy.</p>
+      </header>
+
+      <div class="split">
+        <div class="case-stack">
+          <div class="case-card">
+            <strong class="case-stat__value">27%</strong>
+            <p class="case-stat__label">wzrostu przychodu*</p>
+            <table class="data-table">
+              <tbody>
+                <tr><th scope="row">Obłożenie</th><td>70% - 21 nocy</td></tr>
+                <tr><th scope="row">Średnia stawka za noc</th><td>264 zł</td></tr>
+                <tr><th scope="row">Przychód brutto</th><td>5 544 zł</td></tr>
+                <tr><th scope="row">Koszty obsługi</th><td>980 zł</td></tr>
+                <tr><th scope="row">Prowizja Pirx 18%</th><td>980 zł</td></tr>
+                <tr><th scope="row">Wypłata netto</th><td>3 566 zł</td></tr>
+              </tbody>
+            </table>
+            <p class="case-note">*w porównaniu do 2800 zł przychodu z najmu długoterminowego.</p>
+          </div>
+
+          <div class="case-card">
+            <h3 class="case-card__title">Co zrobiliśmy?</h3>
+            <p class="case-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul class="check-list check-list--strong">
+              <li><i class="fa-regular fa-circle-check"></i> Lista braków na 3400 zł</li>
+              <li><i class="fa-regular fa-circle-check"></i> Publikacja na czterech kanałach</li>
+              <li><i class="fa-regular fa-circle-check"></i> Stawka bazowa 279 zł</li>
+            </ul>
+          </div>
+
+          <figure class="quote">
+            <span class="quote__mark" aria-hidden="true">”</span>
+            <blockquote class="quote__text">Najbardziej brakowało mi tego, żeby ktoś po prostu odbierał telefon.</blockquote>
+            <figcaption class="quote__author">
+              <span class="quote__avatar">J</span>
+              <span>
+                <span class="quote__name">Właściciel mieszkania</span>
+                <span class="quote__place">Gdańsk Zaspa</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="slider">
+          <img class="slider__slide" src="image 51.png" alt="Wnętrze mieszkania – salon z roślinami">
+          <img class="slider__slide" src="img/case-2.jpg" alt="Wnętrze mieszkania – sypialnia" hidden>
+          <img class="slider__slide" src="img/case-3.jpg" alt="Wnętrze mieszkania – kuchnia" hidden>
+          <div class="slider__dots">
+            <button class="slider__dot is-active" type="button" aria-label="Zdjęcie 1"></button>
+            <button class="slider__dot" type="button" aria-label="Zdjęcie 2"></button>
+            <button class="slider__dot" type="button" aria-label="Zdjęcie 3"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.slider').forEach(function (slider) {
+      var slides = slider.querySelectorAll('.slider__slide');
+      var dots = slider.querySelectorAll('.slider__dot');
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () {
+          slides.forEach(function (s, j) { s.hidden = j !== i; });
+          dots.forEach(function (d, j) { d.classList.toggle('is-active', j === i); });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
