@@ -88,3 +88,20 @@ img.phase__art { object-fit: contain; }
   .phase__list li:last-child { border-bottom: 0; }
 }
 
+/* ---------- CO DALEJ ---------- */
+.rhythm__grid { display: grid; grid-template-columns: 560px 559px; justify-content: space-between; gap: 40px; }
+.rhythm__lead { margin-top: 30px; max-width: 487px; }
+.rhythm__block { margin-top: 65px; }
+.rhythm__block .h-md { margin: 26px 0 27px; }
+.rhythm__block .check-list { gap: 16px; }
+.rhythm__img { position: sticky; top: calc(var(--nav-h) + 24px); height: 600px; }
+img.rhythm__img { display: block; width: 100%; object-fit: cover; border-radius: var(--radius); }
+
+@media (max-width: 1279.98px) { .rhythm__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 991.98px) {
+  .rhythm__grid { grid-template-columns: 1fr; gap: 32px; }
+  .rhythm__lead { margin-top: 16px; }
+  .rhythm__block { margin-top: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--c-gray-lg); }
+  .rhythm__img { position: static; height: 300px; }
+}
+
