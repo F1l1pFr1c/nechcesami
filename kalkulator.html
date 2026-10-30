@@ -66,7 +66,104 @@
       </div>
     </section>
 
-  
+    <!-- ===== SEKCIA 2: DASHBOARD S VÝSLEDKAMI ===== -->
+    <section class="calc-dash" aria-label="Szczegóły wyceny">
+      <div class="container container--narrow">
+
+        <div class="calc-dash__row calc-dash__row--top">
+          <article class="cdash cdash--chart">
+            <header class="cdash__head">
+              <h2 class="cdash__title">Prognoza przychodu w skali roku</h2>
+              <ul class="chart-legend">
+                <li><i class="chart-legend__dot chart-legend__dot--base"></i>Scenariusz ostrożny</li>
+                <li><i class="chart-legend__dot chart-legend__dot--top"></i>Scenariusz optymistyczny</li>
+              </ul>
+            </header>
+
+            <div class="chart" id="revenue-chart" aria-label="Wykres prognozy przychodu w skali roku"></div>
+
+            <footer class="cdash__total">
+              <div>
+                <strong>Szacowany przychód roczny</strong>
+                <small>Suma 12 miesięcy z uwzględnieniem sezonowości</small>
+              </div>
+              <p class="cdash__total-value">44 400 zł - 66 000 zł</p>
+            </footer>
+          </article>
+
+          <aside class="cdash cdash--dark">
+            <span class="cdash__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+            <h2 class="cdash__title cdash__title--light">Omówmy Twoje mieszkanie</h2>
+            <ul class="cdash__checks">
+              <li><svg class="cdash__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wybierz termin, który Ci pasuje.</li>
+              <li><svg class="cdash__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Bez zobowiązań – rozmowa jest bezpłatna.</li>
+              <li><svg class="cdash__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Opowiedz nam więcej o mieszkaniu, a doprecyzujemy wycenę.</li>
+            </ul>
+            <p class="cdash__lead">Porozmawiaj z naszym zespołem o potencjale Twojej nieruchomości i o tym, jak wygląda współpraca z Pirx.</p>
+            <a href="#kontakt" class="btn btn--primary">Umów rozmowę</a>
+          </aside>
+        </div>
+
+        <article class="cdash cdash--compare">
+          <div class="compare-short">
+            <h2 class="cdash__title">Krótki najem, a najem długoterminowy</h2>
+            <p>Średni najem długoterminowy dla kawalerki w Warszawie to ok. 2 600 zł miesięcznie.</p>
+            <div class="callout">
+              <small>Nawet w ostrożnym scenariuszu zyskujesz</small>
+              <p><strong>+1100 zł / mies.</strong> <span>+13 200 zł rocznie</span></p>
+            </div>
+          </div>
+
+          <ul class="bars">
+            <li class="bar" style="--w: 47%">
+              <div class="bar__label"><span>Najem długoterminowy</span><strong>~2 600 zł / mies.</strong></div>
+              <div class="bar__track"><div class="bar__fill bar__fill--long"></div></div>
+            </li>
+            <li class="bar" style="--w: 67%">
+              <div class="bar__label"><span>Pirx – scenariusz ostrożny</span><strong>od 3 700 zł / mies.</strong></div>
+              <div class="bar__track"><div class="bar__fill bar__fill--base"></div></div>
+            </li>
+            <li class="bar" style="--w: 100%">
+              <div class="bar__label"><span>Pirx – scenariusz optymistyczny</span><strong>do 5 500 zł / mies.</strong></div>
+              <div class="bar__track"><div class="bar__fill bar__fill--top"></div></div>
+            </li>
+          </ul>
+        </article>
+
+        <div class="calc-dash__row calc-dash__row--bottom">
+          <article class="cdash cdash--steps">
+            <h2 class="cdash__title">Start zajmuje tylko 3 kroki</h2>
+            <ol class="steps">
+              <li><span class="steps__num">1</span><p>Bezpłatna rozmowa i dokładna wycena Twojego mieszkania.</p></li>
+              <li><span class="steps__num">2</span><p>Sesja zdjęciowa, przygotowanie mieszkania i ogłoszenia na wszystkich platformach.</p></li>
+              <li><span class="steps__num">3</span><p>Rezerwacje, sprzątanie i przychody widzisz na bieżąco w panelu właściciela.</p></li>
+            </ol>
+          </article>
+
+          <article class="cdash cdash--models">
+            <h2 class="cdash__title">Modele współpracy</h2>
+            <p class="models__lead">Prowizja wyłącznie od zrealizowanych rezerwacji. Żadnych opłat stałych.</p>
+            <div class="models">
+              <div class="model model--lite">
+                <h3>Pirx Lite</h3>
+                <p class="model__price"><small>od</small> <strong>9%</strong></p>
+                <p>Dla właścicieli, którzy mają własną ekipę na miejscu.</p>
+              </div>
+              <div class="model model--standard">
+                <h3>Pirx Standard</h3>
+                <p class="model__price"><small>od</small> <strong>17%</strong></p>
+                <p>Zajmujemy się wszystkim – od A do Z.</p>
+              </div>
+            </div>
+            <a href="cennik.html" class="btn btn--outline">Zobacz pełny cennik</a>
+          </article>
+        </div>
+
+        <p class="calc-dash__note">* Wyliczenia mają charakter szacunkowy. Oparte są na danych z naszego portfela i rynku najmu krótkoterminowego w Twojej lokalizacji. Dokładną wycenę otrzymasz podczas bezpłatnej rozmowy.</p>
+      </div>
+    </section>
+
+
 
   <script src="js/navbar.js"></script>
   <script src="js/calc-chart.js"></script>

@@ -1,0 +1,28 @@
+/* Stránka Kalkulator: béžové pozadie celej stránky */
+.calc-page { background: var(--color-bg-soft); }
+
+.calc-result { padding-block: 40px 40px; text-align: center; }
+
+.calc-result__pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--color-white);
+  font-size: 9px; font-weight: 500; line-height: 1;
+  box-shadow: 0 1px 2px rgba(31,28,23,.06);
+}
+.calc-result__pill i { font-style: normal; opacity: .6; }
+.calc-result__pill strong { margin-left: 4px; font-weight: 700; text-decoration: underline; }
+
+.calc-result .h2 {
+  max-width: 640px;
+  margin: 28px auto 0;
+  font-size: 36px; /* TODO: overiť vo Figme */
+}
+.calc-result p { margin-top: 20px; font-size: 11px; }
+
+@media (max-width: 767px) {
+  .calc-result { padding-block: 24px 24px; }
+  .calc-result__pill { flex-wrap: wrap; justify-content: center; border-radius: 16px; font-size: 10px; }
+  .calc-result .h2 { font-size: 26px; margin-top: 20px; }
+}
