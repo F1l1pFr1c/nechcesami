@@ -5,7 +5,7 @@
   padding-block: 72px 88px;
   overflow: hidden;
 }
-.pricing__rocket { position: absolute; left: 7%; top: 220px; width: 120px; pointer-events: none; }
+.pricing__rocket { position: absolute; left: 6%; top: 170px; width: 220px; height: auto; pointer-events: none; }
 
 .pricing__head { max-width: 440px; margin: 0 auto 64px; text-align: center; }
 .pricing .h1 { font-size: 40px; } /* TODO: overiť vo Figme */

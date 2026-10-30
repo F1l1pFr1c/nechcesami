@@ -13,7 +13,7 @@
 .hero__buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
 
 .hero__image { justify-self: end; margin-right: 6%; }
-.hero__image img { width: 260px; }
+.hero__image img { width: 300px; height: auto; }
 
 /* ===== Podnavigácia ===== */
 .subnav { border-top: 1px solid #e8e4da; }
@@ -60,7 +60,7 @@
   .hero__buttons { flex-direction: column; margin-top: 32px; }
   .hero__buttons .btn { width: 100%; height: 48px; }
   .hero__image { justify-self: center; margin: 0; }
-  .hero__image img { width: 200px; }
+  .hero__image img { width: 240px; }
 
   .subnav__back { display: none; }
   .subnav__inner { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }

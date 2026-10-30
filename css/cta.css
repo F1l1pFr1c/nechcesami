@@ -13,7 +13,7 @@
   background-position: 10px 20px, 40px 60px;
 }
 
-.cta__planet { position: absolute; left: -20px; top: 12px; width: 300px; max-width: none; pointer-events: none; }
+.cta__planet { position: absolute; left: 0; top: 16px; width: 260px; height: auto; max-width: none; pointer-events: none; }
 .cta__moon {
   position: absolute; left: 22%; top: 50%;
   width: 16px; height: 16px; border-radius: 50%;
@@ -28,7 +28,7 @@
 
 @media (max-width: 767px) {
   .cta { padding-block: 64px; }
-  .cta__planet { width: 180px; left: -30px; top: 0; }
+  .cta__planet { width: 170px; left: -10px; top: 0; }
   .cta__moon { left: 70%; top: 18%; }
   .cta__inner { padding-top: 72px; }
   .cta__buttons { flex-direction: column; }
