@@ -1,0 +1,21 @@
+.header{background:var(--white);height:100px;position:relative;z-index:10}
+.header-in{height:100%;display:flex;align-items:center}
+.nav{display:flex;align-items:center;gap:40px;margin:0 auto 0 55px}
+.nav>a,.nav-item>button{font-size:15px;font-weight:500;background:none;border:0;padding:8px 0;display:flex;align-items:center;gap:8px}
+.nav-item{position:relative}
+.chev{width:7px;height:7px;border-right:1.4px solid currentColor;border-bottom:1.4px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.dropdown{position:absolute;top:100%;left:-16px;min-width:240px;background:var(--white);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.1);padding:10px;display:none}
+.nav-item:hover .dropdown,.nav-item:focus-within .dropdown,.nav-item.open .dropdown{display:block}
+.dropdown a{display:block;padding:11px 14px;font-size:15px;border-radius:8px}
+.dropdown a:hover{background:var(--bg)}
+.nav a.active{background:linear-gradient(transparent 60%,var(--yellow) 60%,var(--yellow) 86%,transparent 86%)}
+.phone{display:flex;align-items:center;gap:10px;height:48px;padding:0 20px;border:1px solid var(--ink);border-radius:12px;font-size:15px;font-weight:500;white-space:nowrap}
+.phone svg{width:18px;height:18px}
+.burger{display:none;width:48px;height:48px;border:1px solid var(--ink);border-radius:12px;background:none;position:relative}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:1.6px;background:var(--ink);position:absolute;left:15px;content:""}
+.burger span{top:23px}.burger span::before{top:-6px;left:0}.burger span::after{top:6px;left:0}
+@media(max-width:860px){
+  .burger{display:block}.phone span{display:none}.phone{padding:0 14px;margin-left:auto;margin-right:12px}
+  .nav{display:none;position:absolute;top:100px;left:0;right:0;background:var(--white);flex-direction:column;align-items:flex-start;gap:6px;margin:0;padding:12px 24px 28px;box-shadow:0 12px 24px rgba(0,0,0,.06)}
+  .nav.open{display:flex}.dropdown{position:static;box-shadow:none;padding:0 0 0 12px}}
+.nav .hl{background:linear-gradient(transparent 60%,var(--yellow) 60%,var(--yellow) 86%,transparent 86%)}
