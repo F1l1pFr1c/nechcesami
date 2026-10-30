@@ -1,0 +1,9 @@
+.author{border-top:1px solid var(--line);margin-top:64px;padding:60px 0 64px}
+.author-avatar{width:80px;height:80px;border-radius:50%;background:var(--ph);overflow:hidden;margin-bottom:44px}
+.author-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.author h3{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.3;margin:0 0 6px}
+.author-role{font-size:13px;font-weight:600;letter-spacing:.3px;text-transform:uppercase;margin-bottom:24px}
+.author p{font-size:17px;line-height:1.68;margin:0 0 40px}
+.author-social{display:flex;gap:17px}
+.author-social a{width:52px;height:52px;border:1px solid var(--ink);border-radius:6px;display:grid;place-items:center}
+.author-social svg{width:20px;height:20px;fill:var(--ink)}

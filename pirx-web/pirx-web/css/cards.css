@@ -1,0 +1,6 @@
+/* Mriežka kariet: 2 stĺpce po 590 px, medzera 60 px */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:60px}
+.card{border-radius:var(--radius);overflow:hidden;background:var(--white);display:flex;flex-direction:column}
+.card-text{flex:1}
+.cards-wrap{padding:60px 0}
+@media(max-width:760px){.cards{grid-template-columns:1fr;gap:28px}}

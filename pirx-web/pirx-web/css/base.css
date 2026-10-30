@@ -1,0 +1,24 @@
+/* Spoločný základ – návrh je robený na šírku 1920 px, obsah má 1240 px */
+:root{--bg:#f5f5ee;--ink:#1c1a17;--white:#fff;--yellow:#fcc400;--ph:#e3e3da;
+--serif:"Source Serif 4",Georgia,"Times New Roman",serif;--sans:"Figtree","Avenir Next",Avenir,Arial,sans-serif;--radius:16px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.container{width:min(1240px,100% - 48px);margin:0 auto}
+.demo{max-width:590px;margin:40px auto} /* len pre náhľad samostatných komponentov */
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:29px;letter-spacing:-.5px;color:#1a1618;line-height:1}
+.logo-mark{width:60px;height:60px;flex:none;background:url(../img/logo-mark.svg) center/contain no-repeat}
+.col860{width:min(860px,100% - 48px);margin:0 auto;padding:60px 0} /* len pre náhľad samostatnej sekcie */
+:root{--line:rgba(28,26,23,.12)}
+:root{--dark:#211d19}
+html{scroll-behavior:smooth}
+.btn{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 24px;border-radius:10px;border:1px solid transparent;font-size:14px;font-weight:700;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-yellow{background:var(--yellow);color:var(--ink)}
+.btn-outline{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-white{background:var(--white);color:var(--ink)}
+.icon-box{width:56px;height:56px;border-radius:12px;background:var(--yellow);display:grid;place-items:center;color:var(--ink)}
+.icon-box svg{width:28px;height:28px}
+.sec-title{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.25;margin:0 0 24px}

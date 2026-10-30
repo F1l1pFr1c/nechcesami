@@ -1,0 +1,7 @@
+.steps{background:var(--white);padding:120px 0}
+.steps .lead{font-size:16px;line-height:1.65;margin:0;max-width:580px}
+.steps-grid{list-style:none;margin:120px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:60px}
+.steps-grid h3{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.3;margin:20px 0 14px}
+.steps-grid p{font-size:14px;line-height:1.6;margin:0}
+@media(max-width:1000px){.steps{padding:72px 0}.steps-grid{grid-template-columns:repeat(2,1fr);gap:48px 32px;margin-top:56px}}
+@media(max-width:560px){.steps-grid{grid-template-columns:1fr}}
