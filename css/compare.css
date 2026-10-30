@@ -27,8 +27,12 @@
 
 @media (max-width: 767px) {
   .compare { padding-block: 40px 40px; }
-  .compare .h2 { font-size: 24px; margin-bottom: 28px; }
-  .compare__table { font-size: 10px; }
-  .compare__table th, .compare__table td { padding: 14px 8px; }
-  .compare__table tbody th { width: 34%; }
+  .compare .h2 { font-size: 26px; margin-bottom: 28px; }
+  /* tabuľka sa na mobile posúva do strán, žltý stĺpec je vpravo */
+  .compare__table { min-width: 560px; font-size: 13px; }
+  .compare__table th, .compare__table td { padding: 18px 14px; }
+  .compare__table tbody th { width: 38%; }
+  .compare__table thead th { font-size: 13px; }
+  .compare__table thead th.is-highlight { font-size: 14px; }
+  .compare__note { font-size: 12px; margin-top: 24px; }
 }

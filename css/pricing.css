@@ -59,7 +59,18 @@
   .pricing__rocket { display: none; }
   .pricing .h1 { font-size: 32px; }
   .pricing__head { margin-bottom: 32px; }
+  .pricing__head p { font-size: 14px; margin-top: 20px; }
   .pricing__cards { grid-template-columns: 1fr; gap: 16px; }
+  .pcard { padding: 24px 20px; font-size: 14px; border-radius: 12px; }
   .pcard--lite { margin-block: 0; }
-  .pcard { font-size: 12px; }
+  .pcard__name { font-size: 24px; margin-bottom: 24px; }
+  .pcard__price small { font-size: 16px; }
+  .pcard__price strong { font-size: 52px; }
+  .pcard__sub { font-size: 15px; margin-top: 8px; }
+  .pcard__badge { font-size: 10px; padding: 5px 10px; margin-top: 14px; }
+  .pcard hr { margin-block: 20px; }
+  .pcard__list { gap: 12px; font-size: 13px; margin-bottom: 32px; }
+  .pcard__list li { align-items: flex-start; }
+  .pcard__check { margin-top: 3px; }
+  .pcard__btn { height: 48px; font-size: 14px; }
 }

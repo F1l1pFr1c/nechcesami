@@ -22,7 +22,16 @@
 .calc-result p { margin-top: 20px; font-size: 11px; }
 
 @media (max-width: 767px) {
-  .calc-result { padding-block: 24px 24px; }
-  .calc-result__pill { flex-wrap: wrap; justify-content: center; border-radius: 16px; font-size: 10px; }
-  .calc-result .h2 { font-size: 26px; margin-top: 20px; }
+  .calc-result { padding-block: 16px 24px; }
+  /* adresa je v karte na celú šírku, jednotlivé údaje sa zalamujú */
+  .calc-result__pill {
+    display: block; width: 100%;
+    padding: 20px 16px; border-radius: 12px;
+    text-align: left; font-size: 13px; line-height: 1.6;
+  }
+  .calc-result__pill > svg { display: block; width: 24px; height: 24px; margin-bottom: 12px; }
+  .calc-result__pill i { margin-inline: 4px; }
+  .calc-result__pill strong { display: block; width: fit-content; margin: 14px 0 0; }
+  .calc-result .h2 { font-size: 28px; margin-top: 32px; }
+  .calc-result p { font-size: 14px; }
 }

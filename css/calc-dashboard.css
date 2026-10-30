@@ -138,25 +138,61 @@
 }
 @media (max-width: 767px) {
   .calc-dash { padding-bottom: 24px; }
-  .cdash { padding: 20px 16px; font-size: 12px; }
-  .cdash__title { font-size: 16px; }
-  .cdash__head { flex-direction: column; }
-  .chart-legend { justify-content: flex-start; font-size: 10px; }
-  .chart { grid-template-columns: 32px 1fr; }
-  .chart__axis span, .chart__months span { font-size: 8px; }
+  .cdash { padding: 24px 20px; font-size: 14px; }
+  .cdash__title { font-size: 18px; }
+
+  /* graf */
+  .cdash__head { flex-direction: column; gap: 16px; }
+  .chart-legend { flex-direction: column; gap: 10px; justify-content: flex-start; font-size: 11px; }
+  .chart { grid-template-columns: 34px 1fr; margin-top: 28px; }
+  .chart__axis span, .chart__months span { font-size: 9px; }
   .chart__months span:nth-child(even) { visibility: hidden; }
   .chart__cols, .chart__months { gap: 3px; }
-  .cdash__total small { font-size: 9px; }
-  .cdash__total strong { font-size: 11px; }
-  .cdash__total-value { font-size: 18px; }
-  .cdash--dark .btn { height: 44px; font-size: 12px; }
+  .chart__tip { font-size: 10px; }
+  .chart__tip small { font-size: 9px; }
+
+  /* súčet v béžovom boxe, údaje pod sebou */
+  .cdash__total {
+    flex-direction: column; align-items: flex-start; gap: 16px;
+    margin-top: 24px; padding: 20px 16px;
+    border-radius: 10px; background: var(--color-bg-soft);
+  }
+  .cdash__total strong { font-size: 13px; }
+  .cdash__total small { font-size: 11px; }
+  .cdash__total-value { font-size: 26px; }
+
+  /* tmavá karta */
+  .cdash__checks { font-size: 13px; }
+  .cdash--dark .cdash__lead { font-size: 13px; }
+  .cdash--dark .btn, .cdash--dark .cdash__lead + .btn { height: 48px; font-size: 14px; margin-top: 28px; }
+
+  /* porovnanie */
   .cdash--compare { grid-template-columns: 1fr; gap: 24px; }
-  .compare-short p, .models__lead { font-size: 12px; }
-  .callout small, .callout span, .bar__label, .steps p, .model { font-size: 11px; }
+  .compare-short p { font-size: 14px; }
+  .callout { padding: 18px 16px; }
+  .callout small { font-size: 12px; }
+  .callout p { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .callout strong { font-size: 28px; }
+  .callout span { font-size: 13px; }
+  .bar__label { gap: 12px; font-size: 12px; }
+  .bar__label span { max-width: 55%; }
+  .bar__label strong { text-align: right; }
+  .bar__track { height: 16px; }
+
+  /* kroky: číslo nad textom */
   .calc-dash__row--bottom { grid-template-columns: 1fr; }
-  .steps li { grid-template-columns: 56px 1fr; }
+  .steps li { grid-template-columns: 1fr; gap: 10px; padding-block: 20px; }
   .steps__num { font-size: 36px; }
+  .steps p { font-size: 12px; }
+
+  /* modely: dlaždice pod sebou, oddeľovač pred popisom */
+  .models__lead { font-size: 14px; }
+  .models { grid-template-columns: 1fr; gap: 12px; }
+  .model { padding: 18px 16px; font-size: 12px; }
   .model h3 { font-size: 13px; }
-  .cdash--models .btn { height: 44px; font-size: 12px; }
-  .calc-dash__note { font-size: 10px; }
+  .model__price strong { font-size: 26px; }
+  .model__price { padding-bottom: 20px; margin-bottom: 14px; border-bottom: 1px solid rgba(31,28,23,.35); }
+  .cdash--models .btn { height: 48px; font-size: 14px; }
+
+  .calc-dash__note { font-size: 11px; }
 }

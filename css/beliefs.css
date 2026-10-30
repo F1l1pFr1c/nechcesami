@@ -46,8 +46,12 @@
 
 @media (max-width: 767px) {
   .beliefs { padding-block: 40px 48px; }
-  .beliefs .h2 { font-size: 28px; }
-  .beliefs__head { margin-bottom: 32px; }
+  .beliefs__head { margin: 0 0 28px; max-width: none; text-align: left; }
+  .beliefs .h2 { font-size: 32px; }
+  .beliefs__head p { font-size: 14px; margin-top: 16px; }
   .beliefs__grid { grid-template-columns: 1fr; gap: 16px; }
-  .belief-card__text { font-size: 12px; }
+  .belief-card { padding: 24px 20px; }
+  .belief-card__icon { width: 36px; height: 36px; border-radius: 10px; }
+  .belief-card__title { font-size: 18px; margin-top: 24px; padding-bottom: 20px; }
+  .belief-card__text { font-size: 14px; line-height: 1.7; margin-top: 20px; }
 }
