@@ -1,0 +1,90 @@
+.navbar {
+  position: relative;
+  z-index: 20;
+  background: var(--color-white);
+}
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  height: 80px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+
+.navbar__menu { flex: 1; }
+.navbar__list { display: flex; align-items: center; gap: 32px; }
+
+.navbar__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  padding-block: 8px;
+}
+/* aktívna položka – žltý "zvýrazňovač" pod textom */
+.navbar__link--active::before {
+  content: "";
+  position: absolute;
+  left: -4px; right: 14px; bottom: 6px;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--color-yellow);
+  z-index: -1;
+}
+.navbar__link:hover { opacity: .7; }
+
+.navbar__actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.navbar__phone { font-size: 13px; }
+.navbar__burger { display: none; }
+
+/* ===== Mobil ===== */
+@media (max-width: 1023px) {
+  .navbar__inner { gap: 12px; height: 72px; }
+  .navbar__phone-text { display: none; }
+  .navbar__phone { width: 44px; padding: 0; }
+
+  .navbar__burger { display: inline-flex; width: 44px; padding: 0; }
+  .navbar__burger-lines,
+  .navbar__burger-lines::before {
+    display: block;
+    width: 18px; height: 1.5px;
+    background: currentColor;
+    border-radius: 2px;
+    position: relative;
+  }
+  .navbar__burger-lines::before {
+    content: "";
+    position: absolute; left: 0; top: -5px;
+    box-shadow: 0 10px 0 currentColor;
+  }
+
+  .navbar__menu {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--color-white);
+    border-top: 1px solid #e8e4da;
+    padding: 16px var(--container-pad) 24px;
+  }
+  .navbar__menu.is-open { display: block; }
+  .navbar__list { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .navbar__link { font-size: 16px; }
+}
+
+/* aktívna položka bez šípky (napr. Cennik) */
+.navbar__link--active:not(:has(.chevron))::before { right: -4px; }
+
+/* logo je PNG vrátane textu pirx.rent */
+.navbar__logo img { width: auto; height: 54px; }
+@media (max-width: 1023px) { .navbar__logo img { height: 44px; } }
