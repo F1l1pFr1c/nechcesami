@@ -17,6 +17,29 @@
 .contact__direct .h-sm { margin-bottom: 30px; }
 .contact__direct .socials { margin-top: 28px; }
 
+/* karta formularza */
+.contact-card { background: var(--c-white); border-radius: var(--radius); padding: 40px 39px 39px 39px; }
+.contact-card__head { display: flex; gap: 23px; align-items: flex-start; }
+.contact-card__head .lead-pirx { margin-top: 10px; max-width: 284px; line-height: 22px; }
+.contact-card__icon {
+  width: 60px; height: 60px; flex: none; border-radius: 50%;
+  background: var(--c-yellow); display: grid; place-items: center;
+  outline: 1px solid transparent;
+}
+.contact-card__icon .ico { width: 24px; height: 24px; }
+
+.contact-form { margin-top: 44px; display: grid; gap: 14px; }
+.contact-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.contact-form .field { min-height: 72px; }
+.contact-form .select__list { top: calc(100% + 6px); left: 0; right: 0; }
+.contact-form textarea.field__input { min-height: 96px; }
+.contact-form .check { margin-top: 2px; margin-bottom: 4px; }
+.contact-form .check a { color: inherit; }
+
+.form-status { margin: 0; min-height: 1em; font-size: 14px; font-weight: 700; }
+.form-status.is-error { color: #c0392b; }
+.form-status.is-ok { color: #1e7a3d; }
+
 @media (max-width: 1199.98px) {
   .contact__grid { grid-template-columns: 1fr 1fr; }
 }
@@ -28,4 +51,8 @@
   .contact__company { padding-block: 24px; }
   .contact__company .h-sm, .contact__direct .h-sm { margin-bottom: 20px; }
   .contact__direct { padding-top: 24px; }
+  .contact-card { padding: 24px 20px; }
+  .contact-card__head { flex-direction: column; gap: 20px; }
+  .contact-form { margin-top: 24px; }
+  .contact-form__row { grid-template-columns: 1fr; }
 }

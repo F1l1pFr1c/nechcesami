@@ -166,4 +166,42 @@
     });
   });
 
+  /* ---------- Formularz kontaktowy (tylko front — bez wysyłki) ---------- */
+  document.querySelectorAll('[data-contact-form]').forEach(function (form) {
+    const status = form.querySelector('[data-form-status]');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let firstBad = null;
+
+      form.querySelectorAll('[required]').forEach(function (input) {
+        const box = input.closest('.field, .check');
+        const ok = input.type === 'checkbox' ? input.checked : input.checkValidity();
+        if (box) box.classList.toggle('is-invalid', !ok);
+        if (!ok && !firstBad) firstBad = input;
+      });
+      form.querySelectorAll('[data-select][data-required]').forEach(function (sel) {
+        const ok = !!sel.querySelector('input[type="hidden"]').value;
+        sel.classList.toggle('is-invalid', !ok);
+        if (!ok && !firstBad) firstBad = sel.querySelector('.select__btn');
+      });
+
+      if (firstBad) {
+        status.textContent = 'Uzupełnij zaznaczone pola.';
+        status.className = 'form-status is-error';
+        firstBad.focus();
+        return;
+      }
+      // TODO: podpiąć wysyłkę (np. fetch do backendu / Formspree), gdy zespół zdecyduje.
+      status.textContent = 'Dziękujemy! Odezwiemy się w ciągu 24 godzin roboczych.';
+      status.className = 'form-status is-ok';
+      form.reset();
+      form.querySelectorAll('[data-select]').forEach(function (s) { s._reset && s._reset(); });
+    });
+
+    form.addEventListener('input', function (e) {
+      const box = e.target.closest('.field, .check');
+      if (box) box.classList.remove('is-invalid');
+    });
+  });
 })();

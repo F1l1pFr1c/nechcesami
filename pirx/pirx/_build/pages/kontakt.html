@@ -45,6 +45,77 @@
           </div>
         </div>
       </div>
+
+      <section class="contact-card" aria-labelledby="form-title">
+        <div class="contact-card__head">
+          <span class="contact-card__icon">{{icon:phone}}</span>
+          <div>
+            <h2 class="h-md" id="form-title">Umów rozmowę</h2>
+            <p class="lead-pirx">Zazwyczaj odpowiadamy w ciągu 24 godzin roboczych.</p>
+          </div>
+        </div>
+
+        <form class="contact-form" data-contact-form novalidate>
+          <label class="field">
+            <span class="field__label">Imię*</span>
+            <input class="field__input" type="text" name="imie" placeholder="np. Jan Kowalski" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span class="field__label">Numer telefonu*</span>
+            <input class="field__input" type="tel" name="telefon" placeholder="+48 123 456 789" autocomplete="tel" pattern="[0-9+ ()\-]{9,}" required>
+          </label>
+          <label class="field">
+            <span class="field__label">E-mail*</span>
+            <input class="field__input" type="email" name="email" placeholder="jankowalski@email.pl" autocomplete="email" required>
+          </label>
+          <label class="field">
+            <span class="field__label">Miasto*</span>
+            <input class="field__input" type="text" name="miasto" placeholder="Warszawa" autocomplete="address-level2" required>
+          </label>
+
+          <div class="contact-form__row">
+            <div class="field select" data-select data-required>
+              <span class="field__label" id="typ-label">Typ nieruchomości*</span>
+              <input type="hidden" name="typ">
+              <button class="select__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="typ-label" aria-controls="typ-list">
+                <span class="select__value">Wybierz z listy</span>{{icon:chevron}}
+              </button>
+              <ul class="select__list" id="typ-list" role="listbox" aria-labelledby="typ-label">
+                <li role="option" data-value="kawalerka">Kawalerka</li>
+                <li role="option" data-value="2-pokoje">2 pokoje</li>
+                <li role="option" data-value="3-pokoje-i-wiecej">3 pokoje i więcej</li>
+                <li role="option" data-value="dom">Dom</li>
+              </ul>
+            </div>
+            <div class="field select" data-select data-required>
+              <span class="field__label" id="pakiet-label">Interesuje mnie*</span>
+              <input type="hidden" name="pakiet">
+              <button class="select__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="pakiet-label" aria-controls="pakiet-list">
+                <span class="select__value">Wybierz z listy</span>{{icon:chevron}}
+              </button>
+              <ul class="select__list" id="pakiet-list" role="listbox" aria-labelledby="pakiet-label">
+                <li role="option" data-value="standard">PIRX Standard</li>
+                <li role="option" data-value="lite">PIRX Lite</li>
+                <li role="option" data-value="nie-wiem">Nie wiem jeszcze</li>
+              </ul>
+            </div>
+          </div>
+
+          <label class="field">
+            <span class="field__label">Twoja wiadomość (opcjonalne)</span>
+            <textarea class="field__input" name="wiadomosc" rows="5" placeholder="Wpisz tutaj"></textarea>
+          </label>
+
+          <label class="check">
+            <input type="checkbox" name="zgoda" required>
+            <span class="check__box"><svg viewBox="0 0 10 8" fill="none" aria-hidden="true"><path d="M1 3.8 2.6 5.5c.4.4.6.5.8.5s.4-.1.8-.5L9 1" stroke="#1F1C17" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span>Akceptuję warunki przetwarzania moich danych osobowych, opisane w <a href="{{link:polityka}}">Polityce Prywatności</a>.</span>
+          </label>
+
+          <button class="btn-pirx btn-pirx--dark btn-pirx--block" type="submit">Wyślij wiadomość</button>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
+      </section>
     </div>
   </main>
 
