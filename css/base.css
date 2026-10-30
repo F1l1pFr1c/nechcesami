@@ -4,6 +4,8 @@
   --color-yellow: #ffd000;
   --color-white: #fff;
   --color-bg-soft: #f5f5ed;
+  --color-dark: #1f1c17;
+  --color-accent: #e85d04;   /* TODO: overiť oranžovú vo Figme */
   --color-bg-soft: #f5f5ed;
   --color-border: #1f1c17;
 
@@ -42,6 +44,9 @@ h1, h2, h3, p { margin: 0; }
   margin-inline: auto;
   padding-inline: var(--container-pad);
 }
+
+/* Užší kontajner pre sekcie pod hero (rovnaké zarovnanie ako sekcia O nas) */
+.container--narrow { max-width: calc(940px + var(--container-pad) * 2); }
 
 /* Nadpisy */
 .h1, .h2 {
