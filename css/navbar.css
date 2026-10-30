@@ -81,3 +81,6 @@
   .navbar__list { flex-direction: column; align-items: flex-start; gap: 8px; }
   .navbar__link { font-size: 16px; }
 }
+
+/* aktívna položka bez šípky (napr. Cennik) */
+.navbar__link--active:not(:has(.chevron))::before { right: -4px; }
