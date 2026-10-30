@@ -2,3 +2,49 @@
    Proces (proces.html)
    ========================================================= */
 
+/* ---------- HERO + okruszki ---------- */
+.p-hero { padding-top: 98px; }
+.p-hero__grid { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
+.p-hero__txt { max-width: 552px; }
+.p-hero__txt .lead-pirx { margin-top: 27px; max-width: 515px; }
+.p-hero__btns { display: flex; gap: 15px; margin-top: 63px; }
+.p-hero__btns .btn-pirx { height: 50px; }
+.p-hero__btns .btn-pirx--yellow { height: 48px; }
+.p-hero__art { width: 372px; height: 357px; flex: none; margin-right: 13px; border-radius: 50%; }
+img.p-hero__art { border-radius: 0; object-fit: contain; }
+
+.crumbs {
+  margin-top: 94px; height: 52px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 2px solid var(--c-line);
+}
+.crumbs a {
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0; text-decoration: none;
+}
+.crumbs__home { display: inline-flex; align-items: center; gap: 8px; }
+.crumbs__dot { width: 20px; height: 20px; border-radius: 50%; background: var(--c-yellow); display: grid; place-items: center; }
+.crumbs__dot .ico { width: 14px; height: 14px; }
+.crumbs__anchors { display: flex; gap: 31px; list-style: none; margin: 0; padding: 0; align-self: stretch; }
+.crumbs__anchors li { display: flex; }
+.crumbs__anchors a { position: relative; display: flex; align-items: center; padding-top: 2px; }
+.crumbs__anchors a::before {
+  content: ""; position: absolute; top: -2px; left: -15px; right: -15px; height: 8px;
+  background: var(--c-yellow); border-radius: 0 0 4px 4px; transform: scaleX(0); transition: transform .2s;
+}
+.crumbs__anchors a.is-active::before, .crumbs__anchors a:hover::before { transform: scaleX(1); }
+
+@media (max-width: 991.98px) {
+  .p-hero { padding-top: 32px; }
+  .p-hero__grid { flex-direction: column; align-items: stretch; gap: 32px; }
+  .p-hero__txt .lead-pirx { margin-top: 20px; }
+  .p-hero__btns { flex-direction: column; margin-top: 24px; gap: 12px; }
+  .p-hero__btns .btn-pirx { width: 100%; }
+  .p-hero__art { width: 280px; height: 270px; margin: 0 auto; }
+  .crumbs { margin-top: 32px; }
+  .crumbs__home { display: none; }
+  .crumbs__anchors { overflow-x: auto; gap: 31px; scrollbar-width: none; }
+  .crumbs__anchors::-webkit-scrollbar { display: none; }
+  .crumbs__anchors li { flex: none; }
+  .crumbs__anchors li:first-child a::before { left: 0; }
+}
+
