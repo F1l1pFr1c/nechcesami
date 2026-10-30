@@ -84,3 +84,7 @@
 
 /* aktívna položka bez šípky (napr. Cennik) */
 .navbar__link--active:not(:has(.chevron))::before { right: -4px; }
+
+/* logo je PNG vrátane textu pirx.rent */
+.navbar__logo img { width: auto; height: 54px; }
+@media (max-width: 1023px) { .navbar__logo img { height: 44px; } }

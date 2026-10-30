@@ -38,3 +38,8 @@
   .footer__bottom { flex-wrap: wrap; font-size: 10px; }
   .footer__copy { margin-left: 0; width: 100%; }
 }
+
+/* logo vo footeri */
+.footer__logo img { width: auto; height: 54px; }
+/* footer na béžovom pozadí (stránka Kalkulator) */
+.footer--soft { background: var(--color-bg-soft); }
