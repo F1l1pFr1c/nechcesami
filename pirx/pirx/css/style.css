@@ -363,5 +363,54 @@ textarea.field__input { resize: vertical; min-height: 96px; }
    SEKCJE WSPÓLNE
    ========================================================= */
 
+/* --- opinie (karuzela) --- */
+.reviews-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.reviews-head p { margin: 15px 0 0; }
+.reviews-arrows { display: flex; gap: 12px; }
+.reviews-arrows button {
+  width: 32px; height: 32px; border-radius: 50%; border: 0;
+  background: var(--c-ink); color: var(--c-white); display: grid; place-items: center;
+}
+.reviews-arrows button .ico { width: 18px; height: 18px; }
+.reviews-arrows button:disabled { opacity: .35; }
+.reviews-track {
+  margin-top: 60px;
+  display: flex; gap: 32px; overflow-x: auto; scroll-snap-type: x mandatory;
+  scrollbar-width: none; padding-bottom: 4px;
+  margin-right: calc(-1 * max(var(--gutter), (100vw - var(--container)) / 2));
+}
+.reviews-track::-webkit-scrollbar { display: none; }
+.review-card {
+  flex: 0 0 604px; scroll-snap-align: start;
+  background: var(--c-white); border-radius: var(--radius);
+  padding: 32px 32px 32px 31px; min-height: 444px;
+  display: flex; flex-direction: column;
+}
+.review-card .quote { width: 37px; height: 32px; color: #000; }
+.review-card__text { margin: 35px 0 24px; font-size: 16px; line-height: 24px; letter-spacing: -0.01em; }
+.review-card__foot { margin-top: auto; display: flex; align-items: center; gap: 15px; }
+.avatar {
+  width: 48px; height: 48px; flex: none; border-radius: var(--radius);
+  background: var(--c-yellow); display: grid; place-items: center;
+  font-size: 22px; font-weight: 700; letter-spacing: -0.02em;
+}
+.review-card__who strong { display: block; font-size: 16px; letter-spacing: -0.01em; }
+.review-card__who span { display: block; margin-top: 9px; }
+.stars { margin-left: auto; display: flex; gap: 4px; color: var(--c-yellow); }
+.stars .ico { width: 13px; height: 13px; }
+.reviews-dots { display: none; gap: 8px; margin-top: 16px; }
+.reviews-dots span { width: 6px; height: 6px; border-radius: 50%; border: 1px solid var(--c-ink); }
+.reviews-dots span.is-active { background: var(--c-ink); }
+
+@media (max-width: 991.98px) {
+  .reviews-arrows { display: none; }
+  .reviews-track { margin-top: 32px; gap: 16px; }
+  .review-card { flex-basis: 84%; min-height: 0; padding: 24px; }
+  .review-card__text { margin: 20px 0; max-height: 216px; overflow-y: auto; padding-right: 12px; }
+  .review-card__foot { flex-wrap: wrap; }
+  .review-card .stars { margin-left: 63px; width: 100%; }
+  .reviews-dots { display: flex; }
+}
+
 /* --- ilość odstępów pomocnicza --- */
 .mt-pirx-40 { margin-top: 40px; }

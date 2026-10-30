@@ -122,4 +122,36 @@
     if (!e.target.closest('[data-select]')) closeAllSelects();
   });
 
+  /* ---------- Karuzela opinii ---------- */
+  document.querySelectorAll('[data-reviews]').forEach(function (track) {
+    const root = track.parentElement;
+    const prev = root.querySelector('[data-reviews-prev]');
+    const next = root.querySelector('[data-reviews-next]');
+    const dotsBox = root.querySelector('[data-reviews-dots]');
+    const cards = Array.from(track.children);
+
+    function step() {
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return cards[0].getBoundingClientRect().width + gap;
+    }
+    if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+
+    let dots = [];
+    if (dotsBox) {
+      dotsBox.innerHTML = cards.map(function () { return '<span></span>'; }).join('');
+      dots = Array.from(dotsBox.children);
+    }
+    function update() {
+      const max = track.scrollWidth - track.clientWidth - 2;
+      if (prev) prev.disabled = track.scrollLeft <= 2;
+      if (next) next.disabled = track.scrollLeft >= max;
+      const idx = Math.round(track.scrollLeft / step());
+      dots.forEach(function (d, i) { d.classList.toggle('is-active', i === Math.min(idx, dots.length - 1)); });
+    }
+    track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+
 })();
