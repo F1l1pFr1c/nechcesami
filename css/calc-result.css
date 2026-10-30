@@ -1,0 +1,37 @@
+/* Stránka Kalkulator: béžové pozadie celej stránky */
+.calc-page { background: var(--color-bg-soft); }
+
+.calc-result { padding-block: 40px 40px; text-align: center; }
+
+.calc-result__pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--color-white);
+  font-size: 9px; font-weight: 500; line-height: 1;
+  box-shadow: 0 1px 2px rgba(31,28,23,.06);
+}
+.calc-result__pill i { font-style: normal; opacity: .6; }
+.calc-result__pill strong { margin-left: 4px; font-weight: 700; text-decoration: underline; }
+
+.calc-result .h2 {
+  max-width: 640px;
+  margin: 28px auto 0;
+  font-size: 36px; /* TODO: overiť vo Figme */
+}
+.calc-result p { margin-top: 20px; font-size: 11px; }
+
+@media (max-width: 767px) {
+  .calc-result { padding-block: 16px 24px; }
+  /* adresa je v karte na celú šírku, jednotlivé údaje sa zalamujú */
+  .calc-result__pill {
+    display: block; width: 100%;
+    padding: 20px 16px; border-radius: 12px;
+    text-align: left; font-size: 13px; line-height: 1.6;
+  }
+  .calc-result__pill > svg { display: block; width: 24px; height: 24px; margin-bottom: 12px; }
+  .calc-result__pill i { margin-inline: 4px; }
+  .calc-result__pill strong { display: block; width: fit-content; margin: 14px 0 0; }
+  .calc-result .h2 { font-size: 28px; margin-top: 32px; }
+  .calc-result p { font-size: 14px; }
+}

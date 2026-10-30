@@ -1,0 +1,198 @@
+.calc-dash { padding-bottom: 32px; }
+.calc-dash .container { display: grid; gap: 12px; }
+
+.calc-dash__row { display: grid; gap: 10px; }
+.calc-dash__row--top { grid-template-columns: 5fr 3fr; }
+.calc-dash__row--bottom { grid-template-columns: 1fr 1fr; }
+
+/* ----- spoločná karta ----- */
+.cdash {
+  padding: 24px;
+  border-radius: 12px; /* TODO: overiť vo Figme */
+  background: var(--color-white);
+  font-size: 10px;
+  line-height: 1.6;
+}
+.cdash__title { font-family: var(--font-heading); font-weight: 600; font-size: 14px; line-height: 1.3; }
+.cdash__title--light { color: var(--color-white); }
+
+/* ===== Graf ===== */
+.cdash--chart { display: flex; flex-direction: column; }
+.cdash__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.chart-legend { display: flex; gap: 14px; font-size: 8px; color: #6b675e; flex-wrap: wrap; justify-content: flex-end; }
+.chart-legend li { display: inline-flex; align-items: center; gap: 6px; }
+.chart-legend__dot { width: 8px; height: 8px; border-radius: 2px; }
+.chart-legend__dot--base { background: var(--color-yellow); }
+.chart-legend__dot--top { background: #fbe9a1; }
+
+.chart {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  margin-top: 36px;
+  min-height: 230px;
+}
+.chart__axis { position: relative; height: 180px; }
+.chart__axis span {
+  position: absolute; right: 8px; transform: translateY(50%);
+  font-size: 7px; color: #8a867c; white-space: nowrap;
+}
+.chart__plot { position: relative; height: 180px; }
+.chart__grid { position: absolute; inset: 0; pointer-events: none; }
+.chart__grid i { position: absolute; left: 0; right: 0; border-top: 1px solid #ece9df; }
+
+.chart__cols { position: absolute; inset: 0; display: flex; align-items: flex-end; gap: 6px; padding-inline: 4px; }
+.chart__col {
+  position: relative; flex: 1; height: 100%;
+  display: flex; align-items: flex-end; justify-content: center;
+  padding: 0; border: 0; background: none; cursor: pointer;
+}
+.chart__bar { position: relative; width: 100%; max-width: 26px; border-radius: 3px 3px 0 0; background: #fbe9a1; overflow: hidden; transition: filter .15s; }
+.chart__bar-base { position: absolute; left: 0; right: 0; bottom: 0; background: var(--color-yellow); }
+.chart__col:hover .chart__bar, .chart__col:focus-visible .chart__bar, .chart__col.is-active .chart__bar { filter: saturate(1.15) brightness(.97); }
+
+.chart__months { grid-column: 2; display: flex; gap: 6px; padding: 8px 4px 0; }
+.chart__months span { flex: 1; text-align: center; font-size: 7px; color: #8a867c; }
+
+.chart__tip {
+  position: absolute; z-index: 2;
+  min-width: 76px; padding: 6px 10px;
+  border-radius: 4px;
+  background: var(--color-dark); color: var(--color-white);
+  font-size: 8px; line-height: 1.4;
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+  white-space: nowrap;
+}
+.chart__tip small { display: block; font-size: 7px; opacity: .75; }
+.chart__tip strong { font-weight: 700; }
+.chart__tip::after {
+  content: ""; position: absolute; left: 50%; bottom: -4px;
+  width: 8px; height: 8px; background: inherit;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.cdash__total { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-top: auto; padding-top: 16px; }
+.cdash__total strong { display: block; font-size: 9px; font-weight: 700; }
+.cdash__total small { font-size: 7px; color: #8a867c; }
+.cdash__total-value { font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 1; letter-spacing: -0.02em; white-space: nowrap; }
+
+/* ===== Tmavá karta ===== */
+.cdash--dark { display: flex; flex-direction: column; background: var(--color-dark); color: var(--color-white); }
+.cdash__icon {
+  display: grid; place-items: center;
+  width: 28px; height: 28px; margin-bottom: 20px;
+  border-radius: 50%; border: 1px solid var(--color-yellow);
+  color: var(--color-yellow);
+}
+.cdash__icon .icon { width: 14px; height: 14px; }
+.cdash__checks { display: grid; gap: 14px; margin-top: 24px; }
+.cdash__checks li { display: flex; gap: 8px; align-items: flex-start; }
+.cdash__check { flex: none; color: var(--color-yellow); margin-top: 1px; }
+.cdash__lead { margin-top: 28px; color: rgba(255,255,255,.85); }
+.cdash--dark .btn { margin-top: auto; width: 100%; height: 36px; font-size: 10px; }
+.cdash--dark .cdash__lead + .btn { margin-top: 48px; }
+
+/* ===== Porovnanie ===== */
+.cdash--compare { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start; }
+.compare-short p { margin-top: 12px; font-size: 10px; }
+.callout { margin-top: 32px; padding: 14px 16px; border-radius: 8px; background: var(--color-yellow); }
+.callout small { font-size: 8px; font-weight: 500; }
+.callout p { margin-top: 6px; display: flex; align-items: baseline; gap: 10px; }
+.callout strong { font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 1; letter-spacing: -0.02em; }
+.callout span { font-size: 8px; font-weight: 600; }
+
+.bars { display: grid; gap: 16px; }
+.bar__label { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 8px; }
+.bar__label strong { font-weight: 700; }
+.bar__track { height: 14px; border-radius: 4px; background: #f1efe6; overflow: hidden; }
+.bar__fill { width: var(--w); height: 100%; border-radius: 4px; }
+.bar__fill--long { background: #ded6c7; }
+.bar__fill--base { background: var(--color-yellow); }
+.bar__fill--top  { background: #fbe9a1; }
+
+/* ===== Kroky ===== */
+.steps { margin-top: 20px; }
+.steps li { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 16px; padding-block: 16px; border-bottom: 1px solid #e3e0d6; }
+.steps li:last-child { border-bottom: 0; padding-bottom: 0; }
+.steps__num { font-family: var(--font-heading); font-weight: 600; font-size: 32px; line-height: 1; }
+.steps p { font-size: 9px; }
+
+/* ===== Modely ===== */
+.models__lead { margin-top: 12px; font-size: 10px; }
+.models { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-block: 20px 20px; }
+.model { padding: 14px; border-radius: 6px; font-size: 8px; line-height: 1.5; }
+.model--lite { background: var(--color-bg-soft); }
+.model--standard { background: var(--color-yellow); }
+.model h3 { font-family: var(--font-heading); font-weight: 600; font-size: 10px; margin-bottom: 8px; }
+.model__price { display: flex; align-items: baseline; gap: 4px; margin-bottom: 8px; }
+.model__price small { font-size: 8px; }
+.model__price strong { font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 1; letter-spacing: -0.02em; }
+.cdash--models .btn { width: 100%; height: 34px; font-size: 10px; }
+
+.calc-dash__note { max-width: 560px; margin: 8px auto 0; text-align: center; font-size: 7px; line-height: 1.7; color: #8a867c; }
+
+/* ===== Tablet / mobil ===== */
+@media (max-width: 1023px) {
+  .calc-dash__row--top { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .calc-dash { padding-bottom: 24px; }
+  .cdash { padding: 24px 20px; font-size: 14px; }
+  .cdash__title { font-size: 18px; }
+
+  /* graf */
+  .cdash__head { flex-direction: column; gap: 16px; }
+  .chart-legend { flex-direction: column; gap: 10px; justify-content: flex-start; font-size: 11px; }
+  .chart { grid-template-columns: 34px 1fr; margin-top: 28px; }
+  .chart__axis span, .chart__months span { font-size: 9px; }
+  .chart__months span:nth-child(even) { visibility: hidden; }
+  .chart__cols, .chart__months { gap: 3px; }
+  .chart__tip { font-size: 10px; }
+  .chart__tip small { font-size: 9px; }
+
+  /* súčet v béžovom boxe, údaje pod sebou */
+  .cdash__total {
+    flex-direction: column; align-items: flex-start; gap: 16px;
+    margin-top: 24px; padding: 20px 16px;
+    border-radius: 10px; background: var(--color-bg-soft);
+  }
+  .cdash__total strong { font-size: 13px; }
+  .cdash__total small { font-size: 11px; }
+  .cdash__total-value { font-size: 26px; }
+
+  /* tmavá karta */
+  .cdash__checks { font-size: 13px; }
+  .cdash--dark .cdash__lead { font-size: 13px; }
+  .cdash--dark .btn, .cdash--dark .cdash__lead + .btn { height: 48px; font-size: 14px; margin-top: 28px; }
+
+  /* porovnanie */
+  .cdash--compare { grid-template-columns: 1fr; gap: 24px; }
+  .compare-short p { font-size: 14px; }
+  .callout { padding: 18px 16px; }
+  .callout small { font-size: 12px; }
+  .callout p { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .callout strong { font-size: 28px; }
+  .callout span { font-size: 13px; }
+  .bar__label { gap: 12px; font-size: 12px; }
+  .bar__label span { max-width: 55%; }
+  .bar__label strong { text-align: right; }
+  .bar__track { height: 16px; }
+
+  /* kroky: číslo nad textom */
+  .calc-dash__row--bottom { grid-template-columns: 1fr; }
+  .steps li { grid-template-columns: 1fr; gap: 10px; padding-block: 20px; }
+  .steps__num { font-size: 36px; }
+  .steps p { font-size: 12px; }
+
+  /* modely: dlaždice pod sebou, oddeľovač pred popisom */
+  .models__lead { font-size: 14px; }
+  .models { grid-template-columns: 1fr; gap: 12px; }
+  .model { padding: 18px 16px; font-size: 12px; }
+  .model h3 { font-size: 13px; }
+  .model__price strong { font-size: 26px; }
+  .model__price { padding-bottom: 20px; margin-bottom: 14px; border-bottom: 1px solid rgba(31,28,23,.35); }
+  .cdash--models .btn { height: 48px; font-size: 14px; }
+
+  .calc-dash__note { font-size: 11px; }
+}

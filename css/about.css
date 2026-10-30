@@ -1,0 +1,31 @@
+.about {
+  background: var(--color-bg-soft);
+  padding-block: 64px;
+}
+
+.about__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 64px;
+  max-width: calc(940px + var(--container-pad) * 2); /* TODO: overiť šírku vo Figme */
+}
+
+.about__media img {
+  width: 100%;
+  aspect-ratio: 307 / 329;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 12px; /* TODO: overiť vo Figme */
+}
+
+.about__content { max-width: 440px; }
+.about .h2 { font-size: 28px; margin-bottom: 24px; } /* TODO: overiť veľkosť nadpisu */
+.about__content p + p { margin-top: 24px; }
+
+@media (max-width: 767px) {
+  .about { padding-block: 32px 48px; }
+  .about__inner { grid-template-columns: 1fr; gap: 32px; }
+  .about__media img { aspect-ratio: 1 / 0.95; }
+  .about__content { max-width: none; }
+}

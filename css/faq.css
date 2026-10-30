@@ -1,0 +1,90 @@
+.faq { background: var(--color-bg-soft); padding-block: 72px 80px; }
+
+.faq__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "intro main"
+    "help  main";
+  grid-template-rows: auto 1fr;
+  column-gap: 88px;
+  align-items: start;
+}
+.faq__intro { grid-area: intro; padding-top: 28px; }
+.faq__main  { grid-area: main; }
+.faq__help  { grid-area: help; }
+
+.faq .h2 { font-size: 28px; }
+.faq__intro p { margin-top: 20px; font-size: 11px; line-height: 1.7; }
+
+/* ----- tmavá výzva ----- */
+.faq__help {
+  margin-top: 40px;
+  padding: 16px;
+  border-radius: 10px; /* TODO: overiť vo Figme */
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+.faq__help-icon { display: block; margin-bottom: 8px; }
+.faq__help p { font-size: 11px; font-weight: 600; }
+.faq__help .btn { width: 100%; height: 40px; margin-top: 16px; font-size: 11px; }
+
+/* ----- záložky ----- */
+.faq__tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.faq__tab {
+  height: 22px; padding: 0 10px;
+  border: 1px solid var(--color-dark);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-dark);
+  font: inherit; font-size: 9px; font-weight: 600; line-height: 1;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+.faq__tab:hover { background: rgba(31,28,23,.08); }
+.faq__tab.is-active { background: var(--color-dark); color: var(--color-white); }
+
+/* ----- accordion ----- */
+.faq__list[hidden] { display: none; }
+.faq-item { border-bottom: 1px solid #8f8c84; }
+.faq-item h3 { margin: 0; font: inherit; }
+
+.faq-item__q {
+  display: flex; align-items: center; gap: 12px;
+  width: 100%; padding: 17px 0;
+  border: 0; background: none; text-align: left;
+  font: inherit; font-size: 11px; font-weight: 600; line-height: 1.5;
+  color: var(--color-text);
+  cursor: pointer;
+}
+.faq-item__num { flex: none; width: 22px; }
+.faq-item__text { flex: 1; }
+.faq-item__chevron { flex: none; transition: transform .2s ease; }
+.faq-item__q[aria-expanded="true"] .faq-item__chevron { transform: rotate(180deg); }
+
+.faq-item__a {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .25s ease;
+}
+.faq-item__a > div { overflow: hidden; }
+.faq-item__a p { padding: 0 24px 16px 34px; font-size: 11px; line-height: 1.7; }
+.faq-item:has(.faq-item__q[aria-expanded="true"]) .faq-item__a { grid-template-rows: 1fr; }
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-item__a, .faq-item__chevron { transition: none; }
+}
+
+/* ===== Mobil: nadpis, text, záložky, otázky, až potom výzva ===== */
+@media (max-width: 767px) {
+  .faq { padding-block: 32px 48px; }
+  .faq__inner { display: flex; flex-direction: column; }
+  .faq__intro { padding-top: 0; }
+  .faq__intro p { font-size: 12px; }
+  .faq__main { margin-top: 28px; }
+  .faq__tab { height: 28px; font-size: 11px; padding-inline: 12px; }
+  .faq-item__q { font-size: 13px; padding-block: 16px; }
+  .faq-item__a p { font-size: 12px; }
+  .faq__help { margin-top: 32px; padding: 20px; }
+  .faq__help p { font-size: 13px; }
+}

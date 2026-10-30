@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kim jest Pirx? | pirx.rent</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/beliefs.css">
+  <link rel="stylesheet" href="css/reviews.css">
+  <link rel="stylesheet" href="css/cta.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="/" class="navbar__logo" aria-label="pirx.rent – strona główna">
+        <img src="assets/logo.png" alt="" width="164" height="54">
+      </a>
+
+      <nav class="navbar__menu" id="main-menu" aria-label="Główna nawigacja">
+        <ul class="navbar__list">
+          <li><a href="#" class="navbar__link navbar__link--active">Jak to działa? <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#" class="navbar__link">Nasze usługi <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#" class="navbar__link">Wiedza <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#" class="navbar__link">Cennik</a></li>
+          <li><a href="#" class="navbar__link">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="tel:+48792937176" class="btn btn--outline navbar__phone">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <span class="navbar__phone-text">+48 792 937 176</span>
+          <span class="visually-hidden">Zadzwoń</span>
+        </a>
+        <button class="btn btn--outline navbar__burger" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Otwórz menu">
+          <span class="navbar__burger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== SEKCIA 1: HERO ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 id="hero-title" class="h1">Kim jest Pirx?</h1>
+          <p class="hero__text">Zarządzamy nieruchomościami tak, jak dobry pilot prowadzi statek – spokojnie, pewnie i bez turbulencji. Za każdą misją stoi system, doświadczenie i ludzie, którzy wiedzą, co robią. Oto jak to się zaczęło.</p>
+          <div class="hero__buttons">
+            <a href="#kontakt" class="btn btn--primary">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              Umów rozmowę
+            </a>
+            <a href="#kalkulator" class="btn btn--outline">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 7h8M8.5 12h1M12 12h1M15 12h.5M8.5 16h1M12 16h1M15 16h.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              Oblicz przychód
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__image">
+          <img src="assets/hero-helmet.png" alt="Ilustracja hełmu astronauty z planetą w wizjerze" width="321" height="309">
+        </div>
+      </div>
+
+      <!-- Podnavigácia sekcie -->
+      <div class="subnav">
+        <div class="container subnav__inner">
+          <a href="/" class="subnav__back">
+            <span class="subnav__back-icon" aria-hidden="true">
+              <svg width="6" height="9" viewBox="0 0 6 9"><path d="M5 1L1.5 4.5 5 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Strona główna
+          </a>
+          <ul class="subnav__list">
+            <li><a href="#o-nas" class="subnav__link subnav__link--active" aria-current="true">O nas</a></li>
+            <li><a href="#historia" class="subnav__link">Historia</a></li>
+            <li><a href="#wierzymy" class="subnav__link">W co wierzymy</a></li>
+            <li><a href="#opinie" class="subnav__link">Opinie</a></li>
+            <li><a href="#kontakt" class="subnav__link">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== SEKCIA 2: SKĄD SIĘ WZIĄŁ PIRX ===== -->
+    <section class="about" id="o-nas" aria-labelledby="about-title">
+      <div class="container about__inner">
+        <div class="about__media">
+          <img src="assets/about-sofa.jpg" alt="Zielona sofa z białym kocem i stolikiem z tulipanami na żółtym tle" width="614" height="658" loading="lazy">
+        </div>
+
+        <div class="about__content">
+          <h2 id="about-title" class="h2">Skąd się wziął Pirx?</h2>
+          <p>Pirx pojawił się w głowie polskiego pisarza ponad pół wieku temu. Był pilotem kosmicznym – nie najlepszym z najlepszych, nie bohaterem bez skazy. Był kimś lepszym. Był niezawodny. Spokojny pod presją. Uczciwy wobec siebie i wobec załogi. Nie obiecywał rzeczy, których nie mógł dostarczyć. Nie porzucał misji w połowie. I zawsze – zawsze – doprowadzał statek do celu.</p>
+          <p>Pirx dał nam coś więcej niż nazwę. Dał sposób myślenia. To imię zobowiązuje – Pirx nie był showmanem, był profesjonalistą który robił swoją robotę i nie potrzebował aplauzu. Tak samo działamy my. Przejmujemy nieruchomość, pilotujemy wynajem i dostarczamy wyniki – spokojnie, pewnie i z pełną transparentnością. Bez fanfar. Bez niespodzianek.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEKCIA 3: W CO WIERZYMY ===== -->
+    <section class="beliefs" id="wierzymy" aria-labelledby="beliefs-title">
+      <div class="container container--narrow">
+        <div class="beliefs__head">
+          <h2 id="beliefs-title" class="h2">W co wierzymy?</h2>
+          <p>Pirx nie latał dla oklasków. Latał, bo wiedział, że to, co robi – ma sens. My podchodzimy do zarządzania nieruchomościami z takim samym przekonaniem.</p>
+        </div>
+        <ul class="beliefs__grid">
+          <li class="belief-card">
+            <span class="belief-card__icon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M12 12l6-6M16 4v3h3"/></svg></span>
+            <h3 class="belief-card__title">Niezawodność ponad obietnice</h3>
+            <p class="belief-card__text">Pirx nigdy nie obiecywał łatwego lotu. Obiecywał, że doprowadzi statek do celu. My nie obiecujemy, że podwoimy Twoje przychody. Obiecujemy, że zajmiemy się Twoją nieruchomością tak jakby była nasza – a wyniki przyjdą same.</p>
+          </li>
+          <li class="belief-card">
+            <span class="belief-card__icon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="14" width="4" height="6" rx="1"/><rect x="10" y="10" width="4" height="10" rx="1"/><rect x="17" y="5" width="4" height="15" rx="1"/></svg></span>
+            <h3 class="belief-card__title">Dane ponad przymiotniki</h3>
+            <p class="belief-card__text">Pirx nie ufał przeczuciom – ufał instrumentom. My nie mówimy, że jesteśmy „najlepsi” ani „liderzy rynku”. Pokazujemy 85,5% obłożenia i 4,84/5 średniej oceny. Liczby nie potrzebują przymiotników.</p>
+          </li>
+          <li class="belief-card">
+            <span class="belief-card__icon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l4-3 4 1 3-2 5 3v4l-5 4-3-1-3 1-5-4z"/><path d="M9 14l3 2"/></svg></span>
+            <h3 class="belief-card__title">Prostota ponad komplikację</h3>
+            <p class="belief-card__text">Dobry kokpit ma tylko te wskaźniki, które są naprawdę potrzebne. Nasza współpraca działa tak samo. Jedna osoba do kontaktu. Jeden dashboard. Jeden raport. Jeden przelew. Zarządzanie nieruchomością nie musi być skomplikowane – pod warunkiem że ktoś wie, co robi.</p>
+          </li>
+          <li class="belief-card">
+            <span class="belief-card__icon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/></svg></span>
+            <h3 class="belief-card__title">Kontrola po Twojej stronie</h3>
+            <p class="belief-card__text">Pirx zawsze wiedział, gdzie są wyjścia awaryjne – i nigdy ich nie potrzebował. Twoja nieruchomość pozostaje Twoja. Blokujesz daty, kiedy chcesz. Odchodzisz, kiedy chcesz. Miesięczne wypowiedzenie. Zostajesz dlatego, że wyniki mówią same za siebie – nie dlatego, że umowa Cię trzyma.</p>
+          </li>
+          <li class="belief-card">
+            <span class="belief-card__icon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+            <h3 class="belief-card__title">Odpowiedzialność bez zastrzeżeń</h3>
+            <p class="belief-card__text">Pirx nie zrzucał winy na załogę, gdy coś szło nie tak. My też nie. Jeśli popełnimy błąd – powiemy o tym pierwsi. Jeśli coś nie działa – naprawimy zanim zdążysz zapytać. Twoja nieruchomość jest pod naszą opieką – a opieka oznacza odpowiedzialność za każdy dzień, nie tylko za te dobre.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== SEKCIA 4: OPINIE ===== -->
+    <section class="reviews" id="opinie" aria-labelledby="reviews-title">
+      <div class="container container--narrow">
+        <div class="reviews__head">
+          <div>
+            <h2 id="reviews-title" class="h2"><span class="accent">4,84/5</span> średniej oceny na podstawie ponad <span class="accent">5 000</span> obsłużonych nocy.</h2>
+            <p class="reviews__lead">Najlepsza nawigacja to opinie tych którzy już polecieli.</p>
+          </div>
+          <div class="reviews__nav">
+            <button type="button" class="reviews__arrow" data-dir="-1" aria-label="Poprzednie opinie"><svg width="6" height="9" viewBox="0 0 6 9" aria-hidden="true"><path d="M5 1L1.5 4.5 5 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button type="button" class="reviews__arrow" data-dir="1" aria-label="Następne opinie"><svg width="6" height="9" viewBox="0 0 6 9" aria-hidden="true"><path d="M1 1l3.5 3.500L1 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </div>
+
+        <div class="reviews__track" tabindex="0" aria-label="Opinie gości">
+          <article class="review-card">
+            <svg class="review-card__quote" viewBox="0 0 28 22" width="28" height="22" aria-hidden="true"><path d="M0 22V13C0 5.5 4 1 11 0l1 3C8 4.2 6.5 6.5 6.5 9.500H12V22H0zm16 0V13c0-7.5 4-12 11-13l1 3c-4 1.2-5.5 3.5-5.5 6.500H28V22H16z" fill="currentColor"/></svg>
+            <p class="review-card__text">Miejsce było czyste, przytulne i bardzo dogodnie położone w pobliżu transportu publicznego i stadionu. Było dokładnie tak, jak na zdjęciach. Łukasz bardzo szybko odpowiadał i był w każdym aspekcie wspaniałym gospodarzem. Gorąco polecam!</p>
+            <footer class="review-card__author">
+              <span class="review-card__avatar" aria-hidden="true">J</span>
+              <span class="review-card__who"><strong>Joanne</strong><small>MARSASKALA, MALTA</small></span>
+              <span class="review-card__stars" role="img" aria-label="Ocena 5 na 5"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg></span>
+            </footer>
+          </article>
+          <article class="review-card">
+            <svg class="review-card__quote" viewBox="0 0 28 22" width="28" height="22" aria-hidden="true"><path d="M0 22V13C0 5.5 4 1 11 0l1 3C8 4.2 6.5 6.5 6.5 9.500H12V22H0zm16 0V13c0-7.5 4-12 11-13l1 3c-4 1.2-5.5 3.5-5.5 6.500H28V22H16z" fill="currentColor"/></svg>
+            <p class="review-card__text">Nie po raz pierwszy tu przebywam i zawsze jestem bardzo zadowolony. To naprawdę przytulne i wygodne miejsce na pobyt. Mieszkanie jest zawsze idealnie czyste i ma wszystko, czego potrzebujesz, od naczyń po żelazko, dzięki czemu poczujesz się jak w domu. Mieszkanie znajduje się w cichej, zielonej okolicy, gdzie przyjemnie jest odpocząć po długim dniu. Chciałbym szczególnie wspomnieć o gospodarzu, Łukaszu. Jest zawsze uprzejmy, szybko pomaga rozwiązywać wszelkie problemy i osobiście dba o jakość obsługi oraz stan techniczny mieszkania.</p>
+            <footer class="review-card__author">
+              <span class="review-card__avatar" aria-hidden="true">Д</span>
+              <span class="review-card__who"><strong>Даниил</strong><small>WARSZAWA, POLSKA</small></span>
+              <span class="review-card__stars" role="img" aria-label="Ocena 5 na 5"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg></span>
+            </footer>
+          </article>
+          <article class="review-card">
+            <svg class="review-card__quote" viewBox="0 0 28 22" width="28" height="22" aria-hidden="true"><path d="M0 22V13C0 5.5 4 1 11 0l1 3C8 4.2 6.5 6.5 6.5 9.500H12V22H0zm16 0V13c0-7.5 4-12 11-13l1 3c-4 1.2-5.5 3.5-5.5 6.500H28V22H16z" fill="currentColor"/></svg>
+            <p class="review-card__text">Wspaniały właściciel. <!-- TODO: doplniť celý text recenzie z Figmy --></p>
+            <footer class="review-card__author">
+              <span class="review-card__avatar" aria-hidden="true">V</span>
+              <span class="review-card__who"><strong>Valentyna</strong><small></small></span>
+              <span class="review-card__stars" role="img" aria-label="Ocena 5 na 5"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.7L6 8.9 2.7 10.8l.8-3.7L.7 4.6l3.7-.4z" fill="currentColor"/></svg></span>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEKCIA 5: CTA ===== -->
+    <section class="cta" id="kontakt" aria-labelledby="cta-title">
+      <img class="cta__planet" src="assets/cta-planet.png" alt="" width="381" height="287" loading="lazy">
+      <div class="cta__moon" aria-hidden="true"></div>
+      <div class="container cta__inner">
+        <h2 id="cta-title" class="h2">Zacznij od 15 minut.</h2>
+        <p>Rozmowa jest bezpłatna i nie kończy się niczym, do czego trzeba się zobowiązać. Wychodzisz z niej z wyliczeniem na piśmie.</p>
+        <div class="cta__buttons">
+          <a href="tel:+48792937176" class="btn btn--primary"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Umów rozmowę</a>
+          <a href="#kalkulator" class="btn btn--light"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 7h8M8.5 12h1M12 12h1M15 12h.5M8.5 16h1M12 16h1M15 16h.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Oblicz przychód</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container container--narrow">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo" aria-label="pirx.rent – strona główna">
+            <img src="assets/logo.png" alt="" width="164" height="54">
+          </a>
+          <p>Pilotujemy Twój wynajem. Profesjonalne zarządzanie najmem krótkoterminowym dla właścicieli którzy cenią wyniki bardziej niż obietnice.</p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Pirx Group Sp. z o. o.</h3>
+          <address>
+            Al. Grunwaldzka 413,<br>80-309 Gdańsk
+            <br><br>
+            Telefon: <a href="tel:+48792937176">+48 792 937 176</a><br>
+            E-mail: <a href="mailto:hello@pirx.rent" class="underline">hello@pirx.rent</a>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h3>Oddział w Warszawie</h3>
+          <address>ul. Bukowińska 22/3,<br>02-703 Warszawa.</address>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <ul class="footer__social">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 2a10 10 0 0 0-1.6 19.900v-7H7.900V12h2.500V9.800c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.500h-1.300c-1.2 0-1.6.8-1.6 1.600V12h2.800l-.4 2.900h-2.300v7A10 10 0 0 0 12 2z"/></svg></a></li>
+          <li><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2.5 7v8H9v-8H6.500zM7.7 6.200a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.800zM11 10v8h2.500v-4.300c0-1.1.6-1.7 1.4-1.700s1.3.6 1.3 1.700V18h2.500v-4.800c0-2.1-1.1-3.4-2.8-3.4-1 0-1.8.5-2.2 1.200V10H11z"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="14" height="14"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg></a></li>
+        </ul>
+        <ul class="footer__legal">
+          <li><a href="#">Polityka prywatności</a></li>
+          <li><a href="#">Regulamin</a></li>
+        </ul>
+        <p class="footer__copy">© Pirx Group. Design&amp;Code <!-- TODO: logo BOCK (SVG z Figmy) --></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/reviews.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+.portfolio { background: var(--color-white); padding-block: 64px; }
+.portfolio .h2 { max-width: 420px; margin: 0 auto 56px; font-size: 28px; text-align: center; }
+
+.portfolio__grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  max-width: 860px; margin-inline: auto;
+}
+
+.pf-card {
+  padding: 28px 24px;
+  border-radius: 10px;
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+.pf-card__place { font-size: 8px; font-weight: 600; line-height: 1.5; }
+.pf-card__value {
+  margin-top: 28px;
+  font-family: var(--font-heading); font-weight: 600;
+  font-size: 40px; line-height: 1; letter-spacing: -0.02em;
+}
+.pf-card__label { margin-top: 8px; font-family: var(--font-heading); font-size: 13px; font-weight: 600; }
+
+.pf-card__stats { margin: 20px 0 0; }
+.pf-card__row {
+  display: flex; justify-content: space-between; gap: 16px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,255,255,.18);
+  font-size: 8px;
+}
+.pf-card__row dt { max-width: 90px; }
+.pf-card__row dd { margin: 0; text-align: right; font-weight: 600; }
+
+.portfolio__note { max-width: 520px; margin: 28px auto 0; text-align: center; font-size: 8px; line-height: 1.7; }
+
+@media (max-width: 767px) {
+  .portfolio { padding-block: 40px; }
+  .portfolio .h2 { font-size: 26px; margin: 0 0 28px; text-align: left; }
+  .portfolio__grid { grid-template-columns: 1fr; gap: 16px; }
+  .pf-card { padding: 24px 20px; }
+  .pf-card__place { font-size: 13px; }
+  .pf-card__value { font-size: 44px; margin-top: 32px; }
+  .pf-card__label { font-size: 18px; margin-top: 10px; }
+  .pf-card__stats { margin-top: 24px; }
+  /* popis a hodnota pod sebou */
+  .pf-card__row { flex-direction: column; gap: 6px; padding-block: 14px; font-size: 12px; }
+  .pf-card__row dt { max-width: none; }
+  .pf-card__row dd { text-align: left; }
+  .portfolio__note { font-size: 12px; text-align: left; margin-top: 24px; }
+}

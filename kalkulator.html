@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalkulator przychodu | pirx.rent</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/calc-result.css">
+  <link rel="stylesheet" href="css/calc-dashboard.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/cta.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body class="calc-page">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="/" class="navbar__logo" aria-label="pirx.rent – strona główna">
+        <img src="assets/logo.png" alt="" width="164" height="54">
+      </a>
+
+      <nav class="navbar__menu" id="main-menu" aria-label="Główna nawigacja">
+        <ul class="navbar__list">
+          <li><a href="#" class="navbar__link">Dlaczego PIRX? <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#" class="navbar__link">Nasze usługi <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#" class="navbar__link">Wiedza <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="cennik.html" class="navbar__link">Cennik</a></li>
+          <li><a href="#" class="navbar__link">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="tel:+48792937176" class="btn btn--outline navbar__phone">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <span class="navbar__phone-text">+48 792 937 176</span>
+          <span class="visually-hidden">Zadzwoń</span>
+        </a>
+        <button class="btn btn--outline navbar__burger" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Otwórz menu">
+          <span class="navbar__burger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== SEKCIA 1: VÝSLEDOK (hlavička) ===== -->
+    <section class="calc-result" aria-labelledby="calc-title">
+      <div class="container">
+        <a href="#kalkulator-formular" class="calc-result__pill">
+          <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 7.500L8 2.500l6 5M3.5 6.500V13h9V6.500M6.5 13V9.500h3V13" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>ul. Francuska 12, Warszawa</span><i aria-hidden="true">·</i>
+          <span>Kawalerka</span><i aria-hidden="true">·</i>
+          <span>Standard: dobry</span>
+          <strong>Zmień dane</strong>
+        </a>
+        <!-- TODO: hodnoty sa budú dosadzovať z formulára kalkulačky -->
+        <h1 id="calc-title" class="h2">Twoja kawalerka na Saskiej Kępie może zarabiać od 3 700 zł do 5 500 zł miesięcznie.</h1>
+        <p>A my zajmiemy się wszystkim.</p>
+      </div>
+    </section>
+
+    <!-- ===== SEKCIA 2: DASHBOARD S VÝSLEDKAMI ===== -->
+    <section class="calc-dash" aria-label="Szczegóły wyceny">
+      <div class="container container--narrow">
+
+        <div class="calc-dash__row calc-dash__row--top">
+          <article class="cdash cdash--chart">
+            <header class="cdash__head">
+              <h2 class="cdash__title">Prognoza przychodu w skali roku</h2>
+              <ul class="chart-legend">
+                <li><i class="chart-legend__dot chart-legend__dot--base"></i>Scenariusz ostrożny</li>
+                <li><i class="chart-legend__dot chart-legend__dot--top"></i>Scenariusz optymistyczny</li>
+              </ul>
+            </header>
+
+            <div class="chart" id="revenue-chart" aria-label="Wykres prognozy przychodu w skali roku"></div>
+
+            <footer class="cdash__total">
+              <div>
+                <strong>Szacowany przychód roczny</strong>
+                <small>Suma 12 miesięcy z uwzględnieniem sezonowości</small>
+              </div>
+              <p class="cdash__total-value">44 400 zł - 66 000 zł</p>
+            </footer>
+          </article>
+
+          <aside class="cdash cdash--dark">
+            <span class="cdash__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+            <h2 class="cdash__title cdash__title--light">Omówmy Twoje mieszkanie</h2>
+            <ul class="cdash__checks">
+              <li><svg class="cdash__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wybierz termin, który Ci pasuje.</li>
+              <li><svg class="cdash__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Bez zobowiązań – rozmowa jest bezpłatna.</li>
+              <li><svg class="cdash__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Opowiedz nam więcej o mieszkaniu, a doprecyzujemy wycenę.</li>
+            </ul>
+            <p class="cdash__lead">Porozmawiaj z naszym zespołem o potencjale Twojej nieruchomości i o tym, jak wygląda współpraca z Pirx.</p>
+            <a href="#kontakt" class="btn btn--primary">Umów rozmowę</a>
+          </aside>
+        </div>
+
+        <article class="cdash cdash--compare">
+          <div class="compare-short">
+            <h2 class="cdash__title">Krótki najem, a najem długoterminowy</h2>
+            <p>Średni najem długoterminowy dla kawalerki w Warszawie to ok. 2 600 zł miesięcznie.</p>
+            <div class="callout">
+              <small>Nawet w ostrożnym scenariuszu zyskujesz</small>
+              <p><strong>+1100 zł / mies.</strong> <span>+13 200 zł rocznie</span></p>
+            </div>
+          </div>
+
+          <ul class="bars">
+            <li class="bar" style="--w: 47%">
+              <div class="bar__label"><span>Najem długoterminowy</span><strong>~2 600 zł / mies.</strong></div>
+              <div class="bar__track"><div class="bar__fill bar__fill--long"></div></div>
+            </li>
+            <li class="bar" style="--w: 67%">
+              <div class="bar__label"><span>Pirx – scenariusz ostrożny</span><strong>od 3 700 zł / mies.</strong></div>
+              <div class="bar__track"><div class="bar__fill bar__fill--base"></div></div>
+            </li>
+            <li class="bar" style="--w: 100%">
+              <div class="bar__label"><span>Pirx – scenariusz optymistyczny</span><strong>do 5 500 zł / mies.</strong></div>
+              <div class="bar__track"><div class="bar__fill bar__fill--top"></div></div>
+            </li>
+          </ul>
+        </article>
+
+        <div class="calc-dash__row calc-dash__row--bottom">
+          <article class="cdash cdash--steps">
+            <h2 class="cdash__title">Start zajmuje tylko 3 kroki</h2>
+            <ol class="steps">
+              <li><span class="steps__num">1</span><p>Bezpłatna rozmowa i dokładna wycena Twojego mieszkania.</p></li>
+              <li><span class="steps__num">2</span><p>Sesja zdjęciowa, przygotowanie mieszkania i ogłoszenia na wszystkich platformach.</p></li>
+              <li><span class="steps__num">3</span><p>Rezerwacje, sprzątanie i przychody widzisz na bieżąco w panelu właściciela.</p></li>
+            </ol>
+          </article>
+
+          <article class="cdash cdash--models">
+            <h2 class="cdash__title">Modele współpracy</h2>
+            <p class="models__lead">Prowizja wyłącznie od zrealizowanych rezerwacji. Żadnych opłat stałych.</p>
+            <div class="models">
+              <div class="model model--lite">
+                <h3>Pirx Lite</h3>
+                <p class="model__price"><small>od</small> <strong>9%</strong></p>
+                <p>Dla właścicieli, którzy mają własną ekipę na miejscu.</p>
+              </div>
+              <div class="model model--standard">
+                <h3>Pirx Standard</h3>
+                <p class="model__price"><small>od</small> <strong>17%</strong></p>
+                <p>Zajmujemy się wszystkim – od A do Z.</p>
+              </div>
+            </div>
+            <a href="cennik.html" class="btn btn--outline">Zobacz pełny cennik</a>
+          </article>
+        </div>
+
+        <p class="calc-dash__note">* Wyliczenia mają charakter szacunkowy. Oparte są na danych z naszego portfela i rynku najmu krótkoterminowego w Twojej lokalizacji. Dokładną wycenę otrzymasz podczas bezpłatnej rozmowy.</p>
+      </div>
+    </section>
+
+    <!-- ===== SEKCIA 3: FAQ ===== -->
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow faq__inner">
+        <div class="faq__intro">
+          <h2 id="faq-title" class="h2">Najczęściej zadawane pytania</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <div class="faq__main">
+          <ul class="faq__list">
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="a1" id="q1">
+                  <span class="faq-item__num">01.</span>
+                  <span class="faq-item__text">Oddaję Ci klucze do mojego mieszkania. Skąd mam wiedzieć, że wrócę do czegoś, co wciąż stoi?</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="a1" role="region" aria-labelledby="q1">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="a2" id="q2">
+                  <span class="faq-item__num">02.</span>
+                  <span class="faq-item__text">Mam najemcę od trzech lat. Płaci w miarę regularnie. Po co mi zmiana?</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="a2" role="region" aria-labelledby="q2">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="a3" id="q3">
+                  <span class="faq-item__num">03.</span>
+                  <span class="faq-item__text">Airbnb samo w sobie nie jest skomplikowane. Dlaczego miałbym płacić Wam prowizję?</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="a3" role="region" aria-labelledby="q3">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="a4" id="q4">
+                  <span class="faq-item__num">04.</span>
+                  <span class="faq-item__text">Ile realnie zarobię – bez owijania w bawełnę?</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="a4" role="region" aria-labelledby="q4">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="a5" id="q5">
+                  <span class="faq-item__num">05.</span>
+                  <span class="faq-item__text">Co się dzieje, jeśli gość zniszczy mieszkanie?</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="a5" role="region" aria-labelledby="q5">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="a6" id="q6">
+                  <span class="faq-item__num">06.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="a6" role="region" aria-labelledby="q6">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="a7" id="q7">
+                  <span class="faq-item__num">07.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="a7" role="region" aria-labelledby="q7">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="a8" id="q8">
+                  <span class="faq-item__num">08.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="a8" role="region" aria-labelledby="q8">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="faq__help">
+          <span class="faq__help-icon"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 7v4M8 5h.01" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+          <p>Nadal poszukujesz odpowiedzi? Chętnie pomożemy.</p>
+          <a href="#kontakt" class="btn btn--light">Skontaktuj się z nami</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== SEKCIA 4: CTA ===== -->
+    <section class="cta" id="kontakt" aria-labelledby="cta-title">
+      <img class="cta__planet" src="assets/cta-planet.png" alt="" width="381" height="287" loading="lazy">
+      <div class="cta__moon" aria-hidden="true"></div>
+      <div class="container cta__inner">
+        <h2 id="cta-title" class="h2">Zacznij od 15 minut.</h2>
+        <p>Rozmowa jest bezpłatna i nie kończy się niczym, do czego trzeba się zobowiązać. Wychodzisz z niej z wyliczeniem na piśmie.</p>
+        <div class="cta__buttons">
+          <a href="tel:+48792937176" class="btn btn--primary"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg> Umów rozmowę</a>
+          <a href="#kalkulator-formular" class="btn btn--light"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 7h8M8.5 12h1M12 12h1M15 12h.5M8.5 16h1M12 16h1M15 16h.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> Przelicz ponownie</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer footer--soft">
+    <div class="container container--narrow">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo" aria-label="pirx.rent – strona główna">
+            <img src="assets/logo.png" alt="" width="164" height="54">
+          </a>
+          <p>Pilotujemy Twój wynajem. Profesjonalne zarządzanie najmem krótkoterminowym dla właścicieli którzy cenią wyniki bardziej niż obietnice.</p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Pirx Group Sp. z o. o.</h3>
+          <address>
+            Al. Grunwaldzka 413,<br>80-309 Gdańsk
+            <br><br>
+            Telefon: <a href="tel:+48792937176">+48 792 937 176</a><br>
+            E-mail: <a href="mailto:hello@pirx.rent" class="underline">hello@pirx.rent</a>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h3>Oddział w Warszawie</h3>
+          <address>ul. Bukowińska 22/3,<br>02-703 Warszawa.</address>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <ul class="footer__social">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 2a10 10 0 0 0-1.6 19.900v-7H7.900V12h2.500V9.800c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.500h-1.300c-1.2 0-1.6.8-1.6 1.600V12h2.800l-.4 2.900h-2.300v7A10 10 0 0 0 12 2z"/></svg></a></li>
+          <li><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2.5 7v8H9v-8H6.500zM7.7 6.200a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.800zM11 10v8h2.500v-4.300c0-1.1.6-1.7 1.4-1.700s1.3.6 1.3 1.700V18h2.500v-4.800c0-2.1-1.1-3.4-2.8-3.4-1 0-1.8.5-2.2 1.200V10H11z"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="14" height="14"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg></a></li>
+        </ul>
+        <ul class="footer__legal">
+          <li><a href="#">Polityka prywatności</a></li>
+          <li><a href="#">Regulamin</a></li>
+        </ul>
+        <p class="footer__copy">© Pirx Group. Design&amp;Code <!-- TODO: logo BOCK (SVG z Figmy) --></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/calc-chart.js"></script>
+  <script src="js/faq.js"></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Najczęściej zadawane pytania | pirx.rent</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (rovnaký ako na ostatných stránkach) ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="/" class="navbar__logo" aria-label="pirx.rent – strona główna">
+        <img src="assets/logo.png" alt="" width="164" height="54">
+      </a>
+
+      <nav class="navbar__menu" id="main-menu" aria-label="Główna nawigacja">
+        <ul class="navbar__list">
+          <li><a href="#" class="navbar__link">Dlaczego PIRX? <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#" class="navbar__link">Nasze usługi <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#" class="navbar__link">Wiedza <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="cennik.html" class="navbar__link">Cennik</a></li>
+          <li><a href="#" class="navbar__link">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="tel:+48792937176" class="btn btn--outline navbar__phone">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <span class="navbar__phone-text">+48 792 937 176</span>
+          <span class="visually-hidden">Zadzwoń</span>
+        </a>
+        <button class="btn btn--outline navbar__burger" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Otwórz menu">
+          <span class="navbar__burger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== SEKCIA: FAQ ===== -->
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow faq__inner">
+
+        <div class="faq__intro">
+          <h1 id="faq-title" class="h2">Najczęściej zadawane pytania</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <div class="faq__main">
+          <div class="faq__tabs" role="tablist" aria-label="Kategorie pytań">
+            <button type="button" role="tab" class="faq__tab is-active" id="tab-start" aria-selected="true" aria-controls="panel-start">Pierwsze kroki</button>
+            <button type="button" role="tab" class="faq__tab" id="tab-services" aria-selected="false" aria-controls="panel-services" tabindex="-1">Usługi</button>
+            <button type="button" role="tab" class="faq__tab" id="tab-finance" aria-selected="false" aria-controls="panel-finance" tabindex="-1">Finanse</button>
+          </div>
+          <ul class="faq__list" role="tabpanel" id="panel-start" aria-labelledby="tab-start">
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="start-a1" id="start-q1">
+                  <span class="faq-item__num">01.</span>
+                  <span class="faq-item__text">Oddaję Ci klucze do mojego mieszkania. Skąd mam wiedzieć, że wrócę do czegoś, co wciąż stoi?</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="start-a1" role="region" aria-labelledby="start-q1">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="start-a2" id="start-q2">
+                  <span class="faq-item__num">02.</span>
+                  <span class="faq-item__text">Mam najemcę od trzech lat. Płaci w miarę regularnie. Po co mi zmiana?</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="start-a2" role="region" aria-labelledby="start-q2">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="start-a3" id="start-q3">
+                  <span class="faq-item__num">03.</span>
+                  <span class="faq-item__text">Airbnb samo w sobie nie jest skomplikowane. Dlaczego miałbym płacić Wam prowizję?</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="start-a3" role="region" aria-labelledby="start-q3">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="start-a4" id="start-q4">
+                  <span class="faq-item__num">04.</span>
+                  <span class="faq-item__text">Ile realnie zarobię – bez owijania w bawełnę?</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="start-a4" role="region" aria-labelledby="start-q4">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="start-a5" id="start-q5">
+                  <span class="faq-item__num">05.</span>
+                  <span class="faq-item__text">Co się dzieje, jeśli gość zniszczy mieszkanie?</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="start-a5" role="region" aria-labelledby="start-q5">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="start-a6" id="start-q6">
+                  <span class="faq-item__num">06.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="start-a6" role="region" aria-labelledby="start-q6">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="start-a7" id="start-q7">
+                  <span class="faq-item__num">07.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="start-a7" role="region" aria-labelledby="start-q7">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="start-a8" id="start-q8">
+                  <span class="faq-item__num">08.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="start-a8" role="region" aria-labelledby="start-q8">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+          </ul>
+          <ul class="faq__list" role="tabpanel" id="panel-services" aria-labelledby="tab-services" hidden>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="services-a1" id="services-q1">
+                  <span class="faq-item__num">01.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="services-a1" role="region" aria-labelledby="services-q1">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="services-a2" id="services-q2">
+                  <span class="faq-item__num">02.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="services-a2" role="region" aria-labelledby="services-q2">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="services-a3" id="services-q3">
+                  <span class="faq-item__num">03.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="services-a3" role="region" aria-labelledby="services-q3">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="services-a4" id="services-q4">
+                  <span class="faq-item__num">04.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="services-a4" role="region" aria-labelledby="services-q4">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+          </ul>
+          <ul class="faq__list" role="tabpanel" id="panel-finance" aria-labelledby="tab-finance" hidden>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="finance-a1" id="finance-q1">
+                  <span class="faq-item__num">01.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="finance-a1" role="region" aria-labelledby="finance-q1">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="finance-a2" id="finance-q2">
+                  <span class="faq-item__num">02.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="finance-a2" role="region" aria-labelledby="finance-q2">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="finance-a3" id="finance-q3">
+                  <span class="faq-item__num">03.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="finance-a3" role="region" aria-labelledby="finance-q3">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <h3>
+                <button type="button" class="faq-item__q" aria-expanded="false" aria-controls="finance-a4" id="finance-q4">
+                  <span class="faq-item__num">04.</span>
+                  <span class="faq-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+                  <svg class="faq-item__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </h3>
+              <div class="faq-item__a" id="finance-a4" role="region" aria-labelledby="finance-q4">
+                <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <!-- TODO: doplniť odpoveď --></p></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="faq__help">
+          <span class="faq__help-icon"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 7v4M8 5h.01" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+          <p>Nadal poszukujesz odpowiedzi? Chętnie pomożemy.</p>
+          <a href="cennik.html#kontakt" class="btn btn--light">Skontaktuj się z nami</a>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (rovnaký ako na ostatných stránkach) ===== -->
+  <footer class="footer">
+    <div class="container container--narrow">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo" aria-label="pirx.rent – strona główna">
+            <img src="assets/logo.png" alt="" width="164" height="54">
+          </a>
+          <p>Pilotujemy Twój wynajem. Profesjonalne zarządzanie najmem krótkoterminowym dla właścicieli którzy cenią wyniki bardziej niż obietnice.</p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Pirx Group Sp. z o. o.</h3>
+          <address>
+            Al. Grunwaldzka 413,<br>80-309 Gdańsk
+            <br><br>
+            Telefon: <a href="tel:+48792937176">+48 792 937 176</a><br>
+            E-mail: <a href="mailto:hello@pirx.rent" class="underline">hello@pirx.rent</a>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h3>Oddział w Warszawie</h3>
+          <address>ul. Bukowińska 22/3,<br>02-703 Warszawa.</address>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <ul class="footer__social">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 2a10 10 0 0 0-1.6 19.900v-7H7.900V12h2.500V9.800c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.500h-1.300c-1.2 0-1.6.8-1.6 1.600V12h2.800l-.4 2.900h-2.300v7A10 10 0 0 0 12 2z"/></svg></a></li>
+          <li><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2.5 7v8H9v-8H6.500zM7.7 6.200a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.800zM11 10v8h2.500v-4.300c0-1.1.6-1.7 1.4-1.700s1.3.6 1.3 1.700V18h2.500v-4.800c0-2.1-1.1-3.4-2.8-3.4-1 0-1.8.5-2.2 1.200V10H11z"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="14" height="14"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg></a></li>
+        </ul>
+        <ul class="footer__legal">
+          <li><a href="#">Polityka prywatności</a></li>
+          <li><a href="#">Regulamin</a></li>
+        </ul>
+        <p class="footer__copy">© Pirx Group. Design&amp;Code <!-- TODO: logo BOCK (SVG z Figmy) --></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/faq.js"></script>
+</body>
+</html>

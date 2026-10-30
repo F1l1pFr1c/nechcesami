@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cennik | pirx.rent</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/pricing.css">
+  <link rel="stylesheet" href="css/compare.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (rovnaký ako na index.html) ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="/" class="navbar__logo" aria-label="pirx.rent – strona główna">
+        <img src="assets/logo.png" alt="" width="164" height="54">
+      </a>
+
+      <nav class="navbar__menu" id="main-menu" aria-label="Główna nawigacja">
+        <ul class="navbar__list">
+          <li><a href="#" class="navbar__link">Dlaczego PIRX? <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#" class="navbar__link">Nasze usługi <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="#" class="navbar__link">Wiedza <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li><a href="cennik.html" class="navbar__link navbar__link--active" aria-current="page">Cennik</a></li>
+          <li><a href="#" class="navbar__link">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="tel:+48792937176" class="btn btn--outline navbar__phone">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <span class="navbar__phone-text">+48 792 937 176</span>
+          <span class="visually-hidden">Zadzwoń</span>
+        </a>
+        <button class="btn btn--outline navbar__burger" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Otwórz menu">
+          <span class="navbar__burger-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== SEKCIA 1: CENNIK ===== -->
+    <section class="pricing" aria-labelledby="pricing-title">
+      <img class="pricing__rocket" src="assets/rocket.png" alt="" width="320" height="501">
+      <div class="container pricing__inner">
+        <div class="pricing__head">
+          <h1 id="pricing-title" class="h1">Prosty model.<br>Żadnych niespodzianek.</h1>
+          <p>Żadnych opłat ukrytych. Żadnych niespodzianek na orbicie. Prowizja naliczana wyłącznie od zrealizowanych rezerwacji – nasz sukces zależy od Twojego sukcesu.</p>
+        </div>
+
+        <div class="pricing__cards">
+          <article class="pcard pcard--lite">
+            <h2 class="pcard__name">Pirx Lite</h2>
+            <p class="pcard__price"><small>od</small> <strong>9%</strong></p>
+            <p class="pcard__sub">przychodu z rezerwacji</p>
+            <hr>
+            <p class="pcard__desc">Dla właścicieli, którzy działają poza głównymi miastami lub mają własną ekipę na miejscu. Ty organizujesz obsługę lokalną – my pilotujemy zdalnie.</p>
+            <hr>
+            <ul class="pcard__list">
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wystawianie na wszystkich platformach</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Dynamiczny pricing</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Komunikacja z gośćmi 24/7</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Weryfikacja gości</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Synchronizacja kalendarzy</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Dashboard właściciela</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Miesięczny raport przychodów</li>
+            </ul>
+            <a href="#kontakt" class="btn btn--light pcard__btn">Skontaktuj się</a>
+          </article>
+
+          <article class="pcard pcard--standard">
+            <h2 class="pcard__name">Pirx Standard</h2>
+            <p class="pcard__price"><small>od</small> <strong>17%</strong></p>
+            <p class="pcard__sub">przychodu z rezerwacji</p>
+            <span class="pcard__badge"><svg viewBox="0 0 12 12" width="9" height="9" aria-hidden="true"><path d="M6 .8l1.6 3.4 3.7.4-2.8 2.5.8 3.700L6 8.9 2.7 10.800l.8-3.700L.7 4.600l3.7-.4z" fill="currentColor"/></svg> Najpopularniejszy</span>
+            <hr>
+            <p class="pcard__desc">Dla właścicieli którzy chcą oddać nieruchomość w całości i nie zajmować się niczym. Pełna obsługa od A do Z.</p>
+            <hr>
+            <ul class="pcard__list">
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wszystko z PIRX Lite</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Profesjonalna sesja fotograficzna</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sprzątanie i housekeeping</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Pościel i kosmetyki hotelowej jakości</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Organizacja check-in i check-out</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Regularne inspekcje nieruchomości</li>
+              <li><svg class="pcard__check" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Koordynacja napraw i serwisu</li>
+            </ul>
+            <a href="#kontakt" class="btn btn--dark pcard__btn">Skontaktuj się</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEKCIA 2: PORÓWNANIE ===== -->
+    <section class="compare" aria-labelledby="compare-title">
+      <div class="container">
+        <h2 id="compare-title" class="h2">Ile naprawdę możesz zarobić więcej?</h2>
+        <div class="compare__table-wrap">
+          <table class="compare__table">
+            <thead>
+              <tr><td></td><th scope="col">Najem długoterminowy</th><th scope="col" class="is-highlight">PIRX Standard</th></tr>
+            </thead>
+            <tbody>
+            <tr><th scope="row">Średni przychód miesięczny</th><td>~2 700 zł</td><td>~5 500 zł</td></tr>
+            <tr><th scope="row">Prowizja / koszty zarządu</th><td>0 zł</td><td>~935 zł</td></tr>
+            <tr><th scope="row">Przychód netto</th><td>~2 700 zł</td><td>~4 565 zł</td></tr>
+            <tr><th scope="row">Bezpieczeństwo prawne</th><td><svg viewBox="0 0 16 16" width="14" height="14" role="img" aria-label="Brak"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.8 5.800l4.4 4.400M10.2 5.800l-4.4 4.4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></td><td><svg viewBox="0 0 16 16" width="14" height="14" role="img" aria-label="Tak"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.3 8.200l1.9 1.9 3.5-3.8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr>
+            <tr><th scope="row">Obsługa gości</th><td>Ty</td><td>My</td></tr>
+            <tr><th scope="row">Kontrola nad nieruchomością</th><td>Ograniczona</td><td>Pełna</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="compare__note">* Dane szacunkowe na podstawie nieruchomości w naszym portfelu (24 m2 na Saskiej Kępie, Warszawa). Dokładną wycenę dla Twojej nieruchomości otrzymasz podczas bezpłatnej konsultacji.</p>
+      </div>
+    </section>
+
+    <!-- ===== SEKCIA 3: PORTFEL ===== -->
+    <section class="portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <h2 id="portfolio-title" class="h2">Ile zarabiają nieruchomości w naszym portfelu?</h2>
+
+        <div class="portfolio__grid">
+          <article class="pf-card">
+            <h3 class="pf-card__place">Apartament 2-pokojowy | 40 m2 | Mokotów, Warszawa</h3>
+            <p class="pf-card__value">62 300 zł</p>
+            <p class="pf-card__label">Szacowany roczny przychód</p>
+            <dl class="pf-card__stats">
+            <div class="pf-card__row"><dt>Obłożenie</dt><dd>88,89% | 324 nocy zarezerwowanych rocznie</dd></div>
+            <div class="pf-card__row"><dt>Średnia cena</dt><dd>192,15 zł/noc</dd></div>
+            <div class="pf-card__row"><dt>Średnia długość pobytu</dt><dd>8 dni</dd></div>
+            </dl>
+          </article>
+
+          <article class="pf-card">
+            <h3 class="pf-card__place">Mieszkanie z wydzielonymi 4 pokojami | 94 m2 | Ursynów, Warszawa</h3>
+            <p class="pf-card__value">121 150 zł</p>
+            <p class="pf-card__label">Szacowany roczny przychód</p>
+            <dl class="pf-card__stats">
+            <div class="pf-card__row"><dt>Obłożenie dla wszystkich pokoi</dt><dd>83,41% | 1218 nocy zarezerwowanych rocznie</dd></div>
+            <div class="pf-card__row"><dt>Średnia cena za pokój</dt><dd>99,47 zł/noc</dd></div>
+            <div class="pf-card__row"><dt>Średnia długość pobytu</dt><dd>14 dni</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <p class="portfolio__note">*Wyniki rzeczywiste z naszego portfela. Twoja nieruchomość może zarabiać więcej lub mniej w zależności od lokalizacji, standardu i dostępności w kalendarzu. Dokładną wycenę otrzymasz podczas bezpłatnej konsultacji.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (rovnaký ako na index.html) ===== -->
+  <footer class="footer">
+    <div class="container container--narrow">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo" aria-label="pirx.rent – strona główna">
+            <img src="assets/logo.png" alt="" width="164" height="54">
+          </a>
+          <p>Pilotujemy Twój wynajem. Profesjonalne zarządzanie najmem krótkoterminowym dla właścicieli którzy cenią wyniki bardziej niż obietnice.</p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Pirx Group Sp. z o. o.</h3>
+          <address>
+            Al. Grunwaldzka 413,<br>80-309 Gdańsk
+            <br><br>
+            Telefon: <a href="tel:+48792937176">+48 792 937 176</a><br>
+            E-mail: <a href="mailto:hello@pirx.rent" class="underline">hello@pirx.rent</a>
+          </address>
+        </div>
+
+        <div class="footer__col">
+          <h3>Oddział w Warszawie</h3>
+          <address>ul. Bukowińska 22/3,<br>02-703 Warszawa.</address>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <ul class="footer__social">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 2a10 10 0 0 0-1.6 19.900v-7H7.900V12h2.500V9.800c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.500h-1.300c-1.2 0-1.6.8-1.6 1.600V12h2.800l-.4 2.900h-2.300v7A10 10 0 0 0 12 2z"/></svg></a></li>
+          <li><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2.5 7v8H9v-8H6.500zM7.7 6.200a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.800zM11 10v8h2.500v-4.300c0-1.1.6-1.7 1.4-1.700s1.3.6 1.3 1.700V18h2.500v-4.800c0-2.1-1.1-3.4-2.8-3.4-1 0-1.8.5-2.2 1.200V10H11z"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="14" height="14"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg></a></li>
+        </ul>
+        <ul class="footer__legal">
+          <li><a href="#">Polityka prywatności</a></li>
+          <li><a href="#">Regulamin</a></li>
+        </ul>
+        <p class="footer__copy">© Pirx Group. Design&amp;Code <!-- TODO: logo BOCK (SVG z Figmy) --></p>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="js/navbar.js"></script>
+</body>
+</html>
