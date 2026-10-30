@@ -363,6 +363,37 @@ textarea.field__input { resize: vertical; min-height: 96px; }
    SEKCJE WSPÓLNE
    ========================================================= */
 
+/* --- FAQ --- */
+.faq-grid { display: grid; grid-template-columns: 560px 560px; justify-content: space-between; gap: 40px; }
+.faq-intro p { margin: 30px 0 0; max-width: 485px; }
+.help-box {
+  margin-top: 64px; padding: 20px;
+  background: var(--c-ink); color: var(--c-lightbg); border-radius: var(--radius);
+}
+.help-box .ico { width: 18px; height: 18px; }
+.help-box p { margin: 12px 0 32px; }
+.faq-list { border-top: 0; }
+.faq-item { border-bottom: 1px solid var(--c-ink-line); }
+.faq-q {
+  width: 100%; display: grid; grid-template-columns: 39px 1fr 12px; gap: 0 0; align-items: start;
+  padding: 0 0 26px; margin-top: 30px; background: none; border: 0; text-align: left;
+  font-family: var(--ff-sans); font-size: 16px; font-weight: 700; letter-spacing: -0.01em; line-height: 22px; color: var(--c-ink);
+}
+.faq-item:first-child .faq-q { margin-top: 0; }
+.faq-q .ico { width: 12px; height: 7px; margin-top: 7px; transition: transform .2s; }
+.faq-q[aria-expanded="true"] .ico { transform: rotate(180deg); }
+.faq-a { padding: 0 24px 26px 39px; font-size: 14px; line-height: 24px; letter-spacing: -0.02em; }
+
+@media (max-width: 1279.98px) { .faq-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 991.98px) {
+  .faq-grid { grid-template-columns: 1fr; gap: 32px; }
+  .faq-intro p { margin-top: 20px; }
+  .faq-help-desktop { display: none; }
+  .faq-q { padding-bottom: 20px; margin-top: 20px; grid-template-columns: 30px 1fr 12px; }
+  .faq-a { padding-left: 30px; }
+}
+@media (min-width: 992px) { .faq-help-mobile { display: none; } }
+
 /* --- opinie (karuzela) --- */
 .reviews-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
 .reviews-head p { margin: 15px 0 0; }
