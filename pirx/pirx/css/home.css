@@ -218,3 +218,34 @@ img.pricing__art { left: calc(max(var(--gutter), (100% - var(--container)) / 2) 
   .reviews { margin-top: 48px; padding-top: 48px; }
 }
 
+/* ---------- KROKI ---------- */
+.steps { padding-bottom: 122px; }
+.timeline { list-style: none; margin: 123px auto 0; padding: 0; max-width: 755px; position: relative; }
+.timeline__item {
+  display: grid; grid-template-columns: 1fr 1fr; align-items: center; position: relative;
+  min-height: 274px;
+}
+.timeline__item::before { /* linia */
+  content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--c-ink-line);
+}
+.timeline__item::after { /* kropka */
+  content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px;
+  border-radius: 50%; background: var(--c-yellow);
+}
+.timeline__txt { padding-right: 70px; }
+.timeline__txt p { margin-top: 21px; max-width: 285px; color: var(--c-white); }
+.timeline__art { width: 176px; height: 176px; justify-self: center; }
+img.timeline__art { object-fit: contain; }
+.timeline__item--rev .timeline__txt { order: 2; padding: 0 0 0 60px; }
+.timeline__item--rev .timeline__art { order: 1; }
+.steps__claim { margin: 120px auto 0; color: var(--c-white); max-width: 760px; }
+
+@media (max-width: 991.98px) {
+  .timeline { margin-top: 32px; }
+  .timeline__item, .timeline__item--rev { grid-template-columns: 1fr; min-height: 0; text-align: center; padding-bottom: 48px; gap: 24px; }
+  .timeline__item::before, .timeline__item::after { display: none; }
+  .timeline__art, .timeline__item--rev .timeline__art { order: 0; width: 140px; height: 140px; }
+  .timeline__txt, .timeline__item--rev .timeline__txt { order: 1; padding: 0; }
+  .timeline__txt p { margin-inline: auto; }
+  .steps__claim { margin-top: 16px; font-size: 20px; }
+}
