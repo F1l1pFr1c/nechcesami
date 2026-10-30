@@ -154,4 +154,16 @@
     update();
   });
 
+  /* ---------- Kropki galerii (case study) ---------- */
+  document.querySelectorAll('[data-gallery]').forEach(function (g) {
+    const slides = Array.from(g.querySelectorAll('.gallery__slide'));
+    const dots = Array.from(g.querySelectorAll('.gallery__dots button'));
+    dots.forEach(function (d, i) {
+      d.addEventListener('click', function () {
+        slides.forEach(function (s, j) { s.hidden = j !== i; });
+        dots.forEach(function (x, j) { x.classList.toggle('is-active', j === i); x.setAttribute('aria-current', j === i ? 'true' : 'false'); });
+      });
+    });
+  });
+
 })();
