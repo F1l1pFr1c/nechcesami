@@ -2,3 +2,30 @@
    Kontakt (kontakt.html)
    ========================================================= */
 
+.contact { padding-block: 120px; }
+.contact__grid { display: grid; grid-template-columns: 560px 531px; justify-content: space-between; gap: 40px 60px; align-items: start; }
+
+.contact__intro { padding-bottom: 38px; border-bottom: 2px solid var(--c-gray-lg); }
+.contact__intro .txt-14 { margin-top: 27px; max-width: 497px; }
+
+.contact__company { padding-block: 42px; border-bottom: 2px solid var(--c-gray-lg); }
+.contact__company address { margin: 0; font-style: normal; }
+.contact__company .h-sm { margin-bottom: 30px; }
+.contact__company address + address { margin-top: 24px; }
+
+.contact__direct { padding-top: 42px; }
+.contact__direct .h-sm { margin-bottom: 30px; }
+.contact__direct .socials { margin-top: 28px; }
+
+@media (max-width: 1199.98px) {
+  .contact__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 991.98px) {
+  .contact { padding-block: 40px 48px; }
+  .contact__grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact__intro { padding-bottom: 24px; }
+  .contact__intro .txt-14 { margin-top: 20px; }
+  .contact__company { padding-block: 24px; }
+  .contact__company .h-sm, .contact__direct .h-sm { margin-bottom: 20px; }
+  .contact__direct { padding-top: 24px; }
+}
