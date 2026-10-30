@@ -64,6 +64,62 @@
       </div>
     </section>
 
+    <!-- ================= DLA KOGO (zakładki) ================= -->
+    <section class="section bg-light-pirx target" aria-labelledby="target-title">
+      <div class="wrap">
+        <h2 class="h-lg text-center" id="target-title">Twoja nieruchomość. Twoja sytuacja.<br>Nasze rozwiązanie.</h2>
+
+        <div class="target-card">
+          <div class="target-tabs" role="tablist">
+            <button class="target-tab active" id="tab-wlasciciel" data-bs-toggle="tab" data-bs-target="#pane-wlasciciel" type="button" role="tab" aria-controls="pane-wlasciciel" aria-selected="true">{{icon:tab-owner}}Właściciel nieruchomości</button>
+            <button class="target-tab" id="tab-dlugo" data-bs-toggle="tab" data-bs-target="#pane-dlugo" type="button" role="tab" aria-controls="pane-dlugo" aria-selected="false">{{icon:tab-long}}Wynajmujący długoterminowo</button>
+            <button class="target-tab" id="tab-inwestor" data-bs-toggle="tab" data-bs-target="#pane-inwestor" type="button" role="tab" aria-controls="pane-inwestor" aria-selected="false">{{icon:tab-investor}}Inwestor</button>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="pane-wlasciciel" role="tabpanel" aria-labelledby="tab-wlasciciel" tabindex="0">
+              <div class="target-pane">
+                <img class="target-pane__img target-pane__img--wlasciciel" src="img/home-wlasciciel.webp" srcset="img/home-wlasciciel-900.webp 900w, img/home-wlasciciel.webp 1800w" sizes="(max-width: 991.98px) 100vw, 460px" width="1800" height="1200" alt="Uśmiechnięty mężczyzna z laptopem na żółtym tle">
+                <div class="target-pane__txt">
+                  <h3 class="target-pane__title">Każda nieruchomość ma potencjał.<br>Naszą rolą jest go uwolnić.</h3>
+                  <p class="lead-pirx">Nieważne czy masz mieszkanie w centrum miasta, apartament nad morzem czy dom, który stoi pusty przez większość roku — każda nieruchomość ma potencjał, który czeka na właściwego pilota. pirx.rent przejmuje stery w całości.</p>
+                  <ul class="feature-list">
+                    <li>{{icon:clock}}Zarządzanie nieruchomościami 24/7</li>
+                    <li>{{icon:camera}}Profesjonalna fotografia i optymalizacja ogłoszenia</li>
+                    <li>{{icon:broom}}Sprzątanie i przygotowanie nieruchomości przed każdym gościem</li>
+                    <li>{{icon:calendar}}Elastyczny kalendarz — blokujesz swoje terminy kiedy chcesz</li>
+                    <li>{{icon:key}}Nieruchomość zawsze gotowa na Twój przyjazd</li>
+                  </ul>
+                  <a class="btn-pirx btn-pirx--dark" href="{{link:cennik}}">Sprawdź ofertę</a>
+                </div>
+              </div>
+            </div>
+            <!-- TODO: Figma ma treść tylko dla pierwszej zakładki — pozostałe do uzupełnienia -->
+            <div class="tab-pane fade" id="pane-dlugo" role="tabpanel" aria-labelledby="tab-dlugo" tabindex="0">
+              <div class="target-pane">
+                <img class="target-pane__img target-pane__img--wynajmujacy" src="img/home-wynajmujacy.webp" srcset="img/home-wynajmujacy-900.webp 900w, img/home-wynajmujacy.webp 1800w" sizes="(max-width: 991.98px) 100vw, 460px" width="1800" height="1200" alt="Uśmiechnięta kobieta w kapeluszu i okularach przeciwsłonecznych opiera się o żółtą walizkę" loading="lazy">
+                <div class="target-pane__txt">
+                  <h3 class="target-pane__title">Najem długoterminowy to nie jedyna droga.</h3>
+                  <p class="lead-pirx">Treść tej zakładki nie jest jeszcze gotowa w projekcie.</p>
+                  <a class="btn-pirx btn-pirx--dark" href="{{link:cennik}}">Sprawdź ofertę</a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pane-inwestor" role="tabpanel" aria-labelledby="tab-inwestor" tabindex="0">
+              <div class="target-pane">
+                <img class="target-pane__img target-pane__img--inwestor" src="img/home-inwestor.webp" srcset="img/home-inwestor-900.webp 900w, img/home-inwestor.webp 1800w" sizes="(max-width: 991.98px) 100vw, 460px" width="1800" height="1200" alt="Zamyślony mężczyzna w niebieskiej marynarce na pomarańczowym tle" loading="lazy">
+                <div class="target-pane__txt">
+                  <h3 class="target-pane__title">Inwestycja, która pracuje na siebie.</h3>
+                  <p class="lead-pirx">Treść tej zakładki nie jest jeszcze gotowa w projekcie.</p>
+                  <a class="btn-pirx btn-pirx--dark" href="{{link:cennik}}">Sprawdź ofertę</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   {{footer}}
