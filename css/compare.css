@@ -1,0 +1,34 @@
+.compare { background: var(--color-bg-soft); padding-block: 64px 56px; }
+.compare .h2 { font-size: 28px; text-align: center; margin-bottom: 48px; }
+
+.compare__table-wrap {
+  max-width: 740px; margin-inline: auto;
+  padding: 4px;
+  border-radius: 12px;
+  background: var(--color-white);
+  box-shadow: 0 1px 2px rgba(31,28,23,.06);
+  overflow-x: auto;
+}
+.compare__table { width: 100%; border-collapse: collapse; font-size: 11px; text-align: center; }
+.compare__table th, .compare__table td { padding: 17px 16px; border-bottom: 1px solid #eceae2; }
+.compare__table tbody th { text-align: left; font-weight: 500; width: 40%; }
+.compare__table thead th { font-weight: 700; font-size: 10px; }
+.compare__table td { font-weight: 700; }
+.compare__table svg { display: inline-block; vertical-align: middle; }
+
+/* zvýraznený žltý stĺpec */
+.compare__table thead th.is-highlight { font-family: var(--font-heading); font-weight: 600; font-size: 11px; }
+.compare__table tr > :last-child { background: var(--color-yellow); font-weight: 600; border-bottom-color: rgba(31,28,23,.1); }
+.compare__table thead tr > :last-child { border-radius: 8px 8px 0 0; }
+.compare__table tbody tr:last-child > * { border-bottom: 0; }
+.compare__table tbody tr:last-child > :last-child { border-radius: 0 0 8px 8px; }
+
+.compare__note { max-width: 560px; margin: 28px auto 0; text-align: center; font-size: 8px; line-height: 1.7; }
+
+@media (max-width: 767px) {
+  .compare { padding-block: 40px 40px; }
+  .compare .h2 { font-size: 24px; margin-bottom: 28px; }
+  .compare__table { font-size: 10px; }
+  .compare__table th, .compare__table td { padding: 14px 8px; }
+  .compare__table tbody th { width: 34%; }
+}
