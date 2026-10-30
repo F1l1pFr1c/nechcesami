@@ -11,6 +11,10 @@
 .p-hero__btns .btn-pirx { height: 50px; }
 .p-hero__btns .btn-pirx--yellow { height: 48px; }
 .p-hero__art { width: 372px; height: 357px; flex: none; margin-right: 13px; border-radius: 50%; }
+<<<<<<< HEAD
+=======
+img.p-hero__art { border-radius: 0; object-fit: contain; }
+>>>>>>> origin/main
 
 .crumbs {
   margin-top: 94px; height: 52px;
@@ -57,6 +61,10 @@
 }
 .phase--labels { margin-top: 147px; padding-block: 0 24px; border-top: 0; }
 .phase__art { width: 180px; height: 180px; margin-top: 0; }
+<<<<<<< HEAD
+=======
+img.phase__art { object-fit: contain; }
+>>>>>>> origin/main
 .phase__what .h-md { margin-bottom: 43px; }
 .phase__what .check-list { gap: 16px; max-width: 400px; }
 .phase__list {
@@ -93,6 +101,10 @@
 .rhythm__block .h-md { margin: 26px 0 27px; }
 .rhythm__block .check-list { gap: 16px; }
 .rhythm__img { position: sticky; top: calc(var(--nav-h) + 24px); height: 600px; }
+<<<<<<< HEAD
+=======
+img.rhythm__img { display: block; width: 100%; object-fit: cover; border-radius: var(--radius); }
+>>>>>>> origin/main
 
 @media (max-width: 1279.98px) { .rhythm__grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 991.98px) {
@@ -149,6 +161,10 @@
 .case-quote figcaption .label-caps { display: block; margin-top: 9px; }
 .gallery { align-self: start; position: sticky; top: calc(var(--nav-h) + 24px); }
 .gallery__slide { height: 600px; }
+<<<<<<< HEAD
+=======
+img.gallery__slide { display: block; width: 100%; object-fit: cover; border-radius: var(--radius); }
+>>>>>>> origin/main
 .gallery__dots { display: flex; gap: 8px; margin-top: 16px; }
 .gallery__dots button { width: 7px; height: 7px; padding: 0; border-radius: 50%; border: 1px solid rgba(255,255,255,.5); background: transparent; }
 .gallery__dots button.is-active { background: var(--c-yellow); border-color: var(--c-yellow); }
@@ -167,6 +183,10 @@
 /* ---------- CTA ---------- */
 .cta { position: relative; overflow: hidden; padding-block: 119px 80px; min-height: 487px; }
 .cta__art { position: absolute; left: 0; top: 0; width: 549px; height: 100%; border-radius: 0; border-width: 0 1px 0 0; }
+<<<<<<< HEAD
+=======
+img.cta__art { object-fit: cover; object-position: 50% 0; }
+>>>>>>> origin/main
 .cta__inner { position: relative; text-align: center; max-width: 560px; }
 .cta__inner .lead-pirx { margin-top: 27px; }
 .cta__btns { display: flex; justify-content: center; gap: 16px; margin-top: 65px; }
